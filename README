@@ -1,7 +1,6 @@
 Cornac : PHP Code Analyzer
 
 Copyright (c) 2010 - 2011 Alter Way Solutions (France)
-Code by Damien Seguy (dams@php.net)
 
 This software is part of the Open Source Cornac Project. 
 
@@ -40,5 +39,4 @@ Pre-requisite :
 + xdebug is used for certain debug display. 
 
 This software is released under PHP licence (3.01)
-Code base is copyright (c) Damien Seguy (damien.seguy@gmail.com)
 
