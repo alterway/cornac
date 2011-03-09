@@ -13,7 +13,7 @@
    | obtain it through the world-wide-web, please send a note to          |
    | license@php.net so we can mail you a copy immediately.               |
    +----------------------------------------------------------------------+
-   | Author: Damien Seguy <damien.seguy@gmail.com>                        |
+   | Author: Damien Seguy <damien.seguy@alterway.fr>                      |
    +----------------------------------------------------------------------+
  */
     function &_getRules( $a = null,$b = null,$c = null,$d = null,$e = null,$f = null) {}

@@ -13,7 +13,7 @@
    | obtain it through the world-wide-web, please send a note to          |
    | license@php.net so we can mail you a copy immediately.               |
    +----------------------------------------------------------------------+
-   | Author: Damien Seguy <damien.seguy@gmail.com>                        |
+   | Author: Damien Seguy <damien.seguy@alterway.fr>                      |
    +----------------------------------------------------------------------+
  */    if ( preg_match( $pattern, $path, $matches ) )
         return $matches[1];

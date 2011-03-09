@@ -13,7 +13,7 @@
    | obtain it through the world-wide-web, please send a note to          |
    | license@php.net so we can mail you a copy immediately.               |
    +----------------------------------------------------------------------+
-   | Author: Damien Seguy <damien.seguy@gmail.com>                        |
+   | Author: Damien Seguy <damien.seguy@alterway.fr>                      |
    +----------------------------------------------------------------------+
  */
 ($this->m_timeStamps[count($this->m_timeStamps) - 1] - $this->m_timeStamps[0])

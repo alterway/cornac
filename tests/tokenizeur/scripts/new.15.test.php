@@ -13,7 +13,7 @@
    | obtain it through the world-wide-web, please send a note to          |
    | license@php.net so we can mail you a copy immediately.               |
    +----------------------------------------------------------------------+
-   | Author: Damien Seguy <damien.seguy@gmail.com>                        |
+   | Author: Damien Seguy <damien.seguy@alterway.fr>                      |
    +----------------------------------------------------------------------+
  */// @note this works, but cannot compile, as static can't be a declared class
         $document = new static();

@@ -13,6 +13,6 @@
    | obtain it through the world-wide-web, please send a note to          |
    | license@php.net so we can mail you a copy immediately.               |
    +----------------------------------------------------------------------+
-   | Author: Damien Seguy <damien.seguy@gmail.com>                        |
+   | Author: Damien Seguy <damien.seguy@alterway.fr>                      |
    +----------------------------------------------------------------------+
  */echo 'x'; ?>  <img src="<?php echo fct_lien_page_custom(TYPE_DOMAINE."/accueil_graph1_trt.php")."?".$chart1URL ?>" border="0" usemap="#map1" /><?php echo 'y'; ?>
