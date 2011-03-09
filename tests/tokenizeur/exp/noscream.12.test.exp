@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/noscream.12.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          noscream @
+              297 "++"_array variable $a[literals b] 
+                  _array
+                      variable $a
+                      literals b
+      1 : 
+          noscream @
+              296 "--"variable $i 
+                  variable $i

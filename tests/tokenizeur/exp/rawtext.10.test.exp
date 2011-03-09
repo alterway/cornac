@@ -1,0 +1,68 @@
+tests/tokenizeur/scripts/rawtext.10.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "variable $x" )
+          block 
+          0 : 
+              rawtext 
+              Texte : "311 "B""
+          1 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      functioncall lang
+                      function call : 307 "lang": 
+                          arglist 
+                          0 : 
+                              literals forums_edit_perm_formula_or
+          2 : 
+              rawtext 
+              Texte : "311 "C""
+          3 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      variable $formulapermexp
+          4 : 
+              rawtext 
+              Texte : "311 "D
+""
+          5 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      functioncall dhtmlspecialchars
+                      function call : 307 "dhtmlspecialchars": 
+                          arglist 
+                          0 : 
+                              _array
+                                  variable $medal
+                                  literals permission
+          6 : 
+              rawtext 
+              Texte : "311 "F""
+          7 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      _array
+                          variable $lang
+                          literals creditwizard_current_formula_notice
+          8 : 
+              rawtext 
+              Texte : "311 "G""
+          9 : 
+              affectation 
+              left : 
+                  variable $y
+               "=" 
+              right : 
+                  literals 1

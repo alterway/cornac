@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/array.5.test.php
+  codephp <?php
+
+  code : 
+      _array
+          _array
+              variable $GLOBALS
+              literals _TABLE_CORRESPONDANCE_MENU
+          _array
+              variable $tb_menu_racc
+              operation 
+              left : 
+                  variable $i
+              operation :  "-"
+              right : 
+                  literals 1

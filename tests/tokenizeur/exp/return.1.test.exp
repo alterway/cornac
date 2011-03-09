@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/return.1.test.php
+  codephp <?php
+
+  code : 
+      _return 
+      return : "literals 1"

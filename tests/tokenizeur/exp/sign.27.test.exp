@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/sign.27.test.php
+  codephp <?php
+
+  code : 
+      function literals return_static_constant ( )
+          block 
+          0 : 
+              _return 
+              return : "sign  "-"constant_static 307 "self"::_constant CLOSEST_ZERO_32"

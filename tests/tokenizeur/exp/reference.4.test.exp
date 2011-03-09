@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/reference.4.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $y
+       "=" 
+      right : 
+          reference &
+              _array
+                  variable $x
+                  literals 1

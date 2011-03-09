@@ -1,0 +1,23 @@
+tests/tokenizeur/scripts/ternaryop.32.test.php
+  codephp <?php
+
+  code : 
+      ternaryop ?
+      functioncall 350 "isset" ( arglist(_array variable $a[literals b]) )  ? cast (bool) : _constant false
+          functioncall isset
+          function call : 350 "isset": 
+              arglist 
+              0 : 
+                  _array
+                      variable $a
+                      literals b
+          cast (290 "(bool)")comparison _array variable $c[literals d] 282 "!=" _constant true
+              comparison 
+              left : 
+                  _array
+                      variable $c
+                      literals d
+              operateur : 282 "!="
+              right : 
+                  _constant (                  true )
+          _constant (          false )

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/foreach.46.test.php
+  codephp <?php
+
+  code : 
+      _foreach (property_static 307 "self"::variable $_k as  => property_static 307 "self"::variable $_n)
+          block 

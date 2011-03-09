@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/opappend.3.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property variable $x->literals y[]
+              property variable $xliterals y->
+       "=" 
+      right : 
+          variable $z

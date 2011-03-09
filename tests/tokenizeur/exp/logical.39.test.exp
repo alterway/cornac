@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/logical.39.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          parenthesis 
+          ( "comparison parenthesis (logical method variable $b->functioncall 307 "c" ( arglist(variable $d) )   "^" property variable $e->literals f) 280 "!==" literals 5" )

@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/keyvalue.1.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $conf
+       "=" 
+      right : 
+          functioncall array
+          function call : 360 "array": 
+              arglist 
+              0 : 
+                  concatenation 
+                  0 : 
+                      literals root_path => property _array variable $_SESSION[literals init_infos]->literals doc_root
+                          literals root_path
+                          property _array variable $_SESSION[literals init_infos]literals doc_root->
+                  1 : 
+                      property _array variable $_SESSION[literals init_infos]literals stockage->
+                  2 : 
+                      literals /images_pdt/
+                  3 : 
+                      variable $pdt_id

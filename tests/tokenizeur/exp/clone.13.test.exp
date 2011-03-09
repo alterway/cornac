@@ -1,0 +1,29 @@
+tests/tokenizeur/scripts/clone.13.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          ternaryop ?
+          functioncall 350 "isset" ( arglist(_array property variable $b->literals c[literals d]) )  ? _clone clone : method method variable $f->functioncall 307 "g" ( ( ) ) ->functioncall 307 "h" ( arglist(literals i) ) 
+              functioncall isset
+              function call : 350 "isset": 
+                  arglist 
+                  0 : 
+                      _array
+                          property variable $bliterals c->
+                          literals d
+              _clone 
+                  _array
+                      property variable $cliterals d->
+                      literals e
+              method method variable $f->functioncall 307 "g" ( ( ) ) 
+              method call : functioncall 307 "h" ( arglist(literals i) ) : 
+                  functioncall h
+                  function call : 307 "h": 
+                      arglist 
+                      0 : 
+                          literals i

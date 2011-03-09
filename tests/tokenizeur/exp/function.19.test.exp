@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/function.19.test.php
+  codephp <?php
+
+  code : 
+      function literals b arglist(typehint 307 "CLASSE" variable $a, typehint 307 "CLASSE" variable $b, typehint 307 "CLASSE" variable $c)
+          block 

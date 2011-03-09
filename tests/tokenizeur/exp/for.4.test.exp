@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/for.4.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : affectation variable $i  "=" literals 0;
+        End  : ;
+        Incr : postplusplus 297 "++"variable $i;
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              literals s

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/break.2.test.php
+  codephp <?php
+
+  code : 
+      _break 
+      Number : " "1""

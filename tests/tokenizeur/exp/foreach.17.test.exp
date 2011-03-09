@@ -1,0 +1,29 @@
+tests/tokenizeur/scripts/foreach.17.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              functioncall range
+              function call : 307 "range": 
+                  arglist 
+                  0 : 
+                      literals 1
+                  1 : 
+                      literals 3
+      1 : 
+          _foreach (variable $x as _array variable $y[literals 1] => reference &_array variable $z[literals 3])
+              block 
+              0 : 
+                  functioncall print
+                  function call : 266 "print": 
+                      arglist 
+                      0 : 
+                          _array
+                              variable $y
+                              literals 1

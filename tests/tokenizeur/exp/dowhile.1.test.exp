@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/dowhile.1.test.php
+  codephp <?php
+
+  code : 
+      _dowhile 
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1
+          parenthesis 
+          ( "comparison variable $x 283 "==" literals 3" )

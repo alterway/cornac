@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/literals.12.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          operation 
+          left : 
+              parenthesis 
+              ( "operation variable $y  "/" sign  "-"literals 2" )
+          operation :  "+"
+          right : 
+              literals 0.3

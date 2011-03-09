@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/while.12.test.php
+  codephp <?php
+
+  code : 
+      _while 
+          parenthesis 
+          ( "variable $action" )
+          block 
+          0 : 
+              functioncall print
+              function call : 266 "print": 
+                  arglist 
+                  0 : 
+                      literals 1

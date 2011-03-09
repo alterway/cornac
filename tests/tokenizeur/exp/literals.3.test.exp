@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/literals.3.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          sign  "-"literals 10
+              literals 10

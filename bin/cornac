@@ -1,0 +1,111 @@
+#!/usr/bin/env php
+<?php
+/*
+   +----------------------------------------------------------------------+
+   | Cornac, PHP code inventory                                           |
+   +----------------------------------------------------------------------+
+   | Copyright (c) 2010 - 2011                                            |
+   +----------------------------------------------------------------------+
+   | This source file is subject to version 3.01 of the PHP license,      |
+   | that is bundled with this package in the file LICENSE, and is        |
+   | available through the world-wide-web at the following url:           |
+   | http://www.php.net/license/3_01.txt                                  |
+   | If you did not receive a copy of the PHP license and are unable to   |
+   | obtain it through the world-wide-web, please send a note to          |
+   | license@php.net so we can mail you a copy immediately.               |
+   +----------------------------------------------------------------------+
+   | Author: Damien Seguy <damien.seguy@gmail.com>                        |
+   +----------------------------------------------------------------------+
+ */
+
+include('library/Cornac/Autoload.php');
+spl_autoload_register('Cornac_Autoload::autoload');
+
+$options = array('help' => array('help' => 'display this help',
+                                 'option' => '?',
+                                 'compulsory' => false),
+                 'ini' => array('help' => 'configuration set or file',
+                                 'get_arg_value' => null,
+                                 'option' => 'I',
+                                 'compulsory' => true),
+                 'directory' => array('help' => 'directory to work in',
+                                      'get_arg_value' => null,
+                                      'option' => 'd',
+                                      'compulsory' => true),
+                 'destination' => array('help' => 'output directory',
+                                      'get_arg_value' => null,
+                                      'option' => 'o',
+                                      'compulsory' => true),
+                 'clean' => array('help' => 'clean tasks',
+                                 'option' => 'K',
+                                 'compulsory' => false),
+);
+$OPTIONS = new Cornac_Options();
+$OPTIONS->setConfig($options);
+$OPTIONS->init();
+
+$OPTIONS->cornac = array('ini' => $OPTIONS->ini);
+$OPTIONS->cornac = array('prefix' => $OPTIONS->ini);
+
+$OPTIONS->cornac = array('origin' => $OPTIONS->directory);
+if (empty($OPTIONS->cornac['origin'])) {
+    print "Origin folder is missing : use option -d\n";
+    $OPTIONS->help();
+}
+// @notes validations
+if (!file_exists($OPTIONS->cornac['origin']['origin'])) {
+    print "Source folder '{$OPTIONS->cornac['origin']}' doesn't exist\n";
+    die();
+}
+
+
+$OPTIONS->cornac = array('destination' => $OPTIONS->destination);
+if (empty($OPTIONS->cornac['destination'])) {
+    print "Destination folder is missing : use option -o\n";
+    help();
+}
+
+// @todo check this. 
+if (realpath($OPTIONS->cornac['origin']) == realpath($OPTIONS->cornac['destination'])) {
+    print "Please, don't use the same folder for source and destination\n";
+    die();
+}
+
+if ($OPTIONS->cornac['storage'] == 'mysql') {
+    $INI['mysql']['active'] = 1;
+    $INI['sqlite']['active'] = 0;
+
+    if ($OPTIONS->clean) {
+        $database = new Cornac_Database();
+        // @todo add some more verifications (existence, number actually destroyed..)
+        $database->query("DROP TABLE '<report>', '<tokens>', '<cache>', '<tokens_cache>', '<tags>', '<tokens_tags>', '<report_module>', '<report_dot>', '<report_attributes>', '<tasks>'");
+        print "tables erased\n";
+    }
+} elseif ($OPTIONS->cornac['storage'] == 'sqlite') {
+    $INI['mysql']['active'] = 0;
+    $INI['sqlite']['active'] = 1;
+} else {
+    print "Please, storage should be mysql or sqlite\n";
+    die();
+}
+
+// execution
+print "
+Folder : {$OPTIONS->cornac['origin']}
+Output : {$OPTIONS->cornac['destination']}\n";
+
+if (!empty($OPTIONS->cornac['ini'])) { $ini = " -I {$OPTIONS->cornac['ini']} "; } else { $ini = ""; }
+
+print "Tokenizeur\n";
+shell_exec("php tokenizeur.php -r -d {$OPTIONS->cornac['origin']} -g {$OPTIONS->cornac['storage']},cache $ini "); // @todo : note the log
+                                                                                                            // @sqlite as default ?
+print "Auditeur\n";
+shell_exec("cd auditeur; php auditeur.php $ini -o -d {$OPTIONS->cornac['destination']}");
+// @todo clean audits tables before.
+
+print "Export\n";
+shell_exec("cd auditeur; php reader.php $ini -F html -o {$OPTIONS->cornac['destination']} ");
+
+print "Done\n";
+
+?>

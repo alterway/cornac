@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/functioncall.35.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              _array
+                  variable $x
+                  literals 1
+           "=" 
+          right : 
+              literals phpinfo
+      1 : 
+          functioncall _array variable $x[literals 1]
+          function call : _array variable $x[literals 1]: 
+              arglist 
+              0 : 

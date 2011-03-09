@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/ifthen.24.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison variable $x 283 "==" literals 6" )
+          block 
+          0 : 
+              _for 
+                Init : affectation variable $i  "=" literals 0;
+                End  : comparison variable $i  "<" literals 1;
+                Incr : postplusplus 297 "++"variable $i;
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $b
+                       "=" 
+                      right : 
+                          literals 2

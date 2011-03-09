@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/goto.1.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          GOTO 307 "cleanupCookie" 
+      1 : 
+           307 "cleanupCookie" : 

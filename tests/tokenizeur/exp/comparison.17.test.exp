@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/comparison.17.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison logical comparison variable $a 283 "==" literals 1 279 "&&" variable $b  ">" operation operation literals 2  "*" _constant M_PI  "/" literals 3" )
+          block 
+          0 : 
+              variable $c297 "++" 
+                  variable $c

@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/sign.14.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $tm
+       "=" 
+      right : 
+          sign  "-"operation variable $tm  "*" variable $y
+              operation 
+              left : 
+                  variable $tm
+              operation :  "*"
+              right : 
+                  variable $y

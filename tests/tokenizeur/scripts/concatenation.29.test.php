@@ -1,0 +1,1 @@
+A<?php echo a($b) ?>"<?php if( defined('c') ) echo 'd' ?>E

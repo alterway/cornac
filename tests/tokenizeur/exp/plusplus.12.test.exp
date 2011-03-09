@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/plusplus.12.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _global 
+          0 : 
+              variable $a
+      1 : 
+          property variable $a->literals b296 "--" 
+              property variable $aliterals b->

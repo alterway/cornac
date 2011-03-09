@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/codephp.19.test.php
+  codephp <?php 
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              method_static 
+              307 "classe"::functioncall 307 "lang" ( ( ) ) : 
+                  functioncall lang
+                  function call : 307 "lang": 
+                      arglist 
+                      Empty arglist

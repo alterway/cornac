@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/opappend.2.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          _array variable $x[literals 1][]
+              _array
+                  variable $x
+                  literals 1
+       "=" 
+      right : 
+          variable $y

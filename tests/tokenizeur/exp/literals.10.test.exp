@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/literals.10.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $query2
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              literals a
+          1 : 
+              variable concatenation literals b . variable $c . literals d  
+          2 : 
+              literals d

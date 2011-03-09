@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/class.32.test.php
+  codephp <?php
+
+  code : 
+       class 307 "b"
+          block 
+          0 : 
+               348 "var"variable $v1 = _constant null
+          1 : 
+               348 "var"variable $v2 = _constant null
+          2 : 
+               344 "private"variable $r1 = _constant null
+          3 : 
+               344 "private"variable $r2 = _constant null
+          4 : 
+               343 "protected"variable $o1 = _constant null
+          5 : 
+               343 "protected"variable $o2 = _constant null
+          6 : 
+               342 "public"variable $u1 = _constant null
+          7 : 
+               342 "public"variable $u2 = _constant null

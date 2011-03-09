@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/concatenation.13.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              concatenation 
+              0 : 
+                  method variable $a
+                  method call : functioncall 307 "b" ( arglist(_array variable $c[_constant d]) ) : 
+                      functioncall b
+                      function call : 307 "b": 
+                          arglist 
+                          0 : 
+                              _array
+                                  variable $c
+                                  _constant (                                  d )
+              1 : 
+                  literals e
+              2 : 
+                  _array
+                      variable $f
+                      literals g
+              3 : 
+                  literals h

@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/logical.25.test.php
+  codephp <?php
+
+  code : 
+      noscream @
+          functioncall chmod
+          function call : 307 "chmod": 
+              arglist 
+              0 : 
+                  variable $fichier
+              1 : 
+                  logical 
+                  left : 
+                      _constant (                      _SPIP_CHMOD )
+                  operateur :  "&"
+                  right : 
+                      literals 0666

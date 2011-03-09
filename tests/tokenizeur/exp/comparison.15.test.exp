@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/comparison.15.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          comparison 
+          left : 
+               new 307 "a" arglist(variable $b) 
+          operateur : 288 "instanceof"
+          right : 
+              _constant (              d )

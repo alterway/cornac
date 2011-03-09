@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/ternaryop.7.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          ternaryop ?
+          literals 1 ? literals 2 : method variable $x->functioncall 307 "y" ( ( ) ) 
+              literals 1
+              literals 2
+              method variable $x
+              method call : functioncall 307 "y" ( ( ) ) : 
+                  functioncall y
+                  function call : 307 "y": 
+                      arglist 
+                      Empty arglist

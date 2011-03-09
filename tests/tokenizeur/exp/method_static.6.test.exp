@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/method_static.6.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $result
+       "=" 
+      right : 
+          method_static 
+          307 "parent"::functioncall variable $a ( arglist(variable $b, variable $c, variable $d) ) : 
+              functioncall $a
+              function call : variable $a: 
+                  arglist 
+                  0 : 
+                      variable $b
+                  1 : 
+                      variable $c
+                  2 : 
+                      variable $d

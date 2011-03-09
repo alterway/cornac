@@ -1,0 +1,35 @@
+tests/tokenizeur/scripts/ternaryop.29.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "logical not ! 279 "&&" method variable $b->functioncall 307 "c" ( arglist(_constant d) ) " )
+              block 
+              0 : 
+                  ifthen if
+                  Condition 0) 
+                      parenthesis 
+                      ( "method variable $e->functioncall 307 "f" ( arglist(_constant g) ) " )
+                      block 
+                      0 : 
+                          _return 
+                          return : "literals 1"
+      1 : 
+          ternaryop ?
+          parenthesis (functioncall 351 "empty" ( arglist(_array variable $x[literals t]) ) ) ? not ! : not !
+              parenthesis 
+              ( "functioncall 351 "empty" ( arglist(_array variable $x[literals t]) ) " )
+              not !
+                  functioncall flush
+                  function call : 307 "flush": 
+                      arglist 
+                      Empty arglist
+              not !
+                  functioncall ob_flush
+                  function call : 307 "ob_flush": 
+                      arglist 
+                      Empty arglist

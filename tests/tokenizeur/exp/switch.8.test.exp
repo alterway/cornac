@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/switch.8.test.php
+  codephp <?php
+
+  code : 
+      _switch 
+          parenthesis 
+          ( "literals 1" )
+          block 
+          0 : 
+              _case 
+                  literals 2
+                  block 
+          1 : 
+              _case 
+                  literals 3
+                  block 
+                  0 : 
+                      literals 3

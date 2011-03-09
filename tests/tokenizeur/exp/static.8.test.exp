@@ -1,0 +1,128 @@
+tests/tokenizeur/scripts/static.8.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _static 
+              variable $a
+      1 : 
+          _static 
+              variable $b
+      2 : 
+          _static 
+              variable $c
+      3 : 
+          _static 
+              variable $d
+      4 : 
+          _static 
+              variable $e
+      5 : 
+          _static 
+              variable $f
+      6 : 
+          _static 
+              affectation 
+              left : 
+                  variable $g
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+      7 : 
+          _static 
+              affectation 
+              left : 
+                  variable $g
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+      8 : 
+          _static 
+              affectation 
+              left : 
+                  variable $h
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+      9 : 
+          _static 
+              affectation 
+              left : 
+                  variable $i
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+      10 : 
+          _static 
+              affectation 
+              left : 
+                  variable $j
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+      11 : 
+          _static 
+              affectation 
+              left : 
+                  variable $k
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+      12 : 
+          _static 
+              affectation 
+              left : 
+                  variable $l
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+      13 : 
+          _static 
+              variable $m
+      14 : 
+          _static 
+              affectation 
+              left : 
+                  variable $k
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+      15 : 
+          _static 
+              variable $recursion
+      16 : 
+          _static 
+              affectation 
+              left : 
+                  variable $scanned_files
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist

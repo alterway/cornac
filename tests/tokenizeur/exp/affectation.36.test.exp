@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/affectation.36.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          functioncall list
+          function call : 359 "list": 
+              arglist 
+              0 : 
+                  [empty]
+              1 : 
+                  variable $x
+       "=" 
+      right : 
+          functioncall explode
+          function call : 307 "explode": 
+              arglist 
+              0 : 
+                  literals a
+              1 : 
+                  literals abacada

@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/variable.14.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+      273 ".=" 
+      right : 
+          concatenation 
+          0 : 
+              literals b
+          1 : 
+              variable _array _array variable $c[literals d][variable $e]
+          2 : 
+              literals f

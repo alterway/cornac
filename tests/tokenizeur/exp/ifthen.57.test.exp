@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/ifthen.57.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "variable $x" )
+          block 
+          0 : 
+              property variable $zliterals y->
+       else 
+          block 
+          0 : 
+              property variable $aliterals b->

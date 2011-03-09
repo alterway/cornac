@@ -1,0 +1,23 @@
+tests/tokenizeur/scripts/sequence.22.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $ignore
+           "=" 
+          right : 
+              literals 1
+      1 : 
+          functioncall $errorfn
+          function call : variable $errorfn: 
+              arglist 
+              0 : 
+                  literals a
+              1 : 
+                  sign  "-"literals 9
+                      literals 9
+              2 : 
+                  literals a

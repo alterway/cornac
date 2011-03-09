@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/operation.50.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          ternaryop ?
+          comparison variable $b 283 "==" literals 1 ? operation literals 2  "*" _constant M_PI : variable $d
+              comparison 
+              left : 
+                  variable $b
+              operateur : 283 "=="
+              right : 
+                  literals 1
+              operation 
+              left : 
+                  literals 2
+              operation :  "*"
+              right : 
+                  _constant (                  M_PI )
+              variable $d

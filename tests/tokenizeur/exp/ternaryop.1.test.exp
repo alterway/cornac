@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/ternaryop.1.test.php
+  codephp <?php
+
+  code : 
+      ternaryop ?
+      literals 1 ? literals 2 : literals 3
+          literals 1
+          literals 2
+          literals 3

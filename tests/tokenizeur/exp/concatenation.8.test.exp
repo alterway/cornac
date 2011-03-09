@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/concatenation.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $query
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              literals a
+          1 : 
+              variable $b
+          2 : 
+              literals c
+          3 : 
+              _array
+                  variable $d
+                  literals e
+          4 : 
+              literals f
+          5 : 
+              variable $g

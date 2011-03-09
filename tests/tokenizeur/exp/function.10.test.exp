@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/function.10.test.php
+  codephp <?php
+
+  code : 
+      function literals x ( )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1

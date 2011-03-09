@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/reference.6.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          reference &
+               new  "x" ( ) 

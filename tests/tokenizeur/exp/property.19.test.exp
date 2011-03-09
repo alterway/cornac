@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/property.19.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          functioncall isset
+          function call : 350 "isset": 
+              arglist 
+              0 : 
+                  property method_static 307 "self"::functioncall 307 "a" ( ( ) ) variable $b->

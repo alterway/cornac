@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/for.25.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : ;
+        End  : ;
+        Incr : ;
+          block 

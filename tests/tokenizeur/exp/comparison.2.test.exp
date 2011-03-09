@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/comparison.2.test.php
+  codephp <?php
+
+  code : 
+      comparison 
+      left : 
+          literals 1
+      operateur :  "<"
+      right : 
+          literals 2

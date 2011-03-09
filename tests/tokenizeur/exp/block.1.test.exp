@@ -1,0 +1,48 @@
+tests/tokenizeur/scripts/block.1.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "functioncall 351 "empty" ( arglist(_array variable $row[literals 0]) ) " )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  _array
+                      variable $date_choisie
+                      literals 0
+               "=" 
+              right : 
+                  functioncall date
+                  function call : 307 "date": 
+                      arglist 
+                      0 : 
+                          literals Y
+          1 : 
+              affectation 
+              left : 
+                  _array
+                      variable $date_choisie
+                      literals 1
+               "=" 
+              right : 
+                  functioncall date
+                  function call : 307 "date": 
+                      arglist 
+                      0 : 
+                          literals m
+          2 : 
+              affectation 
+              left : 
+                  _array
+                      variable $date_choisie
+                      literals 2
+               "=" 
+              right : 
+                  functioncall date
+                  function call : 307 "date": 
+                      arglist 
+                      0 : 
+                          literals j

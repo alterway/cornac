@@ -1,0 +1,25 @@
+tests/tokenizeur/scripts/variable.13.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $result
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              literals 
+
+          1 : 
+              variable property variable $object->literals property
+          2 : 
+              literals ;
+
+
+          3 : 
+              variable method variable $object->functioncall 307 "method" ( ( ) ) 
+          4 : 
+              literals ;
+
+

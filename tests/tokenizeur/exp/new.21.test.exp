@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/new.21.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property variable $thisliterals a->
+       "=" 
+      right : 
+          ternaryop ?
+          property variable $this->literals b ? _new  : _new 
+              property variable $thisliterals b->
+               new  "C" ( ) 
+               new  "D" ( ) 

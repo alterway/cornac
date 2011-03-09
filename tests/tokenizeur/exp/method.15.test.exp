@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/method.15.test.php
+  codephp <?php
+
+  code : 
+      functioncall strlen
+      function call : 307 "strlen": 
+          arglist 
+          0 : 
+              method variable $e
+              method call : functioncall literals namespace1:gt ( ( ) ) : 
+                  functioncall namespace1:gt
+                  function call : literals namespace1:gt: 
+                      arglist 
+                      Empty arglist

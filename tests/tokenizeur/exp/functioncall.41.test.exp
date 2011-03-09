@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/functioncall.41.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          functioncall list
+          function call : 359 "list": 
+              arglist 
+              0 : 
+                  property_static 307 "a"::_array variable $b[literals c]->
+              1 : 
+                  variable $d
+       "=" 
+      right : 
+          method_static 
+          307 "e"::functioncall 307 "f" ( ( ) ) : 
+              functioncall f
+              function call : 307 "f": 
+                  arglist 
+                  Empty arglist

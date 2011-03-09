@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/bitshift.6.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          parenthesis 
+          ( "bitshift property variable $y->literals z  286 ">>"  literals 1 " )

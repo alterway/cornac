@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/array.11.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property opappend [[]literals b->
+       "=" 
+      right : 
+          variable $c

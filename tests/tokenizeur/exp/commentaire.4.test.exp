@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/commentaire.4.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          literals 2

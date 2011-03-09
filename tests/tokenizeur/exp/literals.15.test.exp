@@ -1,0 +1,41 @@
+tests/tokenizeur/scripts/literals.15.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              literals B
+
+      1 : 
+          affectation 
+          left : 
+              variable $y
+           "=" 
+          right : 
+              literals a
+      2 : 
+          affectation 
+          left : 
+              variable $z
+           "=" 
+          right : 
+              literals b
+      3 : 
+          affectation 
+          left : 
+              variable $a
+           "=" 
+          right : 
+              literals 1
+      4 : 
+          affectation 
+          left : 
+              variable $b
+           "=" 
+          right : 
+              literals 1.033

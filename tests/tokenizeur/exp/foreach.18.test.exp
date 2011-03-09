@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/foreach.18.test.php
+  codephp <?php
+
+  code : 
+      _foreach (variable $x as  => variable $z)
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1
+          1 : 
+              affectation 
+              left : 
+                  variable $y
+               "=" 
+              right : 
+                  literals 2

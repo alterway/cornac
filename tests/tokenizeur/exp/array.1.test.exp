@@ -1,0 +1,7 @@
+tests/tokenizeur/scripts/array.1.test.php
+  codephp <?php
+
+  code : 
+      _array
+          variable $_array
+          literals 1

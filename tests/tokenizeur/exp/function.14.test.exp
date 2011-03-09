@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/function.14.test.php
+  codephp <?php
+
+  code : 
+      function literals a arglist(typehint _constant StdClass reference &variable $x, logical _constant StdClass  "&" variable $b)
+          block 

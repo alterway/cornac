@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/return.6.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              literals 1
+      1 : 
+          _return 
+          return : "variable $x"

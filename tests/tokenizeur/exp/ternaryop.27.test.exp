@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/ternaryop.27.test.php
+  codephp <?php
+
+  code : 
+      ternaryop ?
+      variable $x ? comparison variable $y  ">" literals 3 : variable $z
+          variable $x
+          comparison 
+          left : 
+              variable $y
+          operateur :  ">"
+          right : 
+              literals 3
+          variable $z

@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/foreach.52.test.php
+  codephp <?php
+
+  code : 
+      _foreach (operation variable $x  "+" variable $y as variable $a => variable $b)
+          block 
+          0 : 
+              variable $c297 "++" 
+                  variable $c

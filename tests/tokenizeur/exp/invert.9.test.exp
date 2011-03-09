@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/invert.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $mod
+      271 "&=" 
+      right : 
+          invert ~
+              property_static 307 "y"::variable $x->

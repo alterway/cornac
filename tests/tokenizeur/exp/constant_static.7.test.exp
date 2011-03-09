@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/constant_static.7.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          constant_static (          307 "g"\307 "h"\307 "i"::_constant j )

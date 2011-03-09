@@ -1,0 +1,44 @@
+Cornac : PHP Code Analyzer
+
+Copyright (c) 2010 - 2011 Alter Way Solutions (France)
+Code by Damien Seguy (dams@php.net)
+
+This software is part of the Open Source Cornac Project. 
+
+Cornac is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+License for more details.
+
+Usage : 
+
+1) Create [application].ini in ini folder, by duplicating cornac.ini
+   Check the first section, that should be enough. 
+
+2) at the root of cornac folder, run this command : 
+bin/cornac -I <ini>
+
+3) Stand by ... some time. 
+
+4) When cornac says 'Done' : 
+ a) go in your destination directory, HTML version will be there, starting with index.html
+ b) link (ln -s) you web root to the 'web' directory in cornac, and then,
+    point your browser to the good path (http://localhost/web) : 
+    All should be there
+ c) Run bin/inventory -I <ini> and open the resulting .ods with Open Office
+ 
+ 
+May be of interest :
++ scripts/tag/tags.php : a way to tags comments in the code
++ scripts/file2png.php : a way to represent file system as PNG file
+
+Current version is DEV. 
+
+Pre-requisite : 
++ PHP 5.3.1 (only tested on that version, may work somewhere else).
++ MySQL (should work on any version), or SQLite (not currently tested)
++ xdebug is used for certain debug display. 
+
+This software is released under PHP licence (3.01)
+Code base is copyright (c) Damien Seguy (damien.seguy@gmail.com)
+

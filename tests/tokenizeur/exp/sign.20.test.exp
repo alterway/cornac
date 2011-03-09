@@ -1,0 +1,33 @@
+tests/tokenizeur/scripts/sign.20.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          comparison 
+          left : 
+              variable $b
+          operateur : 283 "=="
+          right : 
+              operation 
+              left : 
+                  operation 
+                  left : 
+                      functioncall count
+                      function call : 307 "count": 
+                          arglist 
+                          0 : 
+                              variable $c
+                  operation :  "-"
+                  right : 
+                      ternaryop ?
+                      literals 1 ? variable $d : variable $r
+                          literals 1
+                          variable $d
+                          variable $r
+              operation :  "+"
+              right : 
+                  variable $f

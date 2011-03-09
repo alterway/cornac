@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/interface.3.test.php
+  codephp <?php
+
+  code : 
+      _interface 0 "a"
+       extends 307 "b", 307 "c"
+          block 
+          0 : 
+              function literals x ( )
+                  block 

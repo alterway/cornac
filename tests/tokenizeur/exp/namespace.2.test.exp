@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/namespace.2.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          namespace 307 "a"\307 "b"
+      1 : 
+          namespace 307 "a"\307 "b"\307 "c"
+      2 : 
+          namespace 307 "a"\307 "b"\307 "c"\307 "d"
+      3 : 
+          namespace 307 "a"\307 "b"\307 "c"\307 "d"\307 "e"

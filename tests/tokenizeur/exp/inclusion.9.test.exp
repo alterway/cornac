@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/inclusion.9.test.php
+  codephp <?php
+
+  code : 
+      inclusion require
+          functioncall fct_lien_page_custom
+          function call : 307 "fct_lien_page_custom": 
+              arglist 
+              0 : 
+                  literals fonctions/sysout_agent.php
+              1 : 
+                  literals abs

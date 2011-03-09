@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/concatenation.28.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              concatenation 
+              0 : 
+                  literals a
+              1 : 
+                  property variable $xliterals y->
+              2 : 
+                  literals c 
+              3 : 
+                  variable $bgcolor
+              4 : 
+                  literals  d

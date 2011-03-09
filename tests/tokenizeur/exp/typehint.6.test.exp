@@ -1,0 +1,36 @@
+tests/tokenizeur/scripts/typehint.6.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              literals a: 
+          1 : 
+              functioncall base64_encode
+              function call : 307 "base64_encode": 
+                  arglist 
+                  0 : 
+                      concatenation 
+                      0 : 
+                          variable $b
+                      1 : 
+                          literals ,
+                      2 : 
+                          variable $c
+                      3 : 
+                          literals ,
+                      4 : 
+                          variable $d
+                      5 : 
+                          literals ,e,
+                      6 : 
+                          _array
+                              variable $r
+                              _constant (                              g )
+          2 : 
+              literals \n

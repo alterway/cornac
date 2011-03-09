@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/while.15.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "variable $a" )
+          block 
+          0 : 
+              _while 
+                  parenthesis 
+                  ( "postplusplus 297 "++"variable $x" )
+                  block 

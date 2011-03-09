@@ -1,0 +1,29 @@
+tests/tokenizeur/scripts/sequence.12.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              ternaryop ?
+              parenthesis (literals 1) ? literals 2 : literals 3
+                  parenthesis 
+                  ( "literals 1" )
+                  literals 2
+                  literals 3
+      1 : 
+          affectation 
+          left : 
+              variable $y
+           "=" 
+          right : 
+              ternaryop ?
+              parenthesis (literals 4) ? literals 5 : literals 6
+                  parenthesis 
+                  ( "literals 4" )
+                  literals 5
+                  literals 6

@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/foreach.28.test.php
+  codephp <?php
+
+  code : 
+      _foreach (variable $a as variable $b => variable $c)
+          block 
+          0 : 
+              method variable $this
+              method call : functioncall 307 "d" ( arglist(literals e) ) : 
+                  functioncall d
+                  function call : 307 "d": 
+                      arglist 
+                      0 : 
+                          literals e

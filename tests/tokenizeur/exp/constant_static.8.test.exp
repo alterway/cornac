@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/constant_static.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          constant_static (          _array _array variable $x[literals 1][literals 2]::_constant j )

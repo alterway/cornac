@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/bitshift.5.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          parenthesis 
+          ( "bitshift method variable $y->functioncall 307 "z" ( arglist(variable $a) )   286 ">>"  literals 1 " )

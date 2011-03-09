@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/functioncall.54.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          functioncall array
+          function call : 360 "array": 
+              arglist 
+              0 : 
+                  literals 379 => literals Z
+                      literals 379
+                      literals Z
+              1 : 
+                  literals 380 => literals z
+                      literals 380
+                      literals z

@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/noscream.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property variable $thisliterals a->
+       "=" 
+      right : 
+          noscream @
+              functioncall $b
+              function call : variable $b: 
+                  arglist 
+                  0 : 
+                      concatenation 
+                      0 : 
+                          variable $host
+                      1 : 
+                          literals a
+                  1 : 
+                      literals b

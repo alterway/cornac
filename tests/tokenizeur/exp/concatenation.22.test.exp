@@ -1,0 +1,31 @@
+tests/tokenizeur/scripts/concatenation.22.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          ternaryop ?
+          not ! ? concatenation literals f . functioncall variable $g ( arglist(literals h) )  . literals i   : literals j
+              not !
+                  functioncall empty
+                  function call : 351 "empty": 
+                      arglist 
+                      0 : 
+                          _array
+                              variable $b
+                              literals d
+              concatenation 
+              0 : 
+                  literals f
+              1 : 
+                  functioncall $g
+                  function call : variable $g: 
+                      arglist 
+                      0 : 
+                          literals h
+              2 : 
+                  literals i
+              literals j

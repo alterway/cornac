@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.10.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+           new method variable $classe->functioncall 307 "method" ( ( ) )  ( ) 

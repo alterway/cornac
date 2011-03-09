@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/function.6.test.php
+  codephp <?php
+
+  code : 
+      function literals a arglist(affectation variable $b  "=" functioncall 360 "array" ( arglist(literals 1, keyvalue literals 2 => functioncall 360 "array" ( arglist(literals 3, literals 2) ) , literals 3) ) )
+          block 
+          0 : 
+              functioncall print_r
+              function call : 307 "print_r": 
+                  arglist 
+                  0 : 
+                      variable $b

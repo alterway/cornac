@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/function.8.test.php
+  codephp <?php
+
+  code : 
+      function literals a arglist(affectation variable $x  "=" _constant null, affectation variable $y  "=" _constant true)
+          block 

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/noscream.1.test.php
+  codephp <?php
+
+  code : 
+      noscream @
+          variable $x

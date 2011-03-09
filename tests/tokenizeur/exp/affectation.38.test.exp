@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/affectation.38.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          noscream @
+              _array
+                  _array
+                      variable $a
+                      variable $b
+                  variable $c
+      273 ".=" 
+      right : 
+          variable $d

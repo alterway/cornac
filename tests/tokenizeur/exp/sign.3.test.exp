@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/sign.3.test.php
+  codephp <?php
+
+  code : 
+      sign  "-"functioncall 307 "f" ( arglist(literals 1) ) 
+          functioncall f
+          function call : 307 "f": 
+              arglist 
+              0 : 
+                  literals 1

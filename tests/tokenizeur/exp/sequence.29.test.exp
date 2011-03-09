@@ -1,0 +1,37 @@
+tests/tokenizeur/scripts/sequence.29.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $s
+           "=" 
+          right : 
+              not !
+                  ternaryop ?
+                  comparison functioncall 307 "intval" ( arglist(functioncall 307 "substr" ( arglist(variable $a, literals 1, literals 2) ) ) )   ">" literals 12 ? literals c : literals d
+                      comparison 
+                      left : 
+                          functioncall intval
+                          function call : 307 "intval": 
+                              arglist 
+                              0 : 
+                                  functioncall substr
+                                  function call : 307 "substr": 
+                                      arglist 
+                                      0 : 
+                                          variable $a
+                                      1 : 
+                                          literals 1
+                                      2 : 
+                                          literals 2
+                      operateur :  ">"
+                      right : 
+                          literals 12
+                      literals c
+                      literals d
+      1 : 
+          _break 
+          Number : " "1""

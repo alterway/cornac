@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/codephp.24.test.php
+  codephp <?
+  code : 
+      sequence 
+      0 : 
+          _constant (          php )
+      1 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  literals 2

@@ -1,0 +1,89 @@
+tests/tokenizeur/scripts/ternaryop.20.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $_tag
+           "=" 
+          right : 
+              ternaryop ?
+              method variable $x->functioncall 307 "y" ( ( ) )  ? method variable $x->functioncall 307 "z" ( ( ) )  : literals literal
+                  method variable $x
+                  method call : functioncall 307 "y" ( ( ) ) : 
+                      functioncall y
+                      function call : 307 "y": 
+                          arglist 
+                          Empty arglist
+                  method variable $x
+                  method call : functioncall 307 "z" ( ( ) ) : 
+                      functioncall z
+                      function call : 307 "z": 
+                          arglist 
+                          Empty arglist
+                  literals literal
+      1 : 
+          rawtext 
+          Texte : "311 "<""
+      2 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  variable $x
+      3 : 
+          rawtext 
+          Texte : "311 " id="""
+      4 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  method variable $x
+                  method call : functioncall 307 "w" ( ( ) ) : 
+                      functioncall w
+                      function call : 307 "w": 
+                          arglist 
+                          Empty arglist
+      5 : 
+          rawtext 
+          Texte : "311 "" ""
+      6 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  method variable $z
+                  method call : functioncall 307 "d" ( ( ) ) : 
+                      functioncall d
+                      function call : 307 "d": 
+                          arglist 
+                          Empty arglist
+      7 : 
+          rawtext 
+          Texte : "311 ">
+""
+      8 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  method variable $x
+                  method call : functioncall 307 "x" ( ( ) ) : 
+                      functioncall x
+                      function call : 307 "x": 
+                          arglist 
+                          Empty arglist
+      9 : 
+          rawtext 
+          Texte : "311 "</""
+      10 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  variable $x
+  rawtext 
+  Texte : "311 ">""

@@ -1,0 +1,34 @@
+tests/tokenizeur/scripts/static.3.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+           class 307 "c"
+              block 
+      1 : 
+           class 307 "b" extends 307 "c"
+              block 
+              0 : 
+                  function literals __construct arglist(variable $x, variable $y)
+                      block 
+              1 : 
+                  function literals m ( )
+                      block 
+                      0 : 
+                          affectation 
+                          left : 
+                              variable $y
+                           "=" 
+                          right : 
+                               new 307 "self" arglist(literals 1) 
+                      1 : 
+                          affectation 
+                          left : 
+                              variable $x
+                           "=" 
+                          right : 
+                               new 347 "static" ( ) 
+      2 : 
+           class 307 "a" extends 307 "b"
+              block 

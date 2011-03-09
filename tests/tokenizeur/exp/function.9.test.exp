@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/function.9.test.php
+  codephp <?php
+
+  code : 
+      function literals x arglist(variable $a, affectation variable $b  "=" sign  "-"literals 1, affectation variable $b  "=" literals 0)
+          block 

@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+           new variable variable $classe ( ) 

@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/noscream.2.test.php
+  codephp <?php
+
+  code : 
+      noscream @
+          functioncall x
+          function call : 307 "x": 
+              arglist 
+              Empty arglist

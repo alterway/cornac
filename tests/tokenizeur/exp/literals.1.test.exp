@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/literals.1.test.php
+  codephp <?php
+
+  code : 
+      literals 1

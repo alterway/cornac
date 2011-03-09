@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/codephp.15.test.php
+  codephp <?php 
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              property variable $langliterals forum->

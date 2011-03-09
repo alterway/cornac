@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/class.13.test.php
+  codephp <?php
+
+  code : 
+       class 307 "x"
+          block 
+          0 : 
+               348 "var"variable $x = functioncall 360 "array" ( ( ) ) 

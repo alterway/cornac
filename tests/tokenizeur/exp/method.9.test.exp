@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/method.9.test.php
+  codephp <?php
+
+  code : 
+      method variable $e
+      method call : functioncall concatenation literals namespace1:gt . literals 3 . literals 4   ( arglist(literals 1, literals 2) ) : 
+          functioncall .
+          function call : concatenation literals namespace1:gt . literals 3 . literals 4  : 
+              arglist 
+              0 : 
+                  literals 1
+              1 : 
+                  literals 2

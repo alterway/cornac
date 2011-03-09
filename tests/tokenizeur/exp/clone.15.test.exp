@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/clone.15.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          function literals c ( )
+              block 
+              0 : 
+                  _return 
+                  return : "_clone clone"
+      1 : 
+          function literals d ( )
+              block 

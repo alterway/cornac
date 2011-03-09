@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/constant.12.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "variable $e" )
+          block 
+          0 : 
+              rawtext 
+              Texte : "311 "a""
+          1 : 
+              _constant (              php )
+          2 : 
+              rawtext 
+              Texte : "311 "C""

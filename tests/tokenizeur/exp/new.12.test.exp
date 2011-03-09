@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/new.12.test.php
+  codephp <?php
+
+  code : 
+       new method_static 307 "self"::functioncall variable $a ( arglist() )  ( ) 

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/typehint.7.test.php
+  codephp <?php
+
+  code : 
+      function literals a arglist(typehint 360 "array" affectation reference &variable $b  "=" functioncall 360 "array" ( ( ) ) , typehint 360 "array" affectation reference &variable $c  "=" functioncall 360 "array" ( ( ) ) , typehint 360 "array" affectation reference &variable $b  "=" functioncall 360 "array" ( ( ) ) )
+          block 

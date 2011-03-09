@@ -1,0 +1,33 @@
+tests/tokenizeur/scripts/logical.51.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _static 
+              affectation 
+              left : 
+                  variable $a
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+      1 : 
+          logical 
+          left : 
+              functioncall isset
+              function call : 350 "isset": 
+                  arglist 
+                  0 : 
+                      _array
+                          variable $b
+                          literals c
+          operateur : 278 "||"
+          right : 
+              inclusion include
+                  literals d.php
+      2 : 
+          variable $e297 "++" 
+              variable $e

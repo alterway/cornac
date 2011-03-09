@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/class.2.test.php
+  codephp <?php
+
+  code : 
+       class 307 "x" extends 307 "y"
+          block 

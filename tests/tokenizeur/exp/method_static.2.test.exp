@@ -1,0 +1,39 @@
+tests/tokenizeur/scripts/method_static.2.test.php
+  codephp <?php
+
+  code : 
+      method_static 
+      variable $rech::functioncall 307 "fct_rech_pdt" ( arglist(literals 3, literals 1, literals 2, functioncall 360 "array" ( arglist(variable $select_cle3, variable $select_increment3) ) , functioncall 360 "array" ( arglist(variable $select_cle1, variable $select_increment1) ) , functioncall 360 "array" ( arglist(variable $select_cle2, variable $select_increment2) ) ) ) : 
+          functioncall fct_rech_pdt
+          function call : 307 "fct_rech_pdt": 
+              arglist 
+              0 : 
+                  literals 3
+              1 : 
+                  literals 1
+              2 : 
+                  literals 2
+              3 : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      0 : 
+                          variable $select_cle3
+                      1 : 
+                          variable $select_increment3
+              4 : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      0 : 
+                          variable $select_cle1
+                      1 : 
+                          variable $select_increment1
+              5 : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      0 : 
+                          variable $select_cle2
+                      1 : 
+                          variable $select_increment2

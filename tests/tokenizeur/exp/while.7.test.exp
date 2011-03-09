@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/while.7.test.php
+  codephp <?php
+
+  code : 
+      _while 
+          parenthesis 
+          ( "comparison preplusplus variable $a296 "--" 284 ">=" literals 0" )
+          block 
+          0 : 
+              _array
+                  variable $thi
+                  literals c

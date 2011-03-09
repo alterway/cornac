@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/property_static.10.test.php
+  codephp <?php
+
+  code : 
+      method method_static 307 "self"::functioncall 307 "a" ( ( ) ) 
+      method call : functioncall 307 "b" ( arglist(variable $c, variable $d) ) : 
+          functioncall b
+          function call : 307 "b": 
+              arglist 
+              0 : 
+                  variable $c
+              1 : 
+                  variable $d

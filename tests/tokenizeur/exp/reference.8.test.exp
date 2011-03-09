@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/reference.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $forms
+       "=" 
+      right : 
+          reference &
+              property_static 307 "self"::variable $_forms->

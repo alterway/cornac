@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/clone.3.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          _clone 
+              _array
+                  variable $y
+                  literals 0

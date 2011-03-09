@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/constant.2.test.php
+  codephp <?php
+
+  code : 
+      functioncall print
+      function call : 266 "print": 
+          arglist 
+          0 : 
+              _constant (              __CLASS__ )

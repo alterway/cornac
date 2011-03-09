@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/array.7.test.php
+  codephp <?php
+
+  code : 
+      _array
+          property variable $aliterals b->
+          concatenation 
+          0 : 
+              literals 
+          1 : 
+              property variable $cliterals d->
+          2 : 
+              literals 

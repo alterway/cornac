@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/rawtext.1.test.php
+  rawtext 
+  Texte : "311 "a""
+  codephp <?php 
+  code : 
+      literals 1
+  rawtext 
+  Texte : "311 "b""

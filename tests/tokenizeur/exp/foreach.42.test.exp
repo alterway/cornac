@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/foreach.42.test.php
+  codephp <?php
+
+  code : 
+      _foreach (property variable $a->literals b as  => variable $c)
+          block 
+          0 : 
+              _array
+                  property variable $thisliterals d->
+                  literals 3

@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/affectation.14.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          method variable $y
+          method call : functioncall 307 "z" ( ( ) ) : 
+              functioncall z
+              function call : 307 "z": 
+                  arglist 
+                  Empty arglist

@@ -1,0 +1,7 @@
+tests/tokenizeur/scripts/declare.9.test.php
+  codephp <?php
+
+  code : 
+      _declare 
+         ticks = literals 2
+         encoding = 

@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/property.20.test.php
+  codephp <?php
+
+  code : 
+      property property _array property property property variable $this->literals a->literals b->literals c[variable $f]->variable $dliterals e->

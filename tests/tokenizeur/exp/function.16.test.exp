@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/function.16.test.php
+  codephp <?php
+
+  code : 
+      function literals x arglist(typehint _constant StdClass affectation reference &variable $x  "=" _constant null, typehint _constant StdClass affectation reference &variable $b  "=" _constant null, typehint _constant StdClass affectation reference &variable $c  "=" _constant null)
+          block 

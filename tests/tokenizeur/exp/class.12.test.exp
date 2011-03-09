@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/class.12.test.php
+  codephp <?php
+
+  code : 
+       class 307 "x" extends 307 "y" implements 307 "z"
+          block 
+          0 : 
+               348 "var"variable $a
+          1 : 
+              function literals b ( )
+                  block 
+          2 : 
+               348 "var"variable $c
+          3 : 
+              function literals c ( )
+                  block 
+          4 : 
+               348 "var"variable $d

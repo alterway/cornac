@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/codephp.4.test.php
+  codephp <?php
+
+  code : 
+      rawtext 
+      Texte : "311 "  Espace vide  ""

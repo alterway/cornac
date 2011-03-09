@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/constant_static.5.test.php
+  codephp <?php
+
+  code : 
+      constant_static (      307 "parent"::_constant _constant )

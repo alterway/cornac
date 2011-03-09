@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/new.2.test.php
+  codephp <?php
+
+  code : 
+       new 307 "stdclass" arglist(literals 1) 

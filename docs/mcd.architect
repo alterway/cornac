@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="0.9.14">
+ <project-name>mcd</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" name="tokens" objectType="TABLE" physicalName="New_Table" remarks="This table holds the structure identified in the PHP scripts. " >
+   <folder id="FOL2" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL3" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_id_seq" defaultValue="" name="id" nullable="0" physicalName="" precision="10" primaryKeySeq="0" referenceCount="1" remarks="primary key for the tokens" scale="0" type="4" />
+    <column id="COL4" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_droite_seq" defaultValue="" name="droite" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="right (for the nested model representation)" scale="0" type="4" />
+    <column id="COL5" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_gauche_seq" defaultValue="" name="gauche" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="left (for the nested model representation)" scale="0" type="4" />
+    <column id="COL6" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_type_seq" defaultValue="" name="type" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="type of structure : variable, constante, tableau, _function, etc... " scale="0" type="12" />
+    <column id="COL7" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_code_seq" defaultValue="" name="code" nullable="0" physicalName="" precision="10000" referenceCount="1" remarks="PHP code itself (no comment nor white space)" scale="0" type="12" />
+    <column id="COL8" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_fichier_seq" defaultValue="" name="fichier" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="file hosting the code" scale="0" type="12" />
+    <column id="COL9" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_ligne_seq" defaultValue="" name="ligne" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="line number at which one can find the code" scale="0" type="4" />
+    <column id="COL10" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_scope_seq" defaultValue="" name="scope" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="scope (aka, function or method name) in which is executed the code. Empty is global scope, &apos;global&apos; is for class scope, outside method (for definition of properties or constantes...)" scale="0" type="4" />
+    <column id="COL11" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_class_seq" defaultValue="" name="class" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="class in which the code is executed. empty if global." scale="0" type="4" />
+    <column id="COL12" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_level_seq" defaultValue="" name="level" nullable="1" physicalName="" precision="10" referenceCount="1" remarks="Level of nesting. Based on blocks, loops and structures (functions, methods, classes), this helps gather direct sons of a node. " scale="0" type="4" />
+   </folder>
+   <folder id="FOL13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL14" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL15" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX16" populated="true" clustered="false" name="New_Table_pk" physicalName="New_Table_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC17" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL3" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB18" populated="true" name="tokens_tags" objectType="TABLE" physicalName="New_Table" remarks="This table holds direct links between large structure and their inside : like, the left and right (and operator) part of an assignation, which is faster to find through, rather than move along the tree in token." >
+   <folder id="FOL19" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL20" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_id_seq" defaultValue="" name="id" nullable="0" physicalName="" precision="10" primaryKeySeq="0" referenceCount="2" remarks="primary key. No value." scale="0" type="4" />
+    <column id="COL21" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_token_id_seq" defaultValue="" name="token_id" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="Main structure
+" scale="0" type="4" />
+    <column id="COL22" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_token_sub_id_seq" defaultValue="" name="token_sub_id" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="Sub-structure id, in tokens." scale="0" type="4" />
+    <column id="COL23" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_type_seq" defaultValue="" name="type" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="type of the relation. This depends on the structure itself : if will have conditions and thens and one else; while affectation will have left, right and operator. " scale="0" type="4" />
+   </folder>
+   <folder id="FOL24" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL25" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL26" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX27" populated="true" clustered="false" name="New_Table_pk" physicalName="New_Table_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC28" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL20" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB29" populated="true" name="tokens_rapport" objectType="TABLE" physicalName="New_Table" remarks="Report values, that will be displayed to the developpers." >
+   <folder id="FOL30" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL31" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_id_seq" defaultValue="" name="id" nullable="0" physicalName="" precision="10" primaryKeySeq="0" referenceCount="1" remarks="primary key. No value." scale="0" type="4" />
+    <column id="COL32" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_fichier_seq" defaultValue="" name="fichier" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="name of the file, to whom belong the token" scale="0" type="12" />
+    <column id="COL33" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_element_seq" defaultValue="" name="element" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="PHP code, descriptive of the current structure. This may be a straight value from tokens.code, or a larger structure (usually, extracted from tokens_cache)." scale="0" type="4" />
+    <column id="COL34" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_token_id_seq" defaultValue="" name="token_id" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="Id of the representing token, in tokens." scale="0" type="4" />
+    <column id="COL35" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_module_seq" defaultValue="" name="module" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="name of the analyzer used to build this report. Will be flushed if we run again auditeur.php." scale="0" type="4" />
+   </folder>
+   <folder id="FOL36" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL37" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL38" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX39" populated="true" clustered="false" name="New_Table_pk" physicalName="New_Table_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC40" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL31" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB41" populated="true" name="tokens_rapport_dot" objectType="TABLE" physicalName="New_Table" remarks="Report, when they are a dot structure (class_hierarchie, inclusion...)" >
+   <folder id="FOL42" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL43" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_a_seq" defaultValue="" name="a" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="origin" scale="0" type="12" />
+    <column id="COL44" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_b_seq" defaultValue="" name="b" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="destination" scale="0" type="12" />
+    <column id="COL45" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_cluster_seq" defaultValue="" name="cluster" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="if it must be gather with other values (think folder for files). Leave empty if not understood." scale="0" type="4" />
+    <column id="COL46" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_module_seq" defaultValue="" name="module" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="analyzer producing these values." scale="0" type="4" />
+   </folder>
+   <folder id="FOL47" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL48" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL49" populated="true" name="Indices" physicalName="Indices" type="4" >
+   </folder>
+  </table>
+  <table id="TAB50" populated="true" name="tokens_rapport_module" objectType="TABLE" physicalName="New_Table" remarks="List of analyzer having been ran, and whose resultats are in tokens_report and tokens_report_dot" >
+   <folder id="FOL51" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL52" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_module_seq" defaultValue="" name="module" nullable="0" physicalName="" precision="10" primaryKeySeq="0" referenceCount="1" remarks="Name of the analyzer" scale="0" type="12" />
+    <column id="COL53" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_fait_seq" defaultValue="" name="fait" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="Date of last update." scale="0" type="91" />
+    <column id="COL54" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_format_seq" defaultValue="" name="format" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="normal (tokens_rapport) or dot (tokens_rapport_dot). May be used to reach new tables for distinct report format." scale="0" type="4" />
+   </folder>
+   <folder id="FOL55" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL56" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL57" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX58" populated="true" clustered="false" name="New_Table_pk" physicalName="New_Table_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC59" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL52" name="module" physicalName="module" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB60" populated="true" name="tokens_cache" objectType="TABLE" physicalName="New_Table" remarks="PHP code cache
+" >
+   <folder id="FOL61" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL62" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_id_seq" defaultValue="" name="id" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="primary key from tokens." scale="0" type="4" />
+    <column id="COL63" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_code_seq" defaultValue="" name="code" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="PHP code representing a token value." scale="0" type="12" />
+    <column id="COL64" populated="true" autoIncrement="false" autoIncrementSequenceName="New_Table_fichier_seq" defaultValue="" name="fichier" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="File hosting the code. " scale="0" type="12" />
+   </folder>
+   <folder id="FOL65" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL66" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL67" populated="true" name="Indices" physicalName="Indices" type="4" >
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL68" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB18" fkCardinality="7" identifying="true" name="New_Table_New_Table_fk" physicalName="New_Table_New_Table_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP69" populated="true" fk-column-ref="COL21" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL3" />
+   </relationship>
+   <reference ref-id="REL68" />
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="71" y="50" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB18" x="380" y="52" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB29" x="104" y="462" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB41" x="248" y="461" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB50" x="313" y="338" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB60" x="266" y="182" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="" pk-x="151" pk-y="30" fk-x="0" fk-y="65" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL68" pk-x="151" pk-y="28" fk-x="0" fk-y="52" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+ </play-pen>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>

@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/keyvalue.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          functioncall array
+          function call : 360 "array": 
+              arglist 
+              0 : 
+                  literals a => _array variable $b[variable $c]
+                      literals a
+                      _array
+                          variable $b
+                          variable $c

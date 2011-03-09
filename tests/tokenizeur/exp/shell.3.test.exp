@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/shell.3.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          functioncall strtolower
+          function call : 307 "strtolower": 
+              arglist 
+              0 : 
+                  shell 
+                  0 : 
+                      variable property variable $file->literals x
+                  1 : 
+                      literals  sf 

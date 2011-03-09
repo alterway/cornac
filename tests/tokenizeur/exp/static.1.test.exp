@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/static.1.test.php
+  codephp <?php
+
+  code : 
+      _static 
+          variable $browser

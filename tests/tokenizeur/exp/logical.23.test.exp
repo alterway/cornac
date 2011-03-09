@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/logical.23.test.php
+  codephp <?php
+
+  code : 
+      logical 
+      left : 
+          _array
+              _array
+                  _array
+                      variable $a
+                      literals b
+                  property variable $dliterals e->
+              literals f
+      operateur :  "&"
+      right : 
+          property variable $gliterals h->

@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/constant_class.6.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          constant_class           _constant SORT_Asc = literals 1 
+      1 : 
+          constant_class           _constant SORT_Desc = sign  "-"literals 1 

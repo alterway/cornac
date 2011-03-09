@@ -1,0 +1,42 @@
+tests/tokenizeur/scripts/foreach.12.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _foreach (variable $escape as  => variable $probe)
+              block 
+              0 : 
+                  affectation 
+                  left : 
+                      variable $pattern
+                   "=" 
+                  right : 
+                      functioncall str_replace
+                      function call : 307 "str_replace": 
+                          arglist 
+                          0 : 
+                              variable $probe
+                          1 : 
+                              concatenation 
+                              0 : 
+                                  literals \\
+                              1 : 
+                                  variable $probe
+                          2 : 
+                              variable $pattern
+      1 : 
+          affectation 
+          left : 
+              variable $pattern
+           "=" 
+          right : 
+              functioncall str_replace
+              function call : 307 "str_replace": 
+                  arglist 
+                  0 : 
+                      literals ?*
+                  1 : 
+                      literals *
+                  2 : 
+                      variable $x

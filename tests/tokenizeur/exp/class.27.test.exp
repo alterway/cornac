@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/class.27.test.php
+  codephp <?php
+
+  code : 
+       class 307 "x"
+          block 
+          0 : 
+              342 "public"347 "static"function literals a arglist(reference &variable $x)
+                  block 
+          1 : 
+              344 "private"347 "static"function literals b arglist(reference &variable $x)
+                  block 
+          2 : 
+              343 "protected"347 "static"function literals c arglist(reference &variable $x)
+                  block 

@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/property.11.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          property method _array property variable $b->literals c[literals 0]->functioncall 307 "d" ( ( ) ) literals e->

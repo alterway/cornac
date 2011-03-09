@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/clone.6.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          _clone 
+              functioncall y
+              function call : 307 "y": 
+                  arglist 
+                  Empty arglist

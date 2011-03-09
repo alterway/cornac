@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/while.14.test.php
+  codephp <?php
+
+  code : 
+      _dowhile 
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $a
+               "=" 
+              right : 
+                  functioncall sha1
+                  function call : 307 "sha1": 
+                      arglist 
+                      0 : 
+                          functioncall microtime
+                          function call : 307 "microtime": 
+                              arglist 
+                              Empty arglist
+          parenthesis 
+          ( "functioncall 307 "file_exists" ( arglist(concatenation variable $c . variable $d  ) ) " )

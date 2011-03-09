@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/inclusion.14.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          inclusion include
+              literals a.php
+      1 : 
+          rawtext 
+          Texte : "311 """
+      2 : 
+          inclusion include
+              literals b.php
+      3 : 
+          rawtext 
+          Texte : "311 "
+""
+      4 : 
+          functioncall html_page_bottom1
+          function call : 307 "html_page_bottom1": 
+              arglist 
+              0 : 
+                  literals 1

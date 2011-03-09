@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/sequence.39.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          variable $a
+      1 : 
+          rawtext 
+          Texte : "311 "b""
+      2 : 
+          functioncall d
+          function call : 307 "d": 
+              arglist 
+              0 : 
+                  literals c

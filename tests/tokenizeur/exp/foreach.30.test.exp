@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/foreach.30.test.php
+  codephp <?php
+
+  code : 
+      _foreach (variable $a as variable $b => variable $c)
+          block 
+          0 : 
+              _continue "2" 

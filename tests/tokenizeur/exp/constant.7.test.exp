@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/constant.7.test.php
+  codephp <?php
+
+  code : 
+      ternaryop ?
+      variable $x ? constant_static 307 "a"::_constant b : constant_static 307 "c"::_constant d
+          variable $x
+          constant_static (          307 "a"::_constant b )
+          constant_static (          307 "c"::_constant d )

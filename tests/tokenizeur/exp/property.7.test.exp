@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/property.7.test.php
+  codephp <?php
+
+  code : 
+      concatenation 
+      0 : 
+          property property method_static 307 "classe"::functioncall 307 "method" ( ( ) ) ->literals property1literals property2->
+      1 : 
+          literals 3

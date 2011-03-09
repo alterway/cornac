@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/foreach.31.test.php
+  codephp <?php
+
+  code : 
+      _foreach (method_static 307 "a"::functioncall 307 "b" ( arglist(variable $c, variable $c) )  as  => variable $d)
+          block 
+          0 : 
+              variable $i297 "++" 
+                  variable $i

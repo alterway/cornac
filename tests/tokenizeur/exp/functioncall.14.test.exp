@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/functioncall.14.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              literals oui
+          1 : 
+              literals 1

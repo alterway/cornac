@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/break.3.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "not !" )
+          block 
+          0 : 
+              _break 
+              Number : " "2""

@@ -1,0 +1,25 @@
+tests/tokenizeur/scripts/logical.43.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _global 
+          0 : 
+              variable $global
+      1 : 
+          logical 
+          left : 
+              method_static 
+              307 "Classe"::functioncall 307 "method" ( ( ) ) : 
+                  functioncall method
+                  function call : 307 "method": 
+                      arglist 
+                      Empty arglist
+          operateur : 263 "or"
+          right : 
+              functioncall functioncall
+              function call : 307 "functioncall": 
+                  arglist 
+                  0 : 
+                      literals args

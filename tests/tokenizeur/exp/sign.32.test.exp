@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/sign.32.test.php
+  codephp <?php
+
+  code : 
+      comparison 
+      left : 
+          functioncall _array variable $a[literals b]
+          function call : _array variable $a[literals b]: 
+              arglist 
+              0 : 
+                  variable $c
+              1 : 
+                  sign  "-"functioncall _array variable $d[literals e] ( arglist(variable $f) ) 
+                      functioncall _array variable $d[literals e]
+                      function call : _array variable $d[literals e]: 
+                          arglist 
+                          0 : 
+                              variable $f
+      operateur : 281 "==="
+      right : 
+          variable $g

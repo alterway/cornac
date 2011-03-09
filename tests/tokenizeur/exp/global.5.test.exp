@@ -1,0 +1,7 @@
+tests/tokenizeur/scripts/global.5.test.php
+  codephp <?php
+
+  code : 
+      _global 
+      0 : 
+          variable $x

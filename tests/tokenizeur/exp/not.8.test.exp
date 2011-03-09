@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/not.8.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "logical not ! 278 "||" not !" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $b
+               "=" 
+              right : 
+                  _constant (                  false )

@@ -1,0 +1,48 @@
+tests/tokenizeur/scripts/logical.9.test.php
+  codephp <?php
+
+  code : 
+      _switch 
+          parenthesis 
+          ( "_constant TYPE_DOC" )
+          block 
+          0 : 
+              _case 
+                  literals facture
+                  block 
+                  0 : 
+                      functioncall echo
+                      function call : 316 "echo": 
+                          arglist 
+                          0 : 
+                              _array
+                                  variable $LANG_ACTION
+                                  literals dateecheance
+                  1 : 
+                      _break 
+                      Number : " "1""
+          1 : 
+              _case 
+                  logical 
+                  left : 
+                      logical 
+                      left : 
+                          literals devis
+                      operateur : 278 "||"
+                      right : 
+                          literals commande
+                  operateur : 278 "||"
+                  right : 
+                      literals avoir
+                  block 
+                  0 : 
+                      functioncall echo
+                      function call : 316 "echo": 
+                          arglist 
+                          0 : 
+                              _array
+                                  variable $LANG_ACTION
+                                  literals limitevalidite
+                  1 : 
+                      _break 
+                      Number : " "1""

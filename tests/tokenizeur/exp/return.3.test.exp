@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/return.3.test.php
+  codephp <?php
+
+  code : 
+      _return 
+      return : "operation variable $x  "+" literals 1"

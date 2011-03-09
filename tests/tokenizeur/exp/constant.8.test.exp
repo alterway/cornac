@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/constant.8.test.php
+  codephp <?php
+
+  code : 
+      method variable $d
+      method call : functioncall 307 "a" ( arglist(variable $x, ternaryop ?) ) : 
+          functioncall a
+          function call : 307 "a": 
+              arglist 
+              0 : 
+                  variable $x
+              1 : 
+                  ternaryop ?
+                  variable $b ? _constant null : variable $c
+                      variable $b
+                      _constant (                      null )
+                      variable $c

@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/invert.4.test.php
+  codephp <?php
+
+  code : 
+      functioncall error_reporting
+      function call : 307 "error_reporting": 
+          arglist 
+          0 : 
+              logical 
+              left : 
+                  functioncall error_reporting
+                  function call : 307 "error_reporting": 
+                      arglist 
+                      Empty arglist
+              operateur :  "&"
+              right : 
+                  invert ~
+                      _constant (                      E_STRICT )

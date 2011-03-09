@@ -1,0 +1,28 @@
+tests/tokenizeur/scripts/logical.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          logical 
+          left : 
+              method _array variable $b[literals c]
+              method call : functioncall 307 "d" ( arglist(_array variable $e[literals 0]) ) : 
+                  functioncall d
+                  function call : 307 "d": 
+                      arglist 
+                      0 : 
+                          _array
+                              variable $e
+                              literals 0
+          operateur : 263 "or"
+          right : 
+              method _array variable $f[literals g]
+              method call : functioncall 307 "h" ( ( ) ) : 
+                  functioncall h
+                  function call : 307 "h": 
+                      arglist 
+                      Empty arglist

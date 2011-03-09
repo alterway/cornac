@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/while.11.test.php
+  codephp <?php
+
+  code : 
+      _while 
+          parenthesis 
+          ( "comparison variable $a  ">" operation variable $b  "*" preplusplus variable $d297 "++"" )
+          block 

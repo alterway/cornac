@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/functioncall.33.test.php
+  codephp <?php
+
+  code : 
+      functioncall $x
+      function call : variable $x: 
+          arglist 
+          0 : 
+              variable $y

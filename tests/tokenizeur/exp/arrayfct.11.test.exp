@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/arrayfct.11.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          functioncall array
+          function call : 360 "array": 
+              arglist 
+              0 : 
+                  literals a
+              1 : 
+                  literals b
+              2 : 
+                  literals )
+              3 : 
+                  literals }
+              4 : 
+                  literals {
+              5 : 
+                  literals (

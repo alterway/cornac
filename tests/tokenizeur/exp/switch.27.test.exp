@@ -1,0 +1,23 @@
+tests/tokenizeur/scripts/switch.27.test.php
+  codephp <?php
+
+  code : 
+      _switch 
+          parenthesis 
+          ( "variable $a" )
+          block 
+          0 : 
+              _case 
+                  literals 0
+                  block 
+          1 : 
+              _case 
+                  literals 2
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $b
+                       "=" 
+                      right : 
+                          literals c

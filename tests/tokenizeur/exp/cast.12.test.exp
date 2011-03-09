@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/cast.12.test.php
+  codephp <?php
+
+  code : 
+      _return 
+      return : "cast (string)"

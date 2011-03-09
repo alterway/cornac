@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/block.10.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "variable $j" )
+          block 
+          0 : 
+              rawtext 
+              Texte : "311 "
+""
+          1 : 
+              variable $x
+          2 : 
+              rawtext 
+              Texte : "311 "
+""

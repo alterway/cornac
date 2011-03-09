@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/comparison.7.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison property_static 307 "self"::_array variable $a[literals b]  ">" literals 0" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  _array
+                      variable $c
+                      literals d
+               "=" 
+              right : 
+                  property_static 307 "e"::_array variable $f[literals g]->

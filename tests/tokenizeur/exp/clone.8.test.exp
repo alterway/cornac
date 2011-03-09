@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/clone.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          _clone 
+              property variable $yliterals z->

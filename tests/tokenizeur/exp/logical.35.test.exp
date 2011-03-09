@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/logical.35.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              logical 
+              left : 
+                  parenthesis 
+                  ( "literals 1" )
+              operateur :  "|"
+              right : 
+                  parenthesis 
+                  ( "comparison _array variable $a[literals b] 283 "==" literals " )

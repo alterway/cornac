@@ -1,0 +1,37 @@
+tests/tokenizeur/scripts/sequence.32.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          functioncall a
+          function call : 307 "a": 
+              arglist 
+              0 : 
+                  variable $b
+      1 : 
+          logical 
+          left : 
+              comparison 
+              left : 
+                  functioncall c
+                  function call : 307 "c": 
+                      arglist 
+                      0 : 
+                          variable $d
+              operateur : 282 "!="
+              right : 
+                  variable $e
+          operateur : 279 "&&"
+          right : 
+              functioncall f
+              function call : 307 "f": 
+                  arglist 
+                  0 : 
+                      literals g
+      2 : 
+          functioncall h
+          function call : 307 "h": 
+              arglist 
+              0 : 
+                  literals i

@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/arrayfct.5.test.php
+  codephp <?php
+
+  code : 
+      functioncall array
+      function call : 360 "array": 
+          arglist 
+          0 : 
+              literals 1 => literals 2
+                  literals 1
+                  literals 2

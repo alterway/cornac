@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/rawtext.12.test.php
+  codephp <?php
+
+  code : 
+      _foreach (property variable $this->literals data as variable $size => variable $source)
+          block 
+          0 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      method variable $this
+                      method call : functioncall 307 "escape" ( arglist(variable $source) ) : 
+                          functioncall escape
+                          function call : 307 "escape": 
+                              arglist 
+                              0 : 
+                                  variable $source
+          1 : 
+              rawtext 
+              Texte : "311 "|""
+          2 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      variable $size

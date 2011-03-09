@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/functioncall.40.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $histo_fct
+           "=" 
+          right : 
+              concatenation 
+              0 : 
+                  literals insert_histo_
+              1 : 
+                  variable $type_doc
+      1 : 
+          functioncall $histo_fct
+          function call : variable $histo_fct: 
+              arglist 
+              0 : 
+                  variable $cde_id
+              1 : 
+                  literals 1

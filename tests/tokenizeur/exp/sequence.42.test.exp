@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/sequence.42.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _array
+              variable $x
+              literals 0
+      1 : 
+          _array
+              variable $y
+              literals 1
+      2 : 
+          _array
+              variable $z
+              literals 2

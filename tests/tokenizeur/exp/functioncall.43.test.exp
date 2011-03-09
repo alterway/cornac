@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/functioncall.43.test.php
+  codephp <?php
+
+  code : 
+      functioncall PRINT
+      function call : 266 "PRINT": 
+          arglist 
+          0 : 
+              concatenation 
+              0 : 
+                  literals <b>
+              1 : 
+                  literals </b>

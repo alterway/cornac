@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/typehint.12.test.php
+  codephp <?php
+
+  code : 
+      function literals a arglist(typehint 380 "\"\307 "Exception" affectation variable $b  "=" _constant null)
+          block 

@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/codephp.11.test.php
+  codephp <?php 
+  code : 
+      sequence 
+      0 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  variable $x
+      1 : 
+          variable $y

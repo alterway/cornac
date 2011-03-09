@@ -1,0 +1,28 @@
+tests/tokenizeur/scripts/sign.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          functioncall substr
+          function call : 307 "substr": 
+              arglist 
+              0 : 
+                  variable $b
+              1 : 
+                  literals 0
+              2 : 
+                  operation 
+                  left : 
+                      sign  "-"functioncall 307 "strlen" ( arglist(variable $c) ) 
+                          functioncall strlen
+                          function call : 307 "strlen": 
+                              arglist 
+                              0 : 
+                                  variable $c
+                  operation :  "-"
+                  right : 
+                      literals 1

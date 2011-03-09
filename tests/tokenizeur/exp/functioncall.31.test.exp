@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/functioncall.31.test.php
+  codephp <?php
+
+  code : 
+      functioncall define
+      function call : 307 "define": 
+          arglist 
+          0 : 
+              literals TYPE_DOC
+          1 : 
+              _constant (              true )

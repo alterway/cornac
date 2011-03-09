@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/opappend.5.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property opappend [[]literals url->
+       "=" 
+      right : 
+          variable $file

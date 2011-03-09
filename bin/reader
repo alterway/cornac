@@ -1,0 +1,152 @@
+#!/usr/bin/env php
+<?php
+/*
+   +----------------------------------------------------------------------+
+   | Cornac, PHP code inventory                                           |
+   +----------------------------------------------------------------------+
+   | Copyright (c) 2010 - 2011                                            |
+   +----------------------------------------------------------------------+
+   | This source file is subject to version 3.01 of the PHP license,      |
+   | that is bundled with this package in the file LICENSE, and is        |
+   | available through the world-wide-web at the following url:           |
+   | http://www.php.net/license/3_01.txt                                  |
+   | If you did not receive a copy of the PHP license and are unable to   |
+   | obtain it through the world-wide-web, please send a note to          |
+   | license@php.net so we can mail you a copy immediately.               |
+   +----------------------------------------------------------------------+
+   | Author: Damien Seguy <damien.seguy@gmail.com>                        |
+   +----------------------------------------------------------------------+
+ */
+
+include('library/Cornac/Autoload.php');
+spl_autoload_register('Cornac_Autoload::autoload');
+
+// @synopsis : read options
+$options = array('help' => array('help' => 'display this help',
+                                 'option' => '?',
+                                 'compulsory' => false),
+                 'ini' => array('help' => 'configuration set or file',
+                                 'get_arg_value' => null,
+                                 'option' => 'I',
+                                 'compulsory' => true),
+                 'analyzer' => array('help' => 'analyzer',
+                                     'get_arg_value' => '',
+                                     'option' => 'a',
+                                     'compulsory' => false),
+// @todo limit to one folder?
+                 'file' => array('help' => 'limit report to this file',
+                                      'get_arg_value' => '',
+                                      'option' => 'f',
+                                      'compulsory' => false),
+                 'output' => array('help' => 'output folder (will be created anyway; default to stdout)',
+                                             'get_arg_value' => '',
+                                             'option' => 'o',
+                                             'compulsory' => false),
+                 'format' => array('help' => 'output format (default, xml, text or html)',
+                                             'get_arg_value' => 'xml',
+                                             'option' => 'F',
+                                             'compulsory' => false),
+                 );
+$OPTIONS = new Cornac_Options();
+$OPTIONS->setConfig($options);
+$OPTIONS->init();
+
+// @todo : check $format for values
+// @todo : check output for being a folder
+
+// @question : should options be constants?
+
+$OPTIONS->reader = $m = array('module' => $OPTIONS->analyzer,
+                         'file' => $OPTIONS->file,
+                         'output' => $OPTIONS->output,
+                         'format' => $OPTIONS->format);
+                         
+
+// validations
+// @todo validate this with the available classes in Cornac_Auditeur_Render
+$formats = array('xml','html','text','csv');
+if (empty($OPTIONS->reader['format']) || !in_array($OPTIONS->reader['format'], $formats)) {
+    print "Output format is needed (option -F) : ".join(', ', $formats)."\n";
+    print $OPTIONS->help();
+    die();
+}
+
+
+// @todo : support later
+//$summary = getOption($args, '-s', OPT_NO_VALUE, null);
+
+$DATABASE = new Cornac_Database();
+
+$query = 'SELECT * FROM <report_module> WHERE module='.$DATABASE->quote($OPTIONS->reader['module']);
+$res = $DATABASE->query($query);
+$row = $res->fetch();
+unset($res);
+
+// @todo check that all those columns are needed. 
+if (!$row) {
+    print "No module with name '{$OPTIONS->reader['module']}'. Aborting\n";
+    die();
+} elseif ($row['format'] == 'html') {
+    // @attention : should also support _dot reports
+    $query = 'SELECT * FROM <report> WHERE module='.$DATABASE->quote($OPTIONS->reader['module']);
+    if (!empty($OPTIONS->reader['file'])) {
+        $query .= ' AND file='.$DATABASE->quote($OPTIONS->reader['file']);
+    }
+} elseif ($row['format'] == 'text') {
+    // @attention : should also support _dot reports
+    $query = 'SELECT * FROM <report> WHERE module='.$DATABASE->quote($OPTIONS->reader['module']);
+    if (!empty($OPTIONS->reader['file'])) {
+        $query .= ' AND file='.$DATABASE->quote($OPTIONS->reader['file']);
+    }
+} elseif ($row['format'] == 'dot') {
+    // @attention : should also support _dot reports
+    $query = 'SELECT * FROM <report_dot> WHERE module='.$DATABASE->quote($OPTIONS->reader['module']);
+    // @todo file option is ignored here. This is normal. 
+} elseif ($row['format'] == 'attribute') {
+    $query = 'SELECT T1.file, TC.code AS element, T1.id FROM <report_attributes> TA
+    JOIN <tokens> T1
+        ON TA.id = T1.id
+    JOIN <tokens_cache> TC
+        ON TC.id = T1.id
+    WHERE `'.$OPTIONS->reader['module'].'` = "Yes"';
+    if (!empty($OPTIONS->reader['file'])) {
+        $query .= ' AND T1.file='.$DATABASE->quote($OPTIONS->reader['file']);
+    }
+} else {
+    print "Format '{$row['format']}' is not understood. Aborting\n";
+    die();
+}
+$res = $DATABASE->query($query);
+
+// @attention : should support -s for summaries.
+
+$class = "Cornac_Auditeur_Render_".ucfirst(strtolower($OPTIONS->reader['format']));
+
+$view = new $class($OPTIONS->reader['file']);
+
+// @bug : shouldn't be here. Options should be relayed directly, and the render class will pick the one it needs.
+if (get_class($view) == 'Render_html') {
+    $view->SetFolder($OPTIONS->reader['output']);
+}
+
+if (!$res) {
+    $result = $view->render(array());
+} else {
+    $rows = $res->fetchall(PDO::FETCH_ASSOC);
+    $result = $view->render($rows);
+}
+
+if (empty($OPTIONS->output)) {
+    print $result;
+} else {
+    $fp = @fopen($OPTIONS->output, 'w+');
+    if (is_resource($fp)) {
+        fwrite($fp, $result);
+        fclose($fp);
+        print "File written in '$OPTIONS->output'\n";
+    } else {
+        print "Couldn't open file for output : '$OPTIONS->output'\n";
+    }
+}
+
+?>

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/class.1.test.php
+  codephp <?php
+
+  code : 
+       class 307 "x"
+          block 

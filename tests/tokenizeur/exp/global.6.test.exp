@@ -1,0 +1,23 @@
+tests/tokenizeur/scripts/global.6.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _global 
+          0 : 
+              variable $a
+      1 : 
+          _global 
+          0 : 
+              variable $b
+      2 : 
+          rawtext 
+          Texte : "311 "c""
+      3 : 
+          method variable $d
+          method call : functioncall 307 "e" ( ( ) ) : 
+              functioncall e
+              function call : 307 "e": 
+                  arglist 
+                  Empty arglist

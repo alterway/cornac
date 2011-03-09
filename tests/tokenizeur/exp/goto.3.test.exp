@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/goto.3.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+           307 "cleanupCookie" : 
+      1 : 
+          GOTO 307 "cleanupCookie" 
+      2 : 
+          _switch 
+              parenthesis 
+              ( "variable $x" )
+              block 
+              0 : 
+                  _case 
+                      literals 1
+                      block 

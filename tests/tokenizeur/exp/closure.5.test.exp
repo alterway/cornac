@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/closure.5.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          function() using arglist(variable $a, variable $e) arglist(variable $b, variable $c, variable $d) 
+              arglist 
+              0 : 
+                  variable $a
+              1 : 
+                  variable $e
+              arglist 
+              0 : 
+                  variable $b
+              1 : 
+                  variable $c
+              2 : 
+                  variable $d

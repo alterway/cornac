@@ -1,0 +1,52 @@
+tests/tokenizeur/scripts/ifthen.29.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "literals 1" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1
+          1 : 
+              rawtext 
+              Texte : "311 "texte brut1
+""
+      Condition 1) 
+          parenthesis 
+          ( "literals 1" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $y
+               "=" 
+              right : 
+                  literals 2
+          1 : 
+              rawtext 
+              Texte : "311 "texte brut2
+
+""
+      Condition 2) 
+          parenthesis 
+          ( "literals 3" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $z
+               "=" 
+              right : 
+                  literals 2
+          1 : 
+              rawtext 
+              Texte : "311 "texte brut3
+
+""

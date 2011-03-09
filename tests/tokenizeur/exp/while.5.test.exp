@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/while.5.test.php
+  codephp <?php
+
+  code : 
+      _while 
+          parenthesis 
+          ( "affectation functioncall 359 "list" ( arglist(variable $key, variable $value) )   "=" functioncall 307 "each" ( arglist(variable $array) ) " )
+          block 
+          0 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      concatenation 
+                      0 : 
+                          variable $value
+                      1 : 
+                          literals \n

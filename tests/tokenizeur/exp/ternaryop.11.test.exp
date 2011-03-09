@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/ternaryop.11.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          _array
+              variable $a
+              ternaryop ?
+              parenthesis (variable $b) ? functioncall 307 "strtoupper" ( arglist(property variable $e->literals f) )  : property variable $e->literals f
+                  parenthesis 
+                  ( "variable $b" )
+                  functioncall strtoupper
+                  function call : 307 "strtoupper": 
+                      arglist 
+                      0 : 
+                          property variable $eliterals f->
+                  property variable $eliterals f->
+       "=" 
+      right : 
+          variable $f

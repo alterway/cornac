@@ -1,0 +1,63 @@
+tests/tokenizeur/scripts/foreach.3.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison property _array variable $_SESSION[literals cligraph]->literals nbtuples 283 "==" literals 0" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $date_mess_stock
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      Empty arglist
+       else 
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $i
+               "=" 
+              right : 
+                  literals 0
+          1 : 
+              _foreach (variable $result2 as  => variable $ligne)
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          _array
+                              variable $date_mess_stock
+                              variable $i
+                       "=" 
+                      right : 
+                          _array
+                              variable $ligne
+                              literals 0
+                  1 : 
+                      functioncall echo
+                      function call : 316 "echo": 
+                          arglist 
+                          0 : 
+                              concatenation 
+                              0 : 
+                                  literals <script language='javascript'>calend_valeur_stock[0][
+                              1 : 
+                                  variable $i
+                              2 : 
+                                  literals ]=\"
+                              3 : 
+                                  _array
+                                      variable $date_mess_stock
+                                      variable $i
+                              4 : 
+                                  literals \";</script>
+                  2 : 
+                      variable $i297 "++" 
+                          variable $i

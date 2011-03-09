@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/method.3.test.php
+  codephp <?php
+
+  code : 
+      method method variable $x->functioncall 307 "y" ( ( ) ) 
+      method call : functioncall 307 "z" ( ( ) ) : 
+          functioncall z
+          function call : 307 "z": 
+              arglist 
+              Empty arglist

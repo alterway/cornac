@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/use.8.test.php
+  codephp <?php
+
+  code : 
+      use 307 "Closure"

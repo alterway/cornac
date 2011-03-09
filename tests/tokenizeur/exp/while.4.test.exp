@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/while.4.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "literals 1" )
+              block 
+              0 : 
+                  literals 2
+      1 : 
+          _while 
+              parenthesis 
+              ( "literals 4" )
+              block 
+              0 : 
+                  literals 5

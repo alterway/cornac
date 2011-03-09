@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/operation.32.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          operation 
+          left : 
+              variable $b
+          operation :  "+"
+          right : 
+              operation 
+              left : 
+                  variable $c
+              operation :  "*"
+              right : 
+                  296 "--"variable $i 
+                      variable $i

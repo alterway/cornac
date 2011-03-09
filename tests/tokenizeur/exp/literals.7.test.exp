@@ -1,0 +1,26 @@
+tests/tokenizeur/scripts/literals.7.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              _array
+                  variable $r
+                  literals 0
+           "=" 
+          right : 
+              literals 1
+      1 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  concatenation 
+                  0 : 
+                      literals ABC
+                  1 : 
+                      _array
+                          variable $r
+                          literals 0

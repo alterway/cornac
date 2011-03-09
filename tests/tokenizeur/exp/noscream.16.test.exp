@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/noscream.16.test.php
+  codephp <?php
+
+  code : 
+      noscream @
+          _constant (          CONSTANTE )

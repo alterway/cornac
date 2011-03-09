@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/functioncall.55.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "not !" )
+          block 
+          0 : 
+              _return 
+              return : "_constant false"

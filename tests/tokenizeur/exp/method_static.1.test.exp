@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/method_static.1.test.php
+  codephp <?php
+
+  code : 
+      method_static 
+      variable $x::functioncall 307 "y" ( ( ) ) : 
+          functioncall y
+          function call : 307 "y": 
+              arglist 
+              Empty arglist

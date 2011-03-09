@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/logical.3.test.php
+  codephp <?php
+
+  code : 
+      logical 
+      left : 
+          literals 1
+      operateur : 264 "xor"
+      right : 
+          literals 2

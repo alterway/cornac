@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/function.12.test.php
+  codephp <?php
+
+  code : 
+      function literals test arglist(typehint 360 "array" variable $x)
+          block 
+          0 : 
+              _return 
+              return : "variable $x"

@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/sequence.20.test.php
+  codephp <?php
+
+  code : 
+       class 307 "a"
+          block 
+          0 : 
+              342 "public"function literals b ( )
+                  block 
+          1 : 
+              342 "public"function literals c ( )
+                  block 
+          2 : 
+              342 "public"function literals d arglist(affectation variable $x  "=" literals 2)
+                  block 
+          3 : 
+              342 "public"function literals e ( )
+                  block 
+          4 : 
+              342 "public"function literals f ( )
+                  block 
+          5 : 
+              342 "public"function literals g ( )
+                  block 

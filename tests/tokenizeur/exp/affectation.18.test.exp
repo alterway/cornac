@@ -1,0 +1,23 @@
+tests/tokenizeur/scripts/affectation.18.test.php
+  codephp <?php
+
+  code : 
+      function literals a ( )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $a
+               "=" 
+              right : 
+                  literals 1
+          1 : 
+              _foreach (variable $b as  => variable $c)
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $d
+                       "=" 
+                      right : 
+                          literals 2

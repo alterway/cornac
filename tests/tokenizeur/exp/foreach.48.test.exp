@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/foreach.48.test.php
+  codephp <?php
+
+  code : 
+      _foreach (property variable $adminTab->literals _includeVars as variable $var => variable $value)
+          block 
+          0 : 
+              affectation 
+              left : 
+                  property variable $adminTabvariable $var->
+               "=" 
+              right : 
+                  property variable $thisvariable $value->

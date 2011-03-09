@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/affectation.2.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          literals 1

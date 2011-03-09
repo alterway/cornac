@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/try.4.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _try 
+              block 
+          0 : 
+              _catch (307 "Exception")variable $e
+                  block 
+      1 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              literals 1

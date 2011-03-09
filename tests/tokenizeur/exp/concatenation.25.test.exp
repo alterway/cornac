@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/concatenation.25.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              literals &nbsp;(
+          1 : 
+              noscream @
+                  297 "++"_array variable $n[variable $boucle] 
+                      _array
+                          variable $n
+                          variable $boucle
+          2 : 
+              literals )

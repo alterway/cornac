@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/concatenation.21.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              literals a
+          1 : 
+              parenthesis 
+              ( "operation literals 1  "+" literals 1" )
+          2 : 
+              literals  b

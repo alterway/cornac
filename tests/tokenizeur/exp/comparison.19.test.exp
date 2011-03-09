@@ -1,0 +1,26 @@
+tests/tokenizeur/scripts/comparison.19.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "comparison variable $x 283 "==" literals 1" )
+              block 
+              0 : 
+                  functioncall echo
+                  function call : 316 "echo": 
+                      arglist 
+                      0 : 
+                          literals  Y
+      1 : 
+          rawtext 
+          Texte : "311 ">""
+      2 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  _constant (                  CONSTANT )

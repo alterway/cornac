@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/sign.18.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "logical comparison literals  283 "==" variable $a 279 "&&" comparison sign  "+"literals 1 283 "==" variable $b" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1

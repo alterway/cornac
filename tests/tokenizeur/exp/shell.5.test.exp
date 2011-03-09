@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/shell.5.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          shell 
+          0 : 
+              literals ls -la

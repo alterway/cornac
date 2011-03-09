@@ -1,0 +1,23 @@
+tests/tokenizeur/scripts/ternaryop.24.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+      273 ".=" 
+      right : 
+          not !
+              ternaryop ?
+              functioncall 351 "empty" ( arglist(property variable $b->literals c) )  ? property variable $d->literals e : concatenation literals . . property variable $f->literals g  
+                  functioncall empty
+                  function call : 351 "empty": 
+                      arglist 
+                      0 : 
+                          property variable $bliterals c->
+                  property variable $dliterals e->
+                  concatenation 
+                  0 : 
+                      literals .
+                  1 : 
+                      property variable $fliterals g->

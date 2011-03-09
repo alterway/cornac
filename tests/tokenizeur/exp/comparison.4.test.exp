@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/comparison.4.test.php
+  codephp <?php
+
+  code : 
+      comparison 
+      left : 
+          variable $x
+      operateur :  ">"
+      right : 
+          _array
+              variable $y
+              literals 1

@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/affectation.40.test.php
+  codephp <?php
+
+  code : 
+       class 307 "a"
+          block 
+          0 : 
+              342 "public"function literals __set arglist(variable $key, variable $value)
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          property property variable $this->literals valuevariable $key->
+                       "=" 
+                      right : 
+                          variable $value

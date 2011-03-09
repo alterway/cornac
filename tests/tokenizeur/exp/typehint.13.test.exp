@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/typehint.13.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          function literals a arglist(typehint _constant b reference &variable $c, reference &variable $d, reference &variable $e, reference &variable $f, typehint 360 "array" reference &variable $g)
+              block 
+      1 : 
+          function literals b arglist(typehint _constant b reference &variable $c, reference &variable $d, reference &variable $e, affectation variable $f  "=" literals 3, typehint 360 "array" affectation reference &variable $g  "=" functioncall 360 "array" ( ( ) ) )
+              block 
+      2 : 
+          function literals c arglist(typehint _constant b reference &variable $c, reference &variable $d, reference &variable $e, variable $f, typehint 360 "array" affectation reference &variable $g  "=" functioncall 360 "array" ( ( ) ) )
+              block 
+      3 : 
+          function literals d arglist(typehint _constant b reference &variable $c, reference &variable $d, reference &variable $e, typehint 360 "array" variable $f, typehint 360 "array" affectation reference &variable $g  "=" functioncall 360 "array" ( ( ) ) )
+              block 

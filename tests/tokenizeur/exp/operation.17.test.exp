@@ -1,0 +1,25 @@
+tests/tokenizeur/scripts/operation.17.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          functioncall strtolower
+          function call : 307 "strtolower": 
+              arglist 
+              0 : 
+                  _array
+                      variable $b
+                      operation 
+                      left : 
+                          functioncall count
+                          function call : 307 "count": 
+                              arglist 
+                              0 : 
+                                  variable $c
+                      operation :  "-"
+                      right : 
+                          literals 1

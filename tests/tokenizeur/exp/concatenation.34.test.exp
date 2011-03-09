@@ -1,0 +1,25 @@
+tests/tokenizeur/scripts/concatenation.34.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "variable $x" )
+              block 
+              0 : 
+                  variable $z297 "++" 
+                      variable $z
+           else 
+              block 
+              0 : 
+                  variable $x297 "++" 
+                      variable $x
+      1 : 
+          concatenation 
+          0 : 
+              literals a
+          1 : 
+              literals b

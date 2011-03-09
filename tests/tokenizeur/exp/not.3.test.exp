@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/not.3.test.php
+  codephp <?php
+
+  code : 
+      not !
+          _array
+              variable $x
+              literals 1

@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/block.2.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "functioncall 351 "empty" ( arglist(variable $r) ) " )
+          block 
+          0 : 
+              variable $i297 "++" 
+                  variable $i

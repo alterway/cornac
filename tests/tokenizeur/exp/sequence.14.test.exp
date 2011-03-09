@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/sequence.14.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          inclusion require_once
+              literals a.php
+      1 : 
+          method method_static 307 "b"::functioncall 307 "c" ( arglist(literals d) ) 
+          method call : functioncall 307 "e" ( ( ) ) : 
+              functioncall e
+              function call : 307 "e": 
+                  arglist 
+                  Empty arglist

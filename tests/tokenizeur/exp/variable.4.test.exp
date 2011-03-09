@@ -1,0 +1,7 @@
+tests/tokenizeur/scripts/variable.4.test.php
+  codephp <?php
+
+  code : 
+      _array
+          variable $_ENV
+          literals shell

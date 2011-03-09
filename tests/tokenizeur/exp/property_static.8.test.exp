@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/property_static.8.test.php
+  codephp <?php
+
+  code : 
+       class 307 "x"
+          block 
+          0 : 
+              342 "public"347 "static"function literals getCategoryCombinaisonClass ( )
+                  block 
+                  0 : 
+                      _return 
+                      return : "property_static 307 "parent"::variable $_categoryCombiClass"

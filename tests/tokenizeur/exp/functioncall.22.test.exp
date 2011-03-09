@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/functioncall.22.test.php
+  codephp <?php
+
+  code : 
+      functioncall empty
+      function call : 351 "empty": 
+          arglist 
+          0 : 
+              variable $x

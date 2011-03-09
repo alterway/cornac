@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/sign.5.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              concatenation 
+              0 : 
+                  sign  "-"literals a
+                      literals a
+              1 : 
+                  sign  "-"literals b
+                      literals b

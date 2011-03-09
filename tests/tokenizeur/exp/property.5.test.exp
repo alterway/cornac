@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/property.5.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          property variable $bconcatenation literals c . variable $d  ->

@@ -1,0 +1,34 @@
+tests/tokenizeur/scripts/method.8.test.php
+  rawtext 
+  Texte : "311 "TR ""
+  codephp <?php 
+  code : 
+      sequence 
+      0 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  method method method_static 307 "a"::functioncall 307 "b" ( ( ) ) ->functioncall 307 "c" ( ( ) ) 
+                  method call : functioncall 307 "d" ( ( ) ) : 
+                      functioncall d
+                      function call : 307 "d": 
+                          arglist 
+                          Empty arglist
+      1 : 
+          rawtext 
+          Texte : "311 " TR ""
+      2 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  method variable $c
+                  method call : functioncall 307 "get" ( arglist(literals d) ) : 
+                      functioncall get
+                      function call : 307 "get": 
+                          arglist 
+                          0 : 
+                              literals d
+  rawtext 
+  Texte : "311 " TR""

@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/foreach.25.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : literals 1;
+        End  : literals 2;
+        Incr : literals 3;
+          block 
+          0 : 
+              rawtext 
+              Texte : "311 """

@@ -1,0 +1,36 @@
+tests/tokenizeur/scripts/ternaryop.19.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          ternaryop ?
+          functioncall 351 "empty" ( arglist(variable $b) )  ? affectation variable $d 273 ".=" concatenation literals   . variable $e   : affectation variable $d 273 ".=" concatenation literals   . variable $e  
+              functioncall empty
+              function call : 351 "empty": 
+                  arglist 
+                  0 : 
+                      variable $b
+              affectation 
+              left : 
+                  variable $d
+              273 ".=" 
+              right : 
+                  concatenation 
+                  0 : 
+                      literals  
+                  1 : 
+                      variable $e
+              affectation 
+              left : 
+                  variable $d
+              273 ".=" 
+              right : 
+                  concatenation 
+                  0 : 
+                      literals  
+                  1 : 
+                      variable $e

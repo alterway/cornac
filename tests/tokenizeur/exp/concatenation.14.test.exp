@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/concatenation.14.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          literals 
+Oui
+
+

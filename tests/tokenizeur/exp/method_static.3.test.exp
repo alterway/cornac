@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/method_static.3.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          method method method_static 307 "b"::functioncall 307 "c" ( ( ) ) ->functioncall 307 "d" ( arglist(functioncall 360 "array" ( arglist(keyvalue literals e => functioncall 360 "array" ( arglist(keyvalue literals f => literals g) ) ) ) ) ) 
+          method call : functioncall 307 "h" ( ( ) ) : 
+              functioncall h
+              function call : 307 "h": 
+                  arglist 
+                  Empty arglist

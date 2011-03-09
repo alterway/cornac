@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.7.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+           new _array variable $t[literals 1] ( ) 

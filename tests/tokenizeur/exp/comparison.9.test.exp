@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/comparison.9.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison _constant false 281 "===" affectation variable $greeting  "=" functioncall 307 "coucou" ( arglist(literals 1) ) " )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1

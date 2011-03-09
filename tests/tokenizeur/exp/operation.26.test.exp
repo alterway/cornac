@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/operation.26.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              property variable $thisliterals a->
+          1 : 
+              literals -
+          2 : 
+              variable $b

@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/inclusion.6.test.php
+  codephp <?php
+
+  code : 
+      inclusion require_once
+          concatenation 
+          0 : 
+              literals literal
+          1 : 
+              literals autre

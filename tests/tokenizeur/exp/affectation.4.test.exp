@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/affectation.4.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          ternaryop ?
+          variable $b ? literals 1 : literals 2
+              variable $b
+              literals 1
+              literals 2

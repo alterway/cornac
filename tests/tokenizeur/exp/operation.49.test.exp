@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/operation.49.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          operation 
+          left : 
+              variable $b
+          operation :  "+"
+          right : 
+              method_static 
+              380 "\"\307 "c"::functioncall 307 "d" ( arglist(variable $e) ) : 
+                  functioncall d
+                  function call : 307 "d": 
+                      arglist 
+                      0 : 
+                          variable $e

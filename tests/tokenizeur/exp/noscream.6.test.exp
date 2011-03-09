@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/noscream.6.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          noscream @
+               new  "y" ( ) 

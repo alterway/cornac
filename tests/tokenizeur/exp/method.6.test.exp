@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/method.6.test.php
+  codephp <?php
+
+  code : 
+      method variable $rech
+      method call : functioncall 307 "fct_rech_pdt" ( arglist(literals 3, literals 1, literals 2) ) : 
+          functioncall fct_rech_pdt
+          function call : 307 "fct_rech_pdt": 
+              arglist 
+              0 : 
+                  literals 3
+              1 : 
+                  literals 1
+              2 : 
+                  literals 2

@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/cast.14.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          functioncall array_merge
+          function call : 307 "array_merge": 
+              arglist 
+              0 : 
+                  variable $b
+              1 : 
+                  cast (292 "(array)")functioncall variable $c ( arglist() ) 
+                      functioncall $c
+                      function call : variable $c: 
+                          arglist 
+                          0 : 

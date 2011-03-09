@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/foreach.38.test.php
+  codephp <?php
+
+  code : 
+      _foreach (cast (array) as variable $b => variable $c)
+          block 
+          0 : 
+              rawtext 
+              Texte : "311 "    ""
+          1 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      literals 1
+          2 : 
+              rawtext 
+              Texte : "311 """

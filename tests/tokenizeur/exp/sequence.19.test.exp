@@ -1,0 +1,69 @@
+tests/tokenizeur/scripts/sequence.19.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $sort
+           "=" 
+          right : 
+              parenthesis 
+              ( "ternaryop ?" )
+      1 : 
+          rawtext 
+          Texte : "311 """
+      2 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "not !" )
+              block 
+              0 : 
+                  affectation 
+                  left : 
+                      variable $sort
+                   "=" 
+                  right : 
+                      functioncall array
+                      function call : 360 "array": 
+                          arglist 
+                          0 : 
+                              variable $sort
+                          1 : 
+                              literals asc
+      3 : 
+          rawtext 
+          Texte : "311 "    return array('""
+      4 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  _array
+                      variable $sort
+                      literals 0
+      5 : 
+          rawtext 
+          Texte : "311 "', '""
+      6 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  ternaryop ?
+                  functioncall 350 "isset" ( arglist(_array variable $sort[literals 1]) )  ? _array variable $sort[literals 1] : literals asc
+                      functioncall isset
+                      function call : 350 "isset": 
+                          arglist 
+                          0 : 
+                              _array
+                                  variable $sort
+                                  literals 1
+                      _array
+                          variable $sort
+                          literals 1
+                      literals asc
+  rawtext 
+  Texte : "311 "');""

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/inclusion.7.test.php
+  codephp <?php
+
+  code : 
+      inclusion require_once
+          variable $var

@@ -1,0 +1,34 @@
+tests/tokenizeur/scripts/sequence.17.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $number
+           "=" 
+          right : 
+              logical 
+              left : 
+                  logical 
+                  left : 
+                      parenthesis 
+                      ( "bitshift functioncall 307 "ord" ( arglist(_array variable $data[preplusplus variable $index297 "++"]) )   287 "<<"  literals 16 " )
+                  operateur :  "|"
+                  right : 
+                      parenthesis 
+                      ( "bitshift functioncall 307 "ord" ( arglist(_array variable $data[preplusplus variable $index297 "++"]) )   287 "<<"  literals 8 " )
+              operateur :  "|"
+              right : 
+                  functioncall ord
+                  function call : 307 "ord": 
+                      arglist 
+                      0 : 
+                          _array
+                              variable $data
+                              297 "++"variable $index 
+                                  variable $index
+      1 : 
+          _return 
+          return : "variable $number"

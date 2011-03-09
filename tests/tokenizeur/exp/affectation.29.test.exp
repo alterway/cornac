@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/affectation.29.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          constant_static (          307 "Y"::_constant C )

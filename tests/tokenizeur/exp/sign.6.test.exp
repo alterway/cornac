@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/sign.6.test.php
+  codephp <?php
+
+  code : 
+      comparison 
+      left : 
+          literals 1
+      operateur : 283 "=="
+      right : 
+          sign  "-"literals 1
+              literals 1

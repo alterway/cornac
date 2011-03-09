@@ -1,0 +1,26 @@
+tests/tokenizeur/scripts/sign.26.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              sign  "-"cast (int)
+                  cast (295 "(int)")variable $y
+                      variable $y
+      1 : 
+          affectation 
+          left : 
+              variable $z
+           "=" 
+          right : 
+              sign  "-"functioncall 307 "strtolower" ( arglist(variable $a) ) 
+                  functioncall strtolower
+                  function call : 307 "strtolower": 
+                      arglist 
+                      0 : 
+                          variable $a

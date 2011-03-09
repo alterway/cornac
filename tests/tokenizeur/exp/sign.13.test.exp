@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/sign.13.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          sign  "-"parenthesis (operation literals 1  "+" literals 2)
+              parenthesis 
+              ( "operation literals 1  "+" literals 2" )

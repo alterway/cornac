@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/affectation.16.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $select_increment1
+       "=" 
+      right : 
+          functioncall substr
+          function call : 307 "substr": 
+              arglist 
+              0 : 
+                  variable $select_increment1
+              1 : 
+                  literals 1
+              2 : 
+                  operation 
+                  left : 
+                      functioncall strlen
+                      function call : 307 "strlen": 
+                          arglist 
+                          0 : 
+                              variable $select_increment1
+                  operation :  "-"
+                  right : 
+                      literals 1

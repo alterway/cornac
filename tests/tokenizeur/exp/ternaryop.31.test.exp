@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/ternaryop.31.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          ternaryop ?
+          variable $b ? block { } : functioncall variable $c ( arglist(literals D) ) 
+              variable $b
+              block 
+              functioncall $c
+              function call : variable $c: 
+                  arglist 
+                  0 : 
+                      literals D

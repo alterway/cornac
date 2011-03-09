@@ -1,0 +1,30 @@
+tests/tokenizeur/scripts/rawtext.9.test.php
+  codephp <?php 
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "not !" )
+          block 
+          0 : 
+              rawtext 
+              Texte : "311 "<p style="border:1px solid black;padding:10px;">Tag créé (<a href="""
+          1 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      variable $tag
+          2 : 
+              rawtext 
+              Texte : "311 "">Link</a>)<br/><input type="text" value="
+""
+          3 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      variable $tag
+          4 : 
+              rawtext 
+              Texte : "311 "" readonly="true" style="width:400px;" /></p>""

@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/logical.41.test.php
+  codephp <?php
+
+  code : 
+      logical 
+      left : 
+          functioncall die
+          function call : 300 "die": 
+              arglist 
+              0 : 
+                  literals 1
+      operateur :  "|"
+      right : 
+          parenthesis 
+          ( "comparison _array variable $a[literals b] 283 "==" literals " )

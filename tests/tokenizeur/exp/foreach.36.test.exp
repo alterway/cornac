@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/foreach.36.test.php
+  codephp <?php
+
+  code : 
+      _foreach (variable $feed as  => variable $entry)
+          block 

@@ -1,0 +1,7 @@
+tests/tokenizeur/scripts/variable.5.test.php
+  codephp <?php
+
+  code : 
+      concatenation 
+      0 : 
+          variable variable b

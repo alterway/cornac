@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/use.5.test.php
+  codephp <?php
+
+  code : 
+      use 307 "a"\307 "b"\307 "c"\307 "d" as 307 "e"

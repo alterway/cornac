@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/functioncall.1.test.php
+  codephp <?php
+
+  code : 
+      functioncall x
+      function call : 307 "x": 
+          arglist 
+          Empty arglist

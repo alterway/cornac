@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/property.10.test.php
+  codephp <?php
+
+  code : 
+      method method method method_static 307 "ProduitsRefsPrix"::functioncall 307 "Model" ( ( ) ) ->functioncall 307 "with" ( arglist(literals 1) ) ->functioncall 307 "together" ( ( ) ) 
+      method call : functioncall 307 "findAll" ( ( ) ) : 
+          functioncall findAll
+          function call : 307 "findAll": 
+              arglist 
+              Empty arglist

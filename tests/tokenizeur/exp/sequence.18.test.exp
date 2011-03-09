@@ -1,0 +1,41 @@
+tests/tokenizeur/scripts/sequence.18.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          noscream @
+              functioncall fwrite
+              function call : 307 "fwrite": 
+                  arglist 
+                  0 : 
+                      variable $fp
+                  1 : 
+                      literals 1
+      1 : 
+          noscream @
+              functioncall fwrite
+              function call : 307 "fwrite": 
+                  arglist 
+                  0 : 
+                      variable $fp
+                  1 : 
+                      literals 2
+      2 : 
+          noscream @
+              functioncall fwrite
+              function call : 307 "fwrite": 
+                  arglist 
+                  0 : 
+                      variable $fp
+                  1 : 
+                      literals 3
+      3 : 
+          noscream @
+              functioncall fclose
+              function call : 307 "fclose": 
+                  arglist 
+                  0 : 
+                      variable $fp
+                  1 : 
+                      literals 4

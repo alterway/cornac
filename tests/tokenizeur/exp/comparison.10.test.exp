@@ -1,0 +1,31 @@
+tests/tokenizeur/scripts/comparison.10.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "comparison functioncall variable $strlen ( arglist(variable $text) )   ">" variable $length" )
+              block 
+              0 : 
+                  affectation 
+                  left : 
+                      variable $x
+                   "=" 
+                  right : 
+                      literals 1
+      1 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "comparison parenthesis (variable $text)  ">" variable $length" )
+              block 
+              0 : 
+                  affectation 
+                  left : 
+                      variable $x
+                   "=" 
+                  right : 
+                      literals 1

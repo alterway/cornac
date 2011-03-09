@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/array.13.test.php
+  codephp <?php
+
+  code : 
+      property_static 307 "self"::_array variable _constant a[variable $b]->

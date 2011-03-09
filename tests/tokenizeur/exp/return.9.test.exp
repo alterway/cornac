@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/return.9.test.php
+  codephp <?php
+
+  code : 
+      _return 
+      return : "functioncall 360 "array" ( arglist(literals 1) ) "

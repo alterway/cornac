@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/rawtext.13.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  variable $b
+      1 : 
+          rawtext 
+          Texte : "311 "A""
+      2 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  variable $c

@@ -1,0 +1,23 @@
+tests/tokenizeur/scripts/while.10.test.php
+  codephp <?php
+
+  code : 
+      _while 
+          parenthesis 
+          ( "comparison postplusplus 296 "--"variable $a  ">" literals 0" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $b[]
+                      variable $b
+               "=" 
+              right : 
+                  concatenation 
+                  0 : 
+                      literals 
+                  1 : 
+                      _array
+                          variable $d
+                          variable $e297 "++" 
+                              variable $e

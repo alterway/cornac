@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/invert.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $mod
+      271 "&=" 
+      right : 
+          invert ~
+              method_static 
+              307 "y"::functioncall 307 "x" ( ( ) ) : 
+                  functioncall x
+                  function call : 307 "x": 
+                      arglist 
+                      Empty arglist

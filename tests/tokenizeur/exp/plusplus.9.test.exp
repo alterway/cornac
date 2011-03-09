@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/plusplus.9.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison literals 1 283 "==" operation postplusplus 297 "++"variable $i  "%" literals 2" )
+          block 
+          0 : 
+              _return 
+              return : "variable $a"

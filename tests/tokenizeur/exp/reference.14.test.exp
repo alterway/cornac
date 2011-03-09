@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/reference.14.test.php
+  codephp <?php
+
+  code : 
+      function literals a arglist(typehint 307 "b" variable $c, typehint 360 "array" reference &variable $d)
+          block 

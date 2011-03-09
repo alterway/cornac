@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/new.20.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+           class 307 "b"
+              block 
+      1 : 
+           class 307 "a" extends 307 "b"
+              block 
+              0 : 
+                  342 "public"347 "static"function literals d arglist(typehint 360 "array" variable $h)
+                      block 
+                      0 : 
+                          affectation 
+                          left : 
+                              variable $g
+                           "=" 
+                          right : 
+                               new 347 "static" arglist(_array variable $e[literals f]) 

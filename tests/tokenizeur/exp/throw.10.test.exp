@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/throw.10.test.php
+  codephp <?php
+
+  code : 
+      ternaryop ?
+      _throw variable $e ? variable $e : _new 
+          _throw 
+              variable $e
+          variable $e
+           new 307 "a" arglist(literals b) 

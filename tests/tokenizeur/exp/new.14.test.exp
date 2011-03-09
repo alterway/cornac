@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.14.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+           new _array variable $b[literals d.e] arglist(variable $f) 

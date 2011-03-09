@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/affectation.42.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $sort
+       "=" 
+      right : 
+          parenthesis 
+          ( "ternaryop ?" )

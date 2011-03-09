@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/sequence.41.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          variable $x
+      1 : 
+          variable $y
+      2 : 
+          variable $z

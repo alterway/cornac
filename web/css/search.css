@@ -1,0 +1,47 @@
+<style type="text/css">
+body, div, form, fieldset, input {
+	margin: 0; padding: 0; border: none; border: 0;
+}
+
+form {
+	border: 0 none;
+    margin: auto;
+    width: 242px;
+}
+
+#searchBar {
+	width: 205px; 
+	height:13px;
+	float: left;
+	background: url(../images/search.png) no-repeat top left;
+	font-size: 12px;
+	color: #696969;
+	border:none;
+	border: 0;
+	margin-right:5px;
+	padding: 5px 0 5px 5px;
+}	
+/*	#searchBar:hover, #searchBar.active {
+		background: #ebf3fc url(../images/bar-bg-active.png) repeat-x;
+		border: 3px solid #abd2ff;
+	}*/
+
+#searchButton {
+	width: 27px;
+	height: 23px;
+	float: left;
+	border:none;
+	border:0;
+	background: url(../images/ok_search.png);
+	text-indent: -9999px;
+	cursor: pointer;
+	
+}
+#searchButton:hover {
+	background-position: 0 -23px;
+	border:none;
+	border: 0;
+	}
+
+</style>
+

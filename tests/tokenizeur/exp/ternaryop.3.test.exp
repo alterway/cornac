@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/ternaryop.3.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $rech_ven
+       "=" 
+      right : 
+          ternaryop ?
+          functioncall 350 "isset" ( arglist(_array variable $_REQUEST[literals rech_ven]) )  ? _array variable $_REQUEST[literals rech_ven] : literals 
+              functioncall isset
+              function call : 350 "isset": 
+                  arglist 
+                  0 : 
+                      _array
+                          variable $_REQUEST
+                          literals rech_ven
+              _array
+                  variable $_REQUEST
+                  literals rech_ven
+              literals 

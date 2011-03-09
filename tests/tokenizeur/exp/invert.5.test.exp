@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/invert.5.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+      271 "&=" 
+      right : 
+          invert ~
+              literals 0444

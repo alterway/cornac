@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/ifthen.65.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "variable $s" )
+          block 
+       else 
+          block 
+          0 : 
+              method property variable $x->literals y
+              method call : functioncall 307 "f" ( ( ) ) : 
+                  functioncall f
+                  function call : 307 "f": 
+                      arglist 
+                      Empty arglist

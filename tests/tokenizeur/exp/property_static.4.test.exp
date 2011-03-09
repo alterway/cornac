@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/property_static.4.test.php
+  codephp <?php
+
+  code : 
+      property_static 307 "self"::_array variable $x[literals a]->

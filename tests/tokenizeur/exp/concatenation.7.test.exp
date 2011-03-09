@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/concatenation.7.test.php
+  codephp <?php
+
+  code : 
+      parenthesis 
+      ( "concatenation literals a . literals b  " )

@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/for.6.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : ;
+        End  : ;
+        Incr : ;
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              literals s

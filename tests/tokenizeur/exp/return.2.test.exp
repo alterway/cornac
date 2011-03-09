@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/return.2.test.php
+  codephp <?php
+
+  code : 
+      _return 
+      return : "variable $x"

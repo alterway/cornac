@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/namespace.1.test.php
+  codephp <?php
+
+  code : 
+      namespace 307 "a"

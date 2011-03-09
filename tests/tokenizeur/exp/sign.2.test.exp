@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/sign.2.test.php
+  codephp <?php
+
+  code : 
+      sign  "+"variable $x
+          variable $x

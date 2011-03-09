@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/sequence.7.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          functioncall print
+          function call : 266 "print": 
+              arglist 
+              0 : 
+                  literals 1
+      1 : 
+          functioncall print
+          function call : 266 "print": 
+              arglist 
+              0 : 
+                  literals 2

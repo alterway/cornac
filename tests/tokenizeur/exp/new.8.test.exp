@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+           new property variable $t->literals u ( ) 

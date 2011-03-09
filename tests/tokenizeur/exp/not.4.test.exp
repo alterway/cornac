@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/not.4.test.php
+  codephp <?php
+
+  code : 
+      not !
+          property variable $xliterals a->

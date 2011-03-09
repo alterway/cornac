@@ -1,0 +1,25 @@
+tests/tokenizeur/scripts/operation.42.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $a
+           "=" 
+          right : 
+              literals 1
+      1 : 
+          operation 
+          left : 
+              variable $a
+          operation :  "+"
+          right : 
+              affectation 
+              left : 
+                  variable $b
+               "=" 
+              right : 
+                  parenthesis 
+                  ( "operation variable $c  "/" literals 2" )

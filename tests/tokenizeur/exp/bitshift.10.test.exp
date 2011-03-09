@@ -1,0 +1,23 @@
+tests/tokenizeur/scripts/bitshift.10.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          bitshift 
+          left : 
+              method_static 
+              307 "self"::functioncall 307 "a" ( arglist(variable $i, literals 8) ) : 
+                  functioncall a
+                  function call : 307 "a": 
+                      arglist 
+                      0 : 
+                          variable $i
+                      1 : 
+                          literals 8
+          operation : 287 "<<"
+          right : 
+              literals 24

@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/variable.6.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              concatenation 
+              0 : 
+                  variable variable b
+              1 : 
+                  literals [1]

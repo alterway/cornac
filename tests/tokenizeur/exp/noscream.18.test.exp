@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/noscream.18.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          noscream @
+              _array
+                  variable $b
+                  operation 
+                  left : 
+                      variable $i
+                  operation :  "+"
+                  right : 
+                      literals 1

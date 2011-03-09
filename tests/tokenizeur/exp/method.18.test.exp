@@ -1,0 +1,32 @@
+tests/tokenizeur/scripts/method.18.test.php
+  codephp <?php
+
+  code : 
+      method method variable $a->functioncall 307 "b" ( arglist(_new ) ) 
+      method call : functioncall 307 "e" ( arglist(literals 4, literals 5, literals 6, literals 7, sign  "-"operation _constant M_PI  "/" literals 8, operation _constant M_PI  "/" literals 9) ) : 
+          functioncall e
+          function call : 307 "e": 
+              arglist 
+              0 : 
+                  literals 4
+              1 : 
+                  literals 5
+              2 : 
+                  literals 6
+              3 : 
+                  literals 7
+              4 : 
+                  sign  "-"operation _constant M_PI  "/" literals 8
+                      operation 
+                      left : 
+                          _constant (                          M_PI )
+                      operation :  "/"
+                      right : 
+                          literals 8
+              5 : 
+                  operation 
+                  left : 
+                      _constant (                      M_PI )
+                  operation :  "/"
+                  right : 
+                      literals 9

@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/for.20.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : affectation variable $a  "=" literals 0;
+        End  : block {comparison variable $i  "<" literals 5
+affectation variable $b  "=" literals 1
+affectation variable $c  "=" functioncall 360 "array" ( arglist(literals 1, literals 2, literals 3, literals 4, literals 5) ) 
+affectation variable $d  "=" _constant false
+affectation variable $e  "=" literals  };
+        Incr : postplusplus 297 "++"variable $i;
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1

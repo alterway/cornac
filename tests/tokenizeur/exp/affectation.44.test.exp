@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/affectation.44.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "_array variable $a[affectation variable $i  "=" method property variable $c->literals e->functioncall 307 "d" ( ( ) ) ]" )
+          block 

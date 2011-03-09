@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/codephp.14.test.php
+  codephp <?php 
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              _array
+                  variable $lang
+                  literals forum

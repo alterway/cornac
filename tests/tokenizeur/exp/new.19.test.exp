@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/new.19.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+           new 380 "\"\307 "x" ( ) 
+      1 : 
+           new 307 "y" ( ) 

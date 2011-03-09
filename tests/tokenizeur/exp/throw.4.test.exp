@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/throw.4.test.php
+  codephp <?php
+
+  code : 
+      _throw 
+          property variable $xliterals property->

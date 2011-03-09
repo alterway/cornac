@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/operation.15.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          operation 
+          left : 
+              property variable $aliterals b->
+          operation :  "*"
+          right : 
+              property variable $cliterals d->

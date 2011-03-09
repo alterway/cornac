@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/use.7.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          use 307 "A"
+      1 : 
+          use 307 "B"
+      2 : 
+          use 307 "C"
+      3 : 
+          use 307 "D"
+      4 : 
+          use 307 "E"
+      5 : 
+          use 307 "F"
+      6 : 
+          use 307 "G"

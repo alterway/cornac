@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/functioncall.25.test.php
+  codephp <?php
+
+  code : 
+      functioncall a
+      function call : 307 "a": 
+          arglist 
+          0 : 
+              functioncall b
+              function call : 307 "b": 
+                  arglist 
+                  0 : 
+                      functioncall c
+                      function call : 307 "c": 
+                          arglist 
+                          0 : 
+                              literals 1
+                          1 : 
+                              literals 2
+                          2 : 
+                              literals 3

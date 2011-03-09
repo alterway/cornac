@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/concatenation.30.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          functioncall array
+          function call : 360 "array": 
+              arglist 
+              0 : 
+                  concatenation 
+                  0 : 
+                      parenthesis 
+                      ( "operation parenthesis (operation variable $y  "-" literals 1)  "*" variable $z" )
+                  1 : 
+                      literals ,
+                  2 : 
+                      variable $a

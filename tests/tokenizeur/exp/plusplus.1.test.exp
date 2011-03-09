@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/plusplus.1.test.php
+  codephp <?php
+
+  code : 
+      variable $x297 "++" 
+          variable $x

@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/declare.10.test.php
+  codephp <?php
+
+  code : 
+      _declare 
+         ticks = literals 1
+         encoding = 
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $b
+               "=" 
+              right : 
+                  variable $a

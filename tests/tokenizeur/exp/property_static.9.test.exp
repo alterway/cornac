@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/property_static.9.test.php
+  codephp <?php
+
+  code : 
+      functioncall unset
+      function call : 349 "unset": 
+          arglist 
+          0 : 
+              property property_static 307 "self"::variable $avariable $b->

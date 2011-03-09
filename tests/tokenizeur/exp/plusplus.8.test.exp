@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/plusplus.8.test.php
+  codephp <?php
+
+  code : 
+      297 "++"property variable $x->literals y 
+          property variable $xliterals y->

@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/affectation.17.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable variable $c
+       "=" 
+      right : 
+          functioncall imagecolorallocate
+          function call : 307 "imagecolorallocate": 
+              arglist 
+              0 : 
+                  variable $image_info
+              1 : 
+                  variable $crouge
+              2 : 
+                  variable $cvert
+              3 : 
+                  variable $cbleu

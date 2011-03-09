@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/dowhile.2.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _dowhile 
+              block 
+              0 : 
+                  affectation 
+                  left : 
+                      variable $x
+                   "=" 
+                  right : 
+                      literals 1
+              parenthesis 
+              ( "comparison property variable $this->literals _code  "<" literals 200" )
+      1 : 
+          affectation 
+          left : 
+              property variable $thisliterals _ready->
+           "=" 
+          right : 
+              _constant (              true )

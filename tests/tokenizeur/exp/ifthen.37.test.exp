@@ -1,0 +1,31 @@
+tests/tokenizeur/scripts/ifthen.37.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "functioncall 307 "rand" ( ( ) ) " )
+              block 
+              0 : 
+                  _break 
+                  Number : " "1""
+           else 
+              block 
+              0 : 
+                  _continue "1" 
+      1 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "functioncall 307 "rand" ( ( ) ) " )
+              block 
+              0 : 
+                  _continue "1" 
+           else 
+              block 
+              0 : 
+                  _break 
+                  Number : " "1""

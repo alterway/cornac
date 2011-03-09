@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/sign.8.test.php
+  codephp <?php
+
+  code : 
+      sign  "-"_array _array variable $t[literals 4][literals 5]
+          _array
+              _array
+                  variable $t
+                  literals 4
+              literals 5

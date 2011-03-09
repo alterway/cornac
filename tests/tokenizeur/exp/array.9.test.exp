@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/array.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $v
+       "=" 
+      right : 
+          _array
+              _array
+                  variable $ret
+                  literals 2
+              literals 0

@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/switch.15.test.php
+  codephp <?php
+
+  code : 
+      _switch 
+          parenthesis 
+          ( "variable $x" )
+          block 
+          0 : 
+              _case 
+                  literals 8
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $filtre_traite2
+                      273 ".=" 
+                      right : 
+                          literals  demarchage_flag='1' 
+                  1 : 
+                      _break 
+                      Number : " "1""

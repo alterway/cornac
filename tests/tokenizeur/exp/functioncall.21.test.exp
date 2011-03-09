@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/functioncall.21.test.php
+  codephp <?php
+
+  code : 
+      functioncall die
+      function call : 300 "die": 
+          arglist 
+          0 : 
+              literals 1

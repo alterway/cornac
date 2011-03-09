@@ -1,0 +1,33 @@
+tests/tokenizeur/scripts/ifthen.16.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "not !" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $acces_ip
+               "=" 
+              right : 
+                  concatenation 
+                  0 : 
+                      literals  AND acces_ip=\"
+                  1 : 
+                      _array
+                          variable $_SERVER
+                          literals REMOTE_ADDR
+                  2 : 
+                      literals \"
+       else 
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $acces_ip
+               "=" 
+              right : 
+                  literals 

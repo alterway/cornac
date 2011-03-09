@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/operation.11.test.php
+  codephp <?php
+
+  code : 
+      operation 
+      left : 
+          parenthesis 
+          ( "operation literals 1  "+" literals 2" )
+      operation :  "-"
+      right : 
+          parenthesis 
+          ( "operation literals 3  "*" operation parenthesis (operation literals 4  "/" literals 5)  "%" literals 7" )

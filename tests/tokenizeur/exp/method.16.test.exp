@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/method.16.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              method variable $d
+              method call : functioncall 307 "a" ( arglist(variable $b) ) : 
+                  functioncall a
+                  function call : 307 "a": 
+                      arglist 
+                      0 : 
+                          variable $b

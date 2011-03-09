@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/constant_class.1.test.php
+  codephp <?php
+
+  code : 
+       class 307 "a"
+          block 
+          0 : 
+              constant_class               _constant b = literals c 
+          1 : 
+              constant_class               _constant f = literals 1 
+          2 : 
+              constant_class               _constant g = literals 1.3 

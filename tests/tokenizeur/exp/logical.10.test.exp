@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/logical.10.test.php
+  codephp <?php
+
+  code : 
+      _return 
+      return : "logical variable $a 263 "or" variable $b"

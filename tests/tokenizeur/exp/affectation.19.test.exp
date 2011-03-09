@@ -1,0 +1,28 @@
+tests/tokenizeur/scripts/affectation.19.test.php
+  codephp <?php
+
+  code : 
+      functioncall z
+      function call : 307 "z": 
+          arglist 
+          0 : 
+              affectation 
+              left : 
+                  variable $a
+               "=" 
+              right : 
+                  literals 1
+          1 : 
+              affectation 
+              left : 
+                  variable $b
+               "=" 
+              right : 
+                  literals 2
+          2 : 
+              affectation 
+              left : 
+                  variable $c
+               "=" 
+              right : 
+                  literals 3

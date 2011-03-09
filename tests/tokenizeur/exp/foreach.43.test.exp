@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/foreach.43.test.php
+  codephp <?php
+
+  code : 
+      _foreach (parenthesis (ternaryop ?) as  => variable $d)
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $e
+              273 ".=" 
+              right : 
+                  literals e

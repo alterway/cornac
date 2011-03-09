@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/plusplus.14.test.php
+  codephp <?php
+
+  code : 
+      297 "++"property_static 307 "self"::variable $count 
+          property_static 307 "self"::variable $count->

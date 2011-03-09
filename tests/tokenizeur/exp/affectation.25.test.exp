@@ -1,0 +1,26 @@
+tests/tokenizeur/scripts/affectation.25.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          noscream @
+              variable $x
+       "=" 
+      right : 
+          ternaryop ?
+          comparison variable $y 283 "==" sign  "-"literals 1 ? affectation variable $z  "=" literals 2 : variable $a
+              comparison 
+              left : 
+                  variable $y
+              operateur : 283 "=="
+              right : 
+                  sign  "-"literals 1
+                      literals 1
+              affectation 
+              left : 
+                  variable $z
+               "=" 
+              right : 
+                  literals 2
+              variable $a

@@ -1,0 +1,42 @@
+tests/tokenizeur/scripts/ternaryop.23.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  logical 
+                  left : 
+                      functioncall isset
+                      function call : 350 "isset": 
+                          arglist 
+                          0 : 
+                              _array
+                                  property variable $thisliterals a->
+                                  literals b
+                  operateur : 279 "&&"
+                  right : 
+                      ternaryop ?
+                      _array property variable $c->literals d[literals e] ? literals f : _constant g
+                          _array
+                              property variable $cliterals d->
+                              literals e
+                          literals f
+                          _constant (                          g )
+      1 : 
+          rawtext 
+          Texte : "311 "?""
+      2 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  method variable $h
+                  method call : functioncall 307 "i" ( ( ) ) : 
+                      functioncall i
+                      function call : 307 "i": 
+                          arglist 
+                          Empty arglist

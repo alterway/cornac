@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/new.5.test.php
+  codephp <?php
+
+  code : 
+       new variable $x arglist(literals 1) 

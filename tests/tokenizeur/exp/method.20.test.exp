@@ -1,0 +1,23 @@
+tests/tokenizeur/scripts/method.20.test.php
+  codephp <?php
+
+  code : 
+      method variable $a
+      method call : functioncall 307 "b" ( arglist(method_static 307 "c"::functioncall 307 "d" ( arglist(literals 1, literals 1, variable $e) ) , literals 377) ) : 
+          functioncall b
+          function call : 307 "b": 
+              arglist 
+              0 : 
+                  method_static 
+                  307 "c"::functioncall 307 "d" ( arglist(literals 1, literals 1, variable $e) ) : 
+                      functioncall d
+                      function call : 307 "d": 
+                          arglist 
+                          0 : 
+                              literals 1
+                          1 : 
+                              literals 1
+                          2 : 
+                              variable $e
+              1 : 
+                  literals 377

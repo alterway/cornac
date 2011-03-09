@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/reference.10.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              literals a=
+          1 : 
+              variable $b
+          2 : 
+              literals &
+          3 : 
+              variable $c
+          4 : 
+              literals =
+          5 : 
+              variable $d

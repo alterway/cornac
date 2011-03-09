@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/array.10.test.php
+  codephp <?php
+
+  code : 
+      parenthesis 
+      ( "comparison _array variable $seq[variable $i] 282 "!=" _array variable $seq[parenthesis (operation variable $i  "+" literals 1)]" )

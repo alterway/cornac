@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/logical.32.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          logical 
+          left : 
+              functioncall b
+              function call : 307 "b": 
+                  arglist 
+                  0 : 
+                      variable $q
+          operateur : 263 "or"
+          right : 
+              affectation 
+              left : 
+                  variable $x
+              276 "-=" 
+              right : 
+                  literals 2

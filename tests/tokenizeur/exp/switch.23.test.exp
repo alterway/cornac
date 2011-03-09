@@ -1,0 +1,114 @@
+tests/tokenizeur/scripts/switch.23.test.php
+  codephp <?php
+
+  code : 
+      _switch 
+          parenthesis 
+          ( "variable $a" )
+          block 
+          0 : 
+              _case 
+                  concatenation 
+                  0 : 
+                      literals a
+                  1 : 
+                      literals :
+                  2 : 
+                      literals b
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $a
+                       "=" 
+                      right : 
+                          literals 1
+                  1 : 
+                      affectation 
+                      left : 
+                          variable $b
+                       "=" 
+                      right : 
+                          literals 2
+                  2 : 
+                      _break 
+                      Number : " "1""
+          1 : 
+              _case 
+                  concatenation 
+                  0 : 
+                      literals c
+                  1 : 
+                      literals :
+                  2 : 
+                      literals d
+                  3 : 
+                      literals e
+                  4 : 
+                      literals f
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $a
+                       "=" 
+                      right : 
+                          literals 1
+                  1 : 
+                      affectation 
+                      left : 
+                          variable $b
+                       "=" 
+                      right : 
+                          literals 2
+                  2 : 
+                      affectation 
+                      left : 
+                          variable $c
+                       "=" 
+                      right : 
+                          literals 3
+                  3 : 
+                      _break 
+                      Number : " "1""
+          2 : 
+              _case 
+                  concatenation 
+                  0 : 
+                      literals e
+                  1 : 
+                      literals :
+                  2 : 
+                      literals f
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $a
+                       "=" 
+                      right : 
+                          literals 1
+                  1 : 
+                      affectation 
+                      left : 
+                          variable $b
+                       "=" 
+                      right : 
+                          literals 2
+                  2 : 
+                      _break 
+                      Number : " "1""
+          3 : 
+              _default 
+                  block 
+                  0 : 
+                      method_static 
+                      307 "parent"::functioncall 307 "takeChildFromDOM" ( arglist(variable $child) ) : 
+                          functioncall takeChildFromDOM
+                          function call : 307 "takeChildFromDOM": 
+                              arglist 
+                              0 : 
+                                  variable $child
+                  1 : 
+                      _break 
+                      Number : " "1""

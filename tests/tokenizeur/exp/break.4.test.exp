@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/break.4.test.php
+  codephp <?php
+
+  code : 
+      _break 
+      Number : " "$a""

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/function.7.test.php
+  codephp <?php
+
+  code : 
+      function literals a ( )
+          block 

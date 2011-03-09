@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/for.32.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : affectation variable $i  "=" literals 0;
+        End  : ;
+        Incr : ;
+          block 

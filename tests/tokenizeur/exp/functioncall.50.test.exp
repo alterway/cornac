@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/functioncall.50.test.php
+  codephp <?php
+
+  code : 
+      functioncall _array property _array variable $object[literals 0]->variable $object[literals 1]
+      function call : _array property _array variable $object[literals 0]->variable $object[literals 1]: 
+          arglist 
+          0 : 
+              variable $arg

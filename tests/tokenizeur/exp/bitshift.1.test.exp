@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/bitshift.1.test.php
+  codephp <?php
+
+  code : 
+      bitshift 
+      left : 
+          variable $x
+      operation : 287 "<<"
+      right : 
+          literals 25

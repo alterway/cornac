@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/while.6.test.php
+  codephp <?php
+
+  code : 
+      _while 
+          parenthesis 
+          ( "comparison preplusplus variable $a296 "--" 284 ">=" literals 0" )
+          block 
+          0 : 
+              method variable $this
+              method call : functioncall 307 "b" ( arglist(literals c) ) : 
+                  functioncall b
+                  function call : 307 "b": 
+                      arglist 
+                      0 : 
+                          literals c

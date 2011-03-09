@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/variable.2.test.php
+  codephp <?php
+
+  code : 
+      variable $C1

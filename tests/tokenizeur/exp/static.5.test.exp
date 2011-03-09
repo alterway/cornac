@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/static.5.test.php
+  codephp <?php
+
+  code : 
+      _static 
+          affectation 
+          left : 
+              variable $a
+           "=" 
+          right : 
+              literals 0

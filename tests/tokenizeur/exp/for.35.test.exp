@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/for.35.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : block {affectation variable $i  "=" literals 1
+affectation variable $nb  "=" _array variable $a[literals b] };
+        End  : variable $c;
+        Incr : preplusplus variable $d296 "--";
+          affectation 
+          left : 
+              _array variable $e[literals x][]
+                  _array
+                      variable $e
+                      literals x
+           "=" 
+          right : 
+              variable $i297 "++" 
+                  variable $i

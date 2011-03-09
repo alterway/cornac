@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/ternaryop.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+      273 ".=" 
+      right : 
+          concatenation 
+          0 : 
+              parenthesis 
+              ( "ternaryop ?" )
+          1 : 
+              literals  <code>[-&gt;
+          2 : 
+              variable $k
+          3 : 
+              literals ]</code>

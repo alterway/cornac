@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/sign.30.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "logical functioncall 350 "isset" ( arglist(_array variable $a[literals b]) )  265 "and" comparison sign  "-"literals 1 282 "!=" _array variable $b[literals c]" )
+          block 
+          0 : 
+              variable $z297 "++" 
+                  variable $z

@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/variable.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              variable _array variable b[literals c]

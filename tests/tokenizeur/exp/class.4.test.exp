@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/class.4.test.php
+  codephp <?php
+
+  code : 
+       class 307 "x" implements 307 "z", 307 "y"
+          block 

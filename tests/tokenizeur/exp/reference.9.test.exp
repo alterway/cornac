@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/reference.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          reference &
+              functioncall $b
+              function call : variable $b: 
+                  arglist 
+                  0 : 
+                      variable $c
+                  1 : 
+                      variable $d
+                  2 : 
+                      variable $e

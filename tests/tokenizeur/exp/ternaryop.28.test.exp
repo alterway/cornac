@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/ternaryop.28.test.php
+  codephp <?php
+
+  code : 
+      ternaryop ?
+      comparison property variable $x->literals z  ">" variable $a ? comparison variable $y  ">" literals 3 : variable $z
+          comparison 
+          left : 
+              property variable $xliterals z->
+          operateur :  ">"
+          right : 
+              variable $a
+          comparison 
+          left : 
+              variable $y
+          operateur :  ">"
+          right : 
+              literals 3
+          variable $z

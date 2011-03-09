@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/array.6.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              _array
+                  variable $TABINDEX
+                  concatenation 
+                  0 : 
+                      literals bt_racc
+                  1 : 
+                      variable $i

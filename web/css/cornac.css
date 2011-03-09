@@ -1,0 +1,639 @@
+/* RESET MEYER */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* SITE CSS*/
+body{
+width:100%;
+background:#ffffff;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/**** HEADER ****/
+
+#header{
+background: url("../images/fond_header.jpg") repeat-x scroll left top transparent;
+height:84px;
+width:100%;
+}
+
+#contenu-header{
+margin:auto;
+width:960px;
+align:center;
+}
+
+#contenu-header .logo{
+float:left;
+}
+
+#contenu-header .logo a{
+background:url("../images/logo_cornac.png") no-repeat left top;
+width:235px;
+height:64px;
+text-indent:-9999px;
+margin-top:9px;
+display:block;
+}
+
+#contenu-header .header-droite{
+float:right;
+}
+
+#contenu-header .header-droite .lang{
+margin-left:30px;
+}
+
+#contenu-header .header-droite .liens{
+float:right;
+}
+
+#contenu-header .header-droite .liens a{
+font-size:12px;
+color:#36afb7;
+text-decoration:none;
+}
+
+#contenu-header .header-droite .liens a:hover{
+font-size:12px;
+color:#ffffff;
+text-decoration:none;
+}
+
+#contenu-header .header-droite #filter{
+    clear: both;
+    float: right;
+    padding-top: 14px;
+}
+
+#contenu-header .header-droite .boutons{
+height:52px;
+}
+
+#page #contenu-header .header-droite .haut-en-tete{
+background: url("../images/crane.jpg") no-repeat scroll left bottom transparent;
+height: 20px;
+width: 265px;
+margin-top:12px;
+clear:both;
+}
+
+/**** EN-TETE ****/
+
+#en-tete{
+background: url("../images/en-tete.jpg") repeat scroll left top transparent;
+height: 349px;
+width:100%;
+}
+
+#en-tete .accroche{
+background: url("../images/en_tete.jpg") no-repeat left top transparent;
+height:349px;
+width:960px;
+margin:auto;
+}
+
+#en-tete .accroche .savoir-plus a{
+background:url("../images/btn_en_savoir_plus2.png") no-repeat left top;
+width:189px;
+height:36px;
+display:block;
+text-indent:-9999px;
+}
+
+#en-tete .accroche .savoir-plus a:hover{
+background:url("../images/btn_en_savoir_plus2.png") no-repeat left bottom;
+width:189px;
+height:36px;
+display:block;
+text-indent:-9999px;
+}
+
+#en-tete .accroche .savoir-plus{
+padding-top:261px;
+padding-left:198px;
+}
+
+/**** EN TETE INTERIEUR****/
+#page_interieur #contenu-header .header-droite .haut-en-tete{
+background: url("../images/crane_interieur.jpg") no-repeat scroll left bottom transparent;
+height: 20px;
+width: 265px;
+margin-top:12px;
+clear:both;
+}
+
+#en-tete-interieur{
+background: url("../images/en-tete-interieur.jpg") repeat scroll left top transparent;
+height: 225px;
+width:100%;
+}
+
+#en-tete-interieur .accroche{
+background: url("../images/en_tete_interieur.jpg") no-repeat left top transparent;
+height:225px;
+width:960px;
+margin:auto;
+}
+
+#en-tete-interieur .accroche .savoir-plus a{
+background:url("../images/btn_en_savoir_plus_interieur2.png") no-repeat left top;
+width:147px;
+height:28px;
+display:block;
+text-indent:-9999px;
+}
+
+#en-tete-interieur .accroche .savoir-plus a:hover{
+background:url("../images/btn_en_savoir_plus_interieur2.png") no-repeat left bottom;
+width:147px;
+height:28px;
+display:block;
+text-indent:-9999px;
+}
+
+#en-tete-interieur .accroche .savoir-plus{
+padding-top:166px;
+padding-left:219px;
+}
+
+/**** CONTENEUR ****/
+
+#conteneur{
+background: none repeat scroll 0 0 #DFDFDF;
+height:100%;
+width:100%;
+margin-top:75px;
+}
+
+.conteneur-inner{
+width:960px;
+margin:auto;
+}
+
+/** TEXTE-PRESENTATION **/
+
+.conteneur-inner .texte-presentation{
+width:450px;
+margin-right:10px;
+float:left;
+height:100%;
+padding:5px;
+margin-bottom:10px;
+}
+
+.conteneur-inner .texte-presentation h2{
+background:url("../images/titre_actu_home.jpg") no-repeat scroll left top transparent;
+width:145px;
+height:38px;
+text-indent:-9999px;
+display:block;
+}
+
+.conteneur-inner .texte-presentation .actu{
+border-bottom:1px solid #ffffff;
+
+}
+
+.conteneur-inner .texte-presentation .actu h3{
+font-size:16px;
+font-weight:bold;
+padding-top:20px;
+margin-bottom:5px;
+}
+
+.conteneur-inner .texte-presentation .actu p{
+border-bottom: 1px solid #c9c9c9;
+padding-bottom:20px;
+color:#999999;
+width:434px;
+
+}
+
+/** PARCOURIR **/
+
+.conteneur-inner #parcourir{
+background: url("../images/parcourir.jpg") no-repeat scroll left top transparent;
+float: left;
+height: 236px;
+margin-bottom: 190px;
+padding: 5px;
+width: 439px;
+}
+
+.conteneur-inner #parcourir .parcourir-inner h2{
+background:url("../images/titre_parcourir.png") no-repeat scroll left top transparent;
+width:342px;
+height:59px;
+text-indent:-9999px;
+display:block;
+margin-top:37px;
+margin-left:5px;
+}
+
+.conteneur-inner #parcourir .parcourir-inner #example3 form p input.submit{
+background: url("../images/btn_valider_parcourir2.png") no-repeat scroll left top transparent;
+border: medium none;
+display: block;
+height: 36px;
+margin-left: 74px;
+margin-top: 20px;
+text-indent: -9999px;
+width: 89px;
+cursor:pointer;
+}
+
+.conteneur-inner #parcourir .parcourir-inner #example3 form p input.submit:hover{
+background: url("../images/btn_valider_parcourir2.png") no-repeat scroll left bottom transparent;
+border: medium none;
+display: block;
+height: 36px;
+margin-left: 74px;
+margin-top: 20px;
+text-indent: -9999px;
+width: 89px;
+cursor:pointer;
+}
+
+.conteneur-inner #parcourir .parcourir-inner #example3{
+margin-top: 20px;
+}
+
+
+/**** DASHBOARD 2****/
+
+
+/**** FOOTER ****/
+
+#footer{
+background:url("../images/fond_footer.jpg") repeat-x;
+margin-top:10px;
+width:100%;
+height:120px;
+clear:both;
+}
+
+/**** DEROULE****/
+#scrollingDiv{
+background: none repeat scroll 0 0 #EEEEEE;
+overflow: hidden;
+width: 100%;
+}
+
+#colonne{
+background-color: #EEEEEE;
+margin: auto;
+padding-left: 15px;
+width: 94%;
+}
+
+.items, .results{
+float:left;
+display:block;
+}
+
+.items{
+margin-right:40px
+}
+
+#monBloc{
+clear:both;
+margin-top:24px;
+}
+
+#monBloc ul li .categorie{
+font-size:12px;
+font-weight:bold;
+color:#000000;
+margin-right:5px;
+line-height:18px;
+}
+
+#monBloc ul li .nbre{
+font-size:12px;
+font-weight:bold;
+color:#36afb7;
+}
+
+#monBloc ul.results li{
+font-size:12px;
+color:#000000;
+font-weight:bold;
+line-height:18px;
+}
+
+.boutons_navigation{
+display: inline;
+float: right;
+margin-top: 10px;
+width: 122px;
+}
+
+.nom{
+float:left;
+margin-right:15px;
+}
+
+.retour{
+float: left;
+margin-right: 13px;
+width: 55px;
+}
+
+.precedent{
+float: left;
+margin-right: 3px;
+width: 25px;
+}
+
+.suivant{
+float: left;
+width: 25px;
+}
+/*** Tableau***/
+.conteneur_interieur-inner{
+width: 100%;
+}
+
+tbody{
+border:1px solid #dfdfdf;
+}
+
+thead tr{
+background:url("../images/thead_fond.jpg") repeat-x top left;
+height:41px;
+width:100%;
+}
+
+thead tr th{
+vertical-align:middle;
+color:#36afb7;
+font-size:14px;
+font-weight:normal;
+text-transform:uppercase;
+}
+
+.left{
+text-align:left;
+}
+
+tr{
+height:40px;
+}
+
+tr td{
+border:1px solid #dfdfdf;
+font-size:14px;
+vertical-align:middle;
+}
+
+tr td.fichier{
+background-color:#ffffff;
+color:#636363;
+}
+
+tr td.color2, tr td.color3, tr td.checkbox, tr td.loader, tr td.redo, tr td.false, tr td.true, tr td.charge{
+background-color:#f2f2f2;
+}
+
+tr td.false{
+background:url("../images/false.png") no-repeat center #f2f2f2;
+width:150px;
+
+}
+
+tr td.true{
+background:url("../images/true.png") no-repeat center  #f2f2f2;
+width:150px;
+
+}
+
+tr td.charge{
+background:url("../images/") no-repeat center #f2f2f2;
+width:150px;
+
+}
+
+tr td.color2{
+color:#636363;
+}
+
+tr td.color3{
+color:#21656e;
+}
+
+td.checkbox{
+width:40px;
+}
+
+.tfoot1{
+background:url("../images/tfooter1.jpg") repeat-x top left;
+height:42px;
+color:#36afb7;
+font-size:14px;
+text-transform:uppercase;
+font-weight:normal;
+}
+
+.tfoot2{
+background:url("../images/tfooter2.jpg") repeat-x top left;
+height:41;
+color:#36afb7;
+font-size:14px;
+text-transform:uppercase;
+font-weight:normal;
+}
+
+.tfoot1 th, .tfoot2 th{
+vertical-align:middle;
+}
+
+table.display{
+    margin-bottom: 74px;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+}
+
+/****enroule / deroule****/
+#colonne a#displayBloc{
+    color: #36AFB7;
+    float: left;
+    font-size: 24px;
+    margin-top: 10px;
+    text-decoration: none;
+    width: 820px;
+}
+.deroule{
+    display : block;
+}
+
+.deroule span.roulement{
+    background: url("../images/roulement2.png") no-repeat scroll left bottom transparent;
+    display: block;
+    float: left;
+    height: 18px;
+    margin-top: 3px;
+    width: 17px;
+}
+.deroule span.roulement:hover{
+    background: url("../images/roulement2.png") no-repeat scroll right bottom transparent;
+    display: block;
+    float: left;
+    height: 18px;
+    margin-top: 3px;
+    width: 17px;
+}
+
+.enroule span.roulement{
+    background: url("../images/roulement2.png") no-repeat left top;
+	height:18px;
+	width:17px;
+	display:block;
+	float:left;
+	margin-top:3px;
+}
+
+
+.enroule span.roulement:hover{
+    background: url("../images/roulement2.png") no-repeat right top;
+	height:18px;
+	width:17px;
+	display:block;
+	float:left;
+	margin-top:3px;
+}
+
+.retour a{
+background:url("../images/retour2.png") no-repeat top left;
+width:55px;
+height:26px;
+display:block;
+text-indent:-9999px;
+}
+
+.retour a:hover{
+background:url("../images/retour2.png") no-repeat bottom left;
+width:55px;
+height:26px;
+display:block;
+text-indent:-9999px;
+}
+
+.precedent a{
+background:url("../images/precedent2.png") no-repeat top left;
+width:25px;
+height:26px;
+display:block;
+text-indent:-9999px;
+}
+
+.precedent a:hover{
+background:url("../images/precedent2.png") no-repeat bottom left;
+width:25px;
+height:26px;
+display:block;
+text-indent:-9999px;
+}
+
+.suivant a{
+background:url("../images/suivant2.png") no-repeat top left;
+width:25px;
+height:26px;
+display:block;
+text-indent:-9999px;
+}
+
+.suivant a:hover{
+background:url("../images/suivant2.png") no-repeat bottom left;
+width:25px;
+height:26px;
+display:block;
+text-indent:-9999px;
+}

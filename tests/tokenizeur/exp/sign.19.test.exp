@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/sign.19.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          cast (295 "(int)")sign  "-"literals 3
+              sign  "-"literals 3
+                  literals 3

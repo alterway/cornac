@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/noscream.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $functions
+       "=" 
+      right : 
+          ternaryop ?
+          noscream @ ? literals  : literals bzopen
+              noscream @
+                  functioncall function_exists
+                  function call : 307 "function_exists": 
+                      arglist 
+                      0 : 
+                          literals bzopen
+              literals 
+              literals bzopen

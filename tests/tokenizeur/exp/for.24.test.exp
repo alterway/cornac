@@ -1,0 +1,40 @@
+tests/tokenizeur/scripts/for.24.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : affectation variable $j  "=" literals 0;
+        End  : comparison variable $j  "<" variable $n;
+        Incr : postplusplus 297 "++"variable $j;
+          affectation 
+          left : 
+              _array
+                  _array
+                      _array
+                          property variable $aliterals b->
+                          _array
+                              _array
+                                  _array
+                                      property variable $cliterals d->
+                                      variable $i
+                                  literals f
+                              literals g
+                      literals h
+                  _array
+                      _array
+                          _array
+                              _array
+                                  property variable $iliterals j->
+                                  variable $i
+                              literals k
+                          variable $j
+                      literals l
+           "=" 
+          right : 
+              _array
+                  _array
+                      _array
+                          property variable $pliterals o->
+                          variable $i
+                      literals p
+                  variable $j

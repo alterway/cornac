@@ -1,0 +1,28 @@
+tests/tokenizeur/scripts/functioncall.44.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $a
+           "=" 
+          right : 
+              concatenation 
+              0 : 
+                  literals b
+              1 : 
+                  variable $c
+      1 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  functioncall $d
+                  function call : variable $d: 
+                      arglist 
+                      0 : 
+                          _array
+                              variable $e
+                              variable $f

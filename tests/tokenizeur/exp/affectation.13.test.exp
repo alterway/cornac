@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/affectation.13.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          property variable $yliterals z->

@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/constant.6.test.php
+  codephp <?php
+
+  code : 
+      functioncall chdir
+      function call : 307 "chdir": 
+          arglist 
+          0 : 
+              _constant (              __DIR__ )
+          1 : 
+              _constant (              __FILE__ )

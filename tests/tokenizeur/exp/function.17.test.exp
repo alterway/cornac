@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/function.17.test.php
+  codephp <?php
+
+  code : 
+      _interface 307 "a"
+          block 
+          0 : 
+              342 "public"function literals b ( )
+                  block 

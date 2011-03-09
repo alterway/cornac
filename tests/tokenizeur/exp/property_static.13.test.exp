@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/property_static.13.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          property method_static 307 "b"::functioncall 307 "c" ( arglist(literals d) ) variable $e->

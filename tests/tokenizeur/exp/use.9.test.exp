@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/use.9.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          use 307 "E" as 307 "F"
+      1 : 
+          use 307 "G" as 307 "H"
+      2 : 
+          use _constant I
+      3 : 
+          use 307 "M"\307 "K" as 307 "L"

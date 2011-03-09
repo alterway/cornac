@@ -1,0 +1,25 @@
+tests/tokenizeur/scripts/operation.6.test.php
+  codephp <?php
+
+  code : 
+      operation 
+      left : 
+          operation 
+          left : 
+              operation 
+              left : 
+                  operation 
+                  left : 
+                      literals 1
+                  operation :  "+"
+                  right : 
+                      literals 1
+              operation :  "-"
+              right : 
+                  literals 1
+          operation :  "+"
+          right : 
+              literals 1
+      operation :  "-"
+      right : 
+          literals 1

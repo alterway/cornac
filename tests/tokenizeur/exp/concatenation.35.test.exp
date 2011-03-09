@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/concatenation.35.test.php
+  codephp <?php
+
+  code : 
+      method variable $a
+      method call : functioncall 307 "b" ( arglist(concatenation variable $c . literals . . variable $d . literals  =  . variable $e  ) ) : 
+          functioncall b
+          function call : 307 "b": 
+              arglist 
+              0 : 
+                  concatenation 
+                  0 : 
+                      variable $c
+                  1 : 
+                      literals .
+                  2 : 
+                      variable $d
+                  3 : 
+                      literals  = 
+                  4 : 
+                      variable $e

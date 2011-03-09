@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/reference.5.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          reference &
+              functioncall y
+              function call : 307 "y": 
+                  arglist 
+                  Empty arglist

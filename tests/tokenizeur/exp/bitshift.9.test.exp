@@ -1,0 +1,47 @@
+tests/tokenizeur/scripts/bitshift.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+      273 ".=" 
+      right : 
+          functioncall pack
+          function call : 307 "pack": 
+              arglist 
+              0 : 
+                  bitshift 
+                  left : 
+                      variable $c
+                  operation : 286 ">>"
+                  right : 
+                      literals 36
+              1 : 
+                  bitshift 
+                  left : 
+                      variable $c
+                  operation : 286 ">>"
+                  right : 
+                      literals 24
+              2 : 
+                  bitshift 
+                  left : 
+                      variable $d
+                  operation : 286 ">>"
+                  right : 
+                      literals 16
+              3 : 
+                  bitshift 
+                  left : 
+                      variable $e
+                  operation : 286 ">>"
+                  right : 
+                      literals 8
+              4 : 
+                  bitshift 
+                  left : 
+                      variable $c
+                  operation : 286 ">>"
+                  right : 
+                      literals 8

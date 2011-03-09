@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/static.7.test.php
+  codephp <?php
+
+  code : 
+      346 "abstract" class 307 "b"
+          block 
+          0 : 
+              _static 
+                  affectation 
+                  left : 
+                      variable $a
+                   "=" 
+                  right : 
+                      functioncall array
+                      function call : 360 "array": 
+                          arglist 
+                          0 : 
+                              literals 1

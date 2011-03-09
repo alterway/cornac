@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/sequence.23.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+           class 307 "a"
+              block 
+              0 : 
+                  function literals b ( )
+                      block 
+      1 : 
+          method_static 
+          307 "c"::functioncall 307 "d" ( ( ) ) : 
+              functioncall d
+              function call : 307 "d": 
+                  arglist 
+                  Empty arglist

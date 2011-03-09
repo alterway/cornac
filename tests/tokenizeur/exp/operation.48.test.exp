@@ -1,0 +1,48 @@
+tests/tokenizeur/scripts/operation.48.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "functioncall 350 "isset" ( arglist(_array variable $x[method variable $y->functioncall 307 "z" ( ( ) ) ]) ) " )
+          block 
+          0 : 
+              rawtext 
+              Texte : "311 "    ""
+          1 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      operation 
+                      left : 
+                          method _array variable $x[method variable $y->functioncall 307 "z" ( ( ) ) ]
+                          method call : functioncall 307 "z" ( ( ) ) : 
+                              functioncall z
+                              function call : 307 "z": 
+                                  arglist 
+                                  Empty arglist
+                      operation :  "*"
+                      right : 
+                          literals 3
+          2 : 
+              rawtext 
+              Texte : "311 """
+      Condition 1) 
+          parenthesis 
+          ( "_constant true" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 0
+       else 
+          block 
+          0 : 
+              rawtext 
+              Texte : "311 "    0
+""

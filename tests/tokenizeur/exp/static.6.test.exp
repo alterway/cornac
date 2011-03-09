@@ -1,0 +1,30 @@
+tests/tokenizeur/scripts/static.6.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _static 
+              affectation 
+              left : 
+                  variable $a
+               "=" 
+              right : 
+                  literals 0
+      1 : 
+          rawtext 
+          Texte : "311 """
+      2 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              literals 1
+      3 : 
+          affectation 
+          left : 
+              variable $y
+           "=" 
+          right : 
+              literals 2

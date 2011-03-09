@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/block.6.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison variable $a 282 "!=" _array _array _array variable $b[literals c][literals d][literals 0]" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $a
+               "=" 
+              right : 
+                  _array
+                      _array
+                          _array
+                              variable $b
+                              literals c
+                          literals d
+                      literals 0

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/throw.2.test.php
+  codephp <?php
+
+  code : 
+      _throw 
+           new  "Exception" ( ) 

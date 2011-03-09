@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/throw.1.test.php
+  codephp <?php
+
+  code : 
+      _throw 
+           new 307 "Exception" arglist(literals A) 

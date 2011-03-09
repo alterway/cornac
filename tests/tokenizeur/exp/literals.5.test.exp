@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/literals.5.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              sign  "-"literals 10
+                  literals 10
+      1 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              sign  "-"literals 10
+                  literals 10
+      2 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  variable $x

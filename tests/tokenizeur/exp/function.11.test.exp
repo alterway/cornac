@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/function.11.test.php
+  codephp <?php
+
+  code : 
+      function literals getValue ( )
+          block 
+          0 : 
+              _return 
+              return : "literals 1"

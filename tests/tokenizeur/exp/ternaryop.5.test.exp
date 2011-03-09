@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/ternaryop.5.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          ternaryop ?
+          literals 1 ? literals 2 : _array variable $x[literals 1]
+              literals 1
+              literals 2
+              _array
+                  variable $x
+                  literals 1

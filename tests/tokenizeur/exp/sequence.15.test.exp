@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/sequence.15.test.php
+  codephp <?php
+
+  code : 
+      function literals a arglist(variable $b, variable $c)
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $z
+               "=" 
+              right : 
+                  literals 1
+          1 : 
+              affectation 
+              left : 
+                  variable $y
+               "=" 
+              right : 
+                  literals 2
+          2 : 
+              affectation 
+              left : 
+                  variable $w
+               "=" 
+              right : 
+                  literals 3

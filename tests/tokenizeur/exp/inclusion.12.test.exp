@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/inclusion.12.test.php
+  codephp <?php
+
+  code : 
+      inclusion include
+          _array
+              variable $a
+              literals b

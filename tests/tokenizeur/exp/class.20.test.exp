@@ -1,0 +1,42 @@
+tests/tokenizeur/scripts/class.20.test.php
+  codephp <?php
+
+  code : 
+       class 307 "x"
+          block 
+          0 : 
+               343 "protected"347 "static"variable $a
+          1 : 
+               343 "protected"347 "static"variable $b
+          2 : 
+               343 "protected"347 "static"variable $c
+          3 : 
+               343 "protected"347 "static"variable $d
+          4 : 
+               343 "protected"347 "static"variable $e
+          5 : 
+               343 "protected"347 "static"variable $f
+          6 : 
+               342 "public"347 "static"variable $g
+          7 : 
+               342 "public"347 "static"variable $h
+          8 : 
+               342 "public"347 "static"variable $i
+          9 : 
+               342 "public"347 "static"variable $j
+          10 : 
+               342 "public"347 "static"variable $k
+          11 : 
+               342 "public"347 "static"variable $l
+          12 : 
+               344 "private"347 "static"variable $m
+          13 : 
+               344 "private"347 "static"variable $n
+          14 : 
+               344 "private"347 "static"variable $o
+          15 : 
+               344 "private"347 "static"variable $p
+          16 : 
+               344 "private"347 "static"variable $r
+          17 : 
+               344 "private"347 "static"variable $s

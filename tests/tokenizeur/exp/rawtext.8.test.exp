@@ -1,0 +1,45 @@
+tests/tokenizeur/scripts/rawtext.8.test.php
+  codephp <?php
+
+  code : 
+      function literals show_install ( )
+          block 
+          0 : 
+              ifthen if
+              Condition 0) 
+                  parenthesis 
+                  ( "_constant VIEW_OFF" )
+                  block 
+                  0 : 
+                      _return 
+                      return : ""
+          1 : 
+              rawtext 
+              Texte : "311 "<script type="text/javascript">
+function showmessage(message) {
+	document.getElementById('notice').innerHTML += message + '<br />';
+	document.getElementById('notice').scrollTop = 100000000;
+}
+function initinput() {
+	window.location='index.php?method=ext_info';
+}
+</script>
+	<div class="main">
+		<div class="btnbox"><div id="notice"></div></div>
+		<div class="btnbox marginbot">
+	<input type="button" name="submit" value="""
+          2 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      functioncall lang
+                      function call : 307 "lang": 
+                          arglist 
+                          0 : 
+                              literals install_in_processed
+          3 : 
+              rawtext 
+              Texte : "311 "" disabled style="height: 25" id="laststep" onclick="initinput()">
+	</div>
+""

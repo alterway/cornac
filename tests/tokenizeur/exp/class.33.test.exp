@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/class.33.test.php
+  codephp <?php
+
+  code : 
+       class 307 "a"
+          block 
+          0 : 
+               343 "protected"347 "static"variable $b = _constant null

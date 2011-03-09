@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/affectation.24.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          noscream @
+              variable $x
+       "=" 
+      right : 
+          literals 1

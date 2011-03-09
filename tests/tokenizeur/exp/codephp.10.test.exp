@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/codephp.10.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          logical 
+          left : 
+              variable $x
+          operateur :  "|"
+          right : 
+              variable $y
+      1 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              literals 1

@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/ternaryop.25.test.php
+  codephp <?php
+
+  code : 
+      ternaryop ?
+      comparison property variable $a->literals b 283 "==" literals 3 ? ternaryop ? : _constant false
+          comparison 
+          left : 
+              property variable $aliterals b->
+          operateur : 283 "=="
+          right : 
+              literals 3
+          ternaryop ?
+          variable $d ? property variable $e->literals f : _constant true
+              variable $d
+              property variable $eliterals f->
+              _constant (              true )
+          _constant (          false )

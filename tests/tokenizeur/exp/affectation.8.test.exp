@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/affectation.8.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              concatenation 
+              0 : 
+                  literals a
+              1 : 
+                  literals b
+      1 : 
+          affectation 
+          left : 
+              variable $y
+           "=" 
+          right : 
+              concatenation 
+              0 : 
+                  literals c
+              1 : 
+                  literals d

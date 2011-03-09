@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/rawtext.2.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              literals a
+      1 : 
+          rawtext 
+          Texte : "311 "b""
+      2 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              literals c

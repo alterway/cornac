@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/concatenation.5.test.php
+  codephp <?php
+
+  code : 
+      concatenation 
+      0 : 
+          literals a
+      1 : 
+          literals b

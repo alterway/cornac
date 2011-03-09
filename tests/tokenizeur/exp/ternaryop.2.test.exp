@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/ternaryop.2.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $categorie
+       "=" 
+      right : 
+          ternaryop ?
+          parenthesis (comparison variable $categorie_id 282 "!=" literals ) ? concatenation variable $categorie_id . literals  -  . variable $categorie_nom   : literals 
+              parenthesis 
+              ( "comparison variable $categorie_id 282 "!=" literals " )
+              concatenation 
+              0 : 
+                  variable $categorie_id
+              1 : 
+                  literals  - 
+              2 : 
+                  variable $categorie_nom
+              literals 

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/typehint.8.test.php
+  codephp <?php
+
+  code : 
+      function literals x arglist(typehint 307 "Stdclass" variable $a, typehint 307 "Stdclass" variable $b, typehint 307 "Stdclass" variable $c)
+          block 

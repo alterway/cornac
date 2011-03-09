@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/use.3.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              concatenation 
+              0 : 
+                  literals a
+              1 : 
+                  literals b
+      1 : 
+          affectation 
+          left : 
+              _array
+                  _array
+                      property variable $aliterals b->
+                      literals 3
+                  literals 0
+           "=" 
+          right : 
+              literals 340

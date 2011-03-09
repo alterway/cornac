@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/concatenation.32.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              variable concatenation literals a . variable $b  

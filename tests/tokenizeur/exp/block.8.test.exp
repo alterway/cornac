@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/block.8.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "literals 1" )
+              block 
+              0 : 
+                  _throw 
+                       new 307 "a" arglist(literals b, constant_static 307 "c"::_constant d) 
+      1 : 
+          affectation 
+          left : 
+              variable $number
+           "=" 
+          right : 
+              literals 1

@@ -1,0 +1,30 @@
+tests/tokenizeur/scripts/logical.16.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property variable $thisliterals z->
+       "=" 
+      right : 
+          logical 
+          left : 
+              method variable $this
+              method call : functioncall 307 "a" ( ( ) ) : 
+                  functioncall a
+                  function call : 307 "a": 
+                      arglist 
+                      Empty arglist
+          operateur : 263 "or"
+          right : 
+              affectation 
+              left : 
+                  property variable $thisliterals b->
+               "=" 
+              right : 
+                  method variable $this
+                  method call : functioncall 307 "c" ( ( ) ) : 
+                      functioncall c
+                      function call : 307 "c": 
+                          arglist 
+                          Empty arglist

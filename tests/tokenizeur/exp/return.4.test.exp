@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/return.4.test.php
+  codephp <?php
+
+  code : 
+      _return 
+      return : "parenthesis (literals 1)"

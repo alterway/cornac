@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/array.12.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          _array
+              variable $a[]
+                  variable $a
+              _constant (              b )
+       "=" 
+      right : 
+          variable $c

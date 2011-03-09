@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/variable.12.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $result
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              literals 
+#Allow smarty {php} tags?  These could be dangerous if you don't trust your users.
+\$config['use_smarty_php_tags'] = 
+          1 : 
+              variable ternaryop ?
+          2 : 
+              literals ;
+
+#Automatically assign alias based on page title?
+\$config['auto_alias_content'] = 
+          3 : 
+              variable ternaryop ?
+          4 : 
+              literals ;
+
+

@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/concatenation.20.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              literals (
+          1 : 
+              variable $derivedSelect
+          2 : 
+              literals )

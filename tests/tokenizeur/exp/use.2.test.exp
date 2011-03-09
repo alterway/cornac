@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/use.2.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          use 307 "a"\307 "b"
+      1 : 
+          use 307 "a"\307 "b"\307 "c"
+      2 : 
+          use 307 "a"\307 "b"\307 "c"\307 "d"

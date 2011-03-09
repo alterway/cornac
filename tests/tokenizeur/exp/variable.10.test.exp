@@ -1,0 +1,32 @@
+tests/tokenizeur/scripts/variable.10.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              concatenation 
+              0 : 
+                  variable $y
+      1 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              concatenation 
+              0 : 
+                  variable variable z
+      2 : 
+          affectation 
+          left : 
+              variable $x
+           "=" 
+          right : 
+              concatenation 
+              0 : 
+                  variable variable $a

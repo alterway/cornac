@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/codephp.18.test.php
+  codephp <?php 
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              functioncall lang
+              function call : 307 "lang": 
+                  arglist 
+                  Empty arglist

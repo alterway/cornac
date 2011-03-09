@@ -1,0 +1,32 @@
+tests/tokenizeur/scripts/sequence.25.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $a
+           "=" 
+          right : 
+              literals 
+      1 : 
+          affectation 
+          left : 
+              variable $b
+           "=" 
+          right : 
+              literals c
+      2 : 
+          ifthen if
+          Condition 0) 
+              parenthesis 
+              ( "comparison variable $d 288 "instanceof" _constant e" )
+              block 
+              0 : 
+                  affectation 
+                  left : 
+                      variable $f
+                   "=" 
+                  right : 
+                      literals g

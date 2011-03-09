@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/class.30.test.php
+  codephp <?php
+
+  code : 
+       class 307 "Swift_CharacterStream_NgCharacterStream" implements 307 "Swift_CharacterStream"
+          block 

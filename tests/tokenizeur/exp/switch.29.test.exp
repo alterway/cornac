@@ -1,0 +1,26 @@
+tests/tokenizeur/scripts/switch.29.test.php
+  codephp <?php
+
+  code : 
+      _switch 
+          parenthesis 
+          ( "_constant true" )
+          block 
+          0 : 
+              _case 
+                  comparison 
+                  left : 
+                      property variable $aliterals b->
+                  operateur : 281 "==="
+                  right : 
+                      _constant (                      null )
+                  block 
+                  0 : 
+                      _return 
+                      return : "_new "
+          1 : 
+              _default 
+                  block 
+                  0 : 
+                      _return 
+                      return : "_new "

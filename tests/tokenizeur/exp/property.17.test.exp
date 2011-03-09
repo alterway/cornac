@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/property.17.test.php
+  codephp <?php
+
+  code : 
+      property property property property property property property variable $a->variable $b->variable $c->variable $d->variable $e->variable $f->variable $gvariable $h->

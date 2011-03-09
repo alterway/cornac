@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/foreach.37.test.php
+  codephp <?php
+
+  code : 
+      _foreach (affectation variable $z  "=" _new  as  => variable $e)
+          block 

@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/typehint.3.test.php
+  codephp <?php
+
+  code : 
+      function literals x arglist(typehint 307 "AutreClasse" affectation variable $defaults  "=" _constant null)
+          block 

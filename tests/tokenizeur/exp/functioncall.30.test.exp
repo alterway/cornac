@@ -1,0 +1,28 @@
+tests/tokenizeur/scripts/functioncall.30.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          functioncall define
+          function call : 307 "define": 
+              arglist 
+              0 : 
+                  literals TYPE_DOC
+              1 : 
+                  _constant (                  true )
+      1 : 
+          inclusion require
+              functioncall fct_lien_page_custom
+              function call : 307 "fct_lien_page_custom": 
+                  arglist 
+                  0 : 
+                      concatenation 
+                      0 : 
+                          literals tabindex/
+                      1 : 
+                          _constant (                          TYPE_DOC )
+                      2 : 
+                          literals .php
+                  1 : 
+                      literals abs

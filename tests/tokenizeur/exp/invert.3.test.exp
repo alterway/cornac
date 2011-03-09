@@ -1,0 +1,7 @@
+tests/tokenizeur/scripts/invert.3.test.php
+  codephp <?php
+
+  code : 
+      invert ~
+          parenthesis 
+          ( "logical variable $x  "|" variable $y" )

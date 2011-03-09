@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/function.5.test.php
+  codephp <?php
+
+  code : 
+      function literals a arglist(typehint 307 "StdClass" variable $b)
+          block 
+          0 : 
+              _return 
+              return : "literals 1"

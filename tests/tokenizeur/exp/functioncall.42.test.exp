@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/functioncall.42.test.php
+  codephp <?php
+
+  code : 
+      _return 
+      return : "functioncall 307 "a" ( arglist(functioncall _array variable $b[variable $c] ( arglist(variable $d, variable $e, variable $f) ) ) ) "

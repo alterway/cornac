@@ -1,0 +1,30 @@
+tests/tokenizeur/scripts/logical.46.test.php
+  codephp <?php
+
+  code : 
+      comparison 
+      left : 
+          comparison 
+          left : 
+              variable $a
+          operateur : 281 "==="
+          right : 
+              logical 
+              left : 
+                  concatenation 
+                  0 : 
+                      variable $b
+                  1 : 
+                      literals c.
+                  2 : 
+                      variable $d
+              operateur : 278 "||"
+              right : 
+                  variable $e
+      operateur : 281 "==="
+      right : 
+          concatenation 
+          0 : 
+              literals f.
+          1 : 
+              variable $g

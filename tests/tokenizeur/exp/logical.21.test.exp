@@ -1,0 +1,26 @@
+tests/tokenizeur/scripts/logical.21.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          logical 
+          left : 
+              variable $x
+          operateur :  "|"
+          right : 
+              variable $y
+      1 : 
+          logical 
+          left : 
+              variable $a
+          operateur :  "|"
+          right : 
+              variable $b
+      2 : 
+          logical 
+          left : 
+              variable $c
+          operateur :  "|"
+          right : 
+              variable $d

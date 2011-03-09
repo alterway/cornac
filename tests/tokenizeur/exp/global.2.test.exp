@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/global.2.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _global 
+          0 : 
+              variable $x
+      1 : 
+          _global 
+          0 : 
+              variable $y
+      2 : 
+          _global 
+          0 : 
+              variable $z
+      3 : 
+          _global 
+          0 : 
+              variable $a

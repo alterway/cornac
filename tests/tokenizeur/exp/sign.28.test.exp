@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/sign.28.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          sign  "-"property_static 307 "classe"::_array variable $property[literals index]
+              property_static 307 "classe"::_array variable $property[literals index]->

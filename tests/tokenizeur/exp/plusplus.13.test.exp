@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/plusplus.13.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property variable $thisliterals a->
+       "=" 
+      right : 
+          property_static 307 "self"::variable $b297 "++" 
+              property_static 307 "self"::variable $b->

@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/logical.47.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison _new  288 "instanceof" _constant x" )
+          block 
+          0 : 
+              variable $x297 "++" 
+                  variable $x

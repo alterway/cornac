@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/ifthen.26.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison variable $x 283 "==" literals 6" )
+          block 
+          0 : 
+              _foreach (variable $x as  => variable $y)
+                  block 
+                  0 : 
+                      variable $x296 "--" 
+                          variable $x

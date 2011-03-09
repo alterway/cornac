@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/property_static.5.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property_static 307 "self"::_array variable $t[literals i]->
+       "=" 
+      right : 
+          literals 0

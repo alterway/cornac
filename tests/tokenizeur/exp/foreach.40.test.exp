@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/foreach.40.test.php
+  codephp <?php
+
+  code : 
+      _foreach (ternaryop ? as  => variable $t)
+          block 
+          0 : 
+              functioncall print
+              function call : 266 "print": 
+                  arglist 
+                  0 : 
+                      variable $t

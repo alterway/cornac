@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/ifthen.22.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison _constant false 280 "!==" variable $x" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $y
+               "=" 
+              right : 
+                  literals 1

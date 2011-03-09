@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/noscream.17.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          noscream @
+              _array variable $rows[_array variable $row[literals fichier]][]
+                  _array
+                      variable $rows
+                      _array
+                          variable $row
+                          literals fichier
+       "=" 
+      right : 
+          variable $row

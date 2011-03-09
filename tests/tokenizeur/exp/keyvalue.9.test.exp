@@ -1,0 +1,35 @@
+tests/tokenizeur/scripts/keyvalue.9.test.php
+  codephp <?php
+
+  code : 
+      functioncall array
+      function call : 360 "array": 
+          arglist 
+          0 : 
+              literals a => variable $b
+                  literals a
+                  variable $b
+          1 : 
+              literals c => method_static variable $d::functioncall 307 "e" ( ( ) ) 
+                  literals c
+                  method_static 
+                  variable $d::functioncall 307 "e" ( ( ) ) : 
+                      functioncall e
+                      function call : 307 "e": 
+                          arglist 
+                          Empty arglist
+          2 : 
+              literals f => functioncall 360 "array" ( arglist(keyvalue literals g => method_static variable $h::functioncall 307 "i" ( ( ) ) ) ) 
+                  literals f
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      0 : 
+                          literals g => method_static variable $h::functioncall 307 "i" ( ( ) ) 
+                              literals g
+                              method_static 
+                              variable $h::functioncall 307 "i" ( ( ) ) : 
+                                  functioncall i
+                                  function call : 307 "i": 
+                                      arglist 
+                                      Empty arglist

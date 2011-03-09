@@ -1,0 +1,26 @@
+tests/tokenizeur/scripts/for.36.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : affectation variable $i  "=" literals 0;
+        End  : comparison variable $i  "<" functioncall 307 "count" ( arglist(variable $regex) ) ;
+        Incr : preplusplus variable $i297 "++";
+          affectation 
+          left : 
+              property variable $thisliterals a->
+           "=" 
+          right : 
+              functioncall preg_replace_callback
+              function call : 307 "preg_replace_callback": 
+                  arglist 
+                  0 : 
+                      _array
+                          variable $regex
+                          variable $i
+                  1 : 
+                      _array
+                          variable $replace
+                          variable $i
+                  2 : 
+                      property variable $thisliterals b->

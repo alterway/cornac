@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/constant.1.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          functioncall define
+          function call : 307 "define": 
+              arglist 
+              0 : 
+                  literals x
+              1 : 
+                  literals 1
+      1 : 
+          _constant (          x )

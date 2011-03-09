@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/operation.3.test.php
+  codephp <?php
+
+  code : 
+      operation 
+      left : 
+          literals 1
+      operation :  "*"
+      right : 
+          literals 1

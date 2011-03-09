@@ -1,0 +1,7 @@
+tests/tokenizeur/scripts/array.8.test.php
+  codephp <?php
+
+  code : 
+      _array
+          property variable $xliterals y->
+          literals 0

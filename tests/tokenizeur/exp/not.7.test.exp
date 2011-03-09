@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/not.7.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              variable $a
+          1 : 
+              literals /
+          2 : 
+              property variable $bliterals c->
+          3 : 
+              variable $d
+          4 : 
+              literals !
+          5 : 
+              property variable $eliterals f->

@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/sequence.31.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          method_static 
+          307 "a"::functioncall 307 "b" ( ( ) ) : 
+              functioncall b
+              function call : 307 "b": 
+                  arglist 
+                  Empty arglist
+      1 : 
+          functioncall define
+          function call : 307 "define": 
+              arglist 
+              0 : 
+                  literals c
+              1 : 
+                  literals 1

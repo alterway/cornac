@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/not.5.test.php
+  codephp <?php
+
+  code : 
+      not !
+          functioncall $x
+          function call : variable $x: 
+              arglist 
+              0 : 
+                  literals 1

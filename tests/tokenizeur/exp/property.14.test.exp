@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/property.14.test.php
+  codephp <?php
+
+  code : 
+      method _array property _array property variable $a->literals b[literals 1]->variable $c[literals 0]
+      method call : functioncall 307 "d" ( arglist(literals e, literals f) ) : 
+          functioncall d
+          function call : 307 "d": 
+              arglist 
+              0 : 
+                  literals e
+              1 : 
+                  literals f

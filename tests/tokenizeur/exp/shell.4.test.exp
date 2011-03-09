@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/shell.4.test.php
+  codephp <?php
+
+  code : 
+      noscream @
+          shell 
+          0 : 
+              literals mkdir -p 
+          1 : 
+              variable $dir

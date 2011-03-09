@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/opappend.8.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          _array opappend [[][literals adf][]
+              _array
+                  opappend [[][]
+                      variable $lines[]
+                          variable $lines
+                  literals adf
+       "=" 
+      right : 
+          literals 1

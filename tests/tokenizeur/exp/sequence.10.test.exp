@@ -1,0 +1,55 @@
+tests/tokenizeur/scripts/sequence.10.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              property variable $paginationliterals enregistrement->
+           "=" 
+          right : 
+              property _array variable $_SESSION[literals init_infos]literals nb_pet_liste->
+      1 : 
+          affectation 
+          left : 
+              property variable $paginationliterals col_nom->
+           "=" 
+          right : 
+              concatenation 
+              0 : 
+                  literals nom_col
+              1 : 
+                  property variable $paginationliterals col_id->
+              2 : 
+                  literals _9
+      2 : 
+          affectation 
+          left : 
+              property variable $paginationliterals col_sens->
+           "=" 
+          right : 
+              literals DESC
+      3 : 
+          method variable $pagination
+          method call : functioncall 307 "fct_tri" ( ( ) ) : 
+              functioncall fct_tri
+              function call : 307 "fct_tri": 
+                  arglist 
+                  Empty arglist
+      4 : 
+          logical 
+          left : 
+              method _array variable $_SESSION[literals cligraph]
+              method call : functioncall 307 "connect" ( ( ) ) : 
+                  functioncall connect
+                  function call : 307 "connect": 
+                      arglist 
+                      Empty arglist
+          operateur : 263 "or"
+          right : 
+              functioncall die
+              function call : 300 "die": 
+                  arglist 
+                  0 : 
+                      property _array variable $_SESSION[literals cligraph]literals errormsg->

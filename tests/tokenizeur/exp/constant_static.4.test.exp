@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/constant_static.4.test.php
+  codephp <?php
+
+  code : 
+      constant_static (      347 "static"::_constant _constant )

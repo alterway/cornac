@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/sequence.13.test.php
+  codephp <?php
+
+  code : 
+      operation 
+      left : 
+          parenthesis 
+          ( "operation _array property variable $this->literals m_timeStamps[operation functioncall 307 "count" ( arglist(property variable $this->literals m_timeStamps) )   "-" literals 1]  "-" _array property variable $this->literals m_timeStamps[literals 0]" )
+      operation :  "/"
+      right : 
+          functioncall count
+          function call : 307 "count": 
+              arglist 
+              0 : 
+                  property variable $thisliterals m_timeStamps->

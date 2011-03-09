@@ -1,0 +1,26 @@
+tests/tokenizeur/scripts/affectation.41.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $salt
+      273 ".=" 
+      right : 
+          functioncall substr
+          function call : 307 "substr": 
+              arglist 
+              0 : 
+                  literals abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./
+              1 : 
+                  logical 
+                  left : 
+                      functioncall mt_rand
+                      function call : 307 "mt_rand": 
+                          arglist 
+                          Empty arglist
+                  operateur :  "&"
+                  right : 
+                      variable $c3
+              2 : 
+                  literals 1

@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/for.12.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : affectation variable $a  "=" literals 1;
+        End  : comparison variable $a  "<" operation variable $b  "+" literals 1;
+        Incr : postplusplus 297 "++"variable $a;
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $c
+               "=" 
+              right : 
+                  literals 0

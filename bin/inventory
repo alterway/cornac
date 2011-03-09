@@ -1,0 +1,275 @@
+#!/usr/bin/env php
+<?php
+/*
+   +----------------------------------------------------------------------+
+   | Cornac, PHP code inventory                                           |
+   +----------------------------------------------------------------------+
+   | Copyright (c) 2010 - 2011                                            |
+   +----------------------------------------------------------------------+
+   | This source file is subject to version 3.01 of the PHP license,      |
+   | that is bundled with this package in the file LICENSE, and is        |
+   | available through the world-wide-web at the following url:           |
+   | http://www.php.net/license/3_01.txt                                  |
+   | If you did not receive a copy of the PHP license and are unable to   |
+   | obtain it through the world-wide-web, please send a note to          |
+   | license@php.net so we can mail you a copy immediately.               |
+   +----------------------------------------------------------------------+
+   | Author: Damien Seguy <damien.seguy@gmail.com>                        |
+   +----------------------------------------------------------------------+
+ */
+
+include('library/Cornac/Autoload.php');
+spl_autoload_register('Cornac_Autoload::autoload');
+
+$options = array('help' => array('help' => 'display this help',
+                                 'option' => '?',
+                                 'compulsory' => false),
+                 'ini' => array('help' => 'configuration set or file',
+                                 'get_arg_value' => null,
+                                 'option' => 'I',
+                                 'compulsory' => true),
+                 'output' => array('help' => 'output file name (default inventory)',
+                                 'get_arg_value' => 'inventory',
+                                 'option' => 'o',
+                                 'compulsory' => false),
+                 'format' => array('help' => 'output file name (not supported. Only ODS at the moment)',
+                                 'get_arg_value' => 'ods',
+                                 'option' => 'f',
+                                 'compulsory' => false),
+// @todo option to run auditeur if missing values. 
+                 'clean' => array('help' => 'remove output file',
+                                 'option' => 'K',
+                                 'compulsory' => false),
+);
+
+$OPTIONS = new Cornac_Options();
+$OPTIONS->setConfig($options);
+$OPTIONS->init();
+
+if (preg_match('#[^a-zA-Z0-9_/\.\-]#', $OPTIONS->output)) {
+    print "Invalid output file '$OPTIONS->output'. Aborting\n";
+    die();
+}
+
+if (strtolower(substr($OPTIONS->output, 0, -4)) != '.ods') {
+    $OPTIONS->output .= ".ods";
+}
+
+if (file_exists($OPTIONS->output)) {
+    if ($OPTIONS->clean) {
+        unlink($OPTIONS->output);
+        print "Old file '$OPTIONS->output' removed\n";
+    } else {
+        print "$OPTIONS->output already exists. Use -K to force removal. Aborting\n";
+        die();
+    }
+}
+
+if (empty($OPTIONS->format) || !in_array($OPTIONS->format, array('ods'))) {
+    print "Output format is needed (option -f) : ods only\n";
+    help();
+}
+
+
+// @todo : check $format for values
+// @todo : check output for being a folder
+// @todo : check that ini is really read. That seems OK, but need to be tested. :)
+
+$DATABASE = new Cornac_Database();
+
+$res = $DATABASE->query("SHOW TABLES LIKE '<report>'");
+$row = $res->fetch();
+if (!$row) {
+    print "Auditeur haven't been run yet. Run it before inventaire.\n ./bin/auditeur -I $OPTIONS->ini -a Inventaire\n";
+    die();
+}
+
+if (isset($INI['cornac']['prefix'])) {
+    $prefix = $INI['cornac']['prefix'];
+} else {
+    $prefix = 'tokens';
+}
+unset($ini);
+
+// @todo internationalize this!
+// @todo make this configurable from the local web
+$headers = array(
+                // @doc procedural
+                 'Variables' => 'SELECT COUNT(DISTINCT element)  FROM <report> WHERE module="Variables_Names"',
+                 'Files'  => 'SELECT COUNT(DISTINCT file) FROM <report>',
+                 'Functions'   => 'SELECT COUNT(DISTINCT element)  FROM <report> WHERE module="Functions_Definitions"',
+                 'Constants'   => 'SELECT COUNT(DISTINCT element) FROM <report> WHERE module="Constants_Definitions"',
+                // @doc objects
+                 'Classes'   => 'SELECT COUNT(DISTINCT element)  FROM <report> WHERE module="Classes_Definitions"',
+                 'Properties'   => 'SELECT COUNT(DISTINCT element) FROM <report> WHERE module="Classes_Properties"',
+                 'Methods'   => 'SELECT COUNT(DISTINCT element)  FROM <report> WHERE module="Classes_MethodsDefinition"',
+                 'Class Constants'   => 'SELECT COUNT(DISTINCT element) FROM <report> WHERE module="Classes_Constants"',
+                 'Magic methods'   => 'SELECT IF(COUNT(DISTINCT element) > 0, "Yes","No")  FROM <report> WHERE module="Classes_MethodsSpecial"',
+                 'Interfaces'   => 'SELECT COUNT(DISTINCT element) FROM <report> WHERE module="Classes_Interfaces"',
+                 'Namespaces'   => 'SELECT COUNT(DISTINCT element) FROM <report> WHERE module="Php_Namespace"',
+                 'Have static'   => 'SELECT IF(COUNT(DISTINCT code) > 0, "Yes", "No") FROM <tokens> WHERE type IN ("method_static","property_static")',
+                // @doc PHP patterns
+                 'Have globals'   => 'SELECT IF(COUNT(DISTINCT code) > 0, "Yes", "No") FROM <tokens> WHERE type IN ("_static","_global")',
+                 'Fluent interfaces'   => 'SELECT IF(COUNT(DISTINCT element) > 0, "Yes","No")  FROM <report> WHERE module="Structures_FluentInterface"',
+                 'References'   => 'SELECT IF(COUNT(DISTINCT element) > 0, "Yes","No")  FROM <report> WHERE module="Php_References"',
+                 'Variable variables'   => 'SELECT IF(COUNT(DISTINCT element) > 0, "Yes","No")  FROM <report> WHERE module="Variables_Variables"',
+                 'Ticks'   => 'SELECT IF(COUNT(*) > 0, "Yes","No")  FROM <tokens> WHERE type="_declare"',
+                 'Closures'   => 'SELECT IF(COUNT(file) > 0, "Yes","No")  FROM <tokens> WHERE type="_closure"',
+                // @doc dependencies
+                 'External libraries'   => 'SELECT IF(COUNT(target) > 0, "Yes","No")  FROM <tasks> WHERE completed=3',
+                 'Uses Zend Framework'   => 'SELECT IF(COUNT(DISTINCT element) > 0, "Yes","No")  FROM <report> WHERE module="Zf_Dependencies"',
+                 'Uses Symfony'   => 'SELECT IF(COUNT(DISTINCT element) > 0, "Yes","No")  FROM <report> WHERE module="Sf_Dependencies"',
+                // @doc software patterns
+                 'Uncompilable files'   => 'SELECT IF(COUNT(target) > 0, "Yes","No")  FROM <tasks> WHERE completed=3',
+                 'Have phpinfo'   => 'SELECT IF(COUNT(DISTINCT element) > 0, "Yes","No")  FROM <report> WHERE module="Php_Phpinfo"',
+                 'Have debug'   => 'SELECT IF(COUNT(DISTINCT element) > 0, "Yes","No")  FROM <report> WHERE module="Ext_VarDump"',
+                 );
+
+$stats = array();
+
+$ods = new Cornac_Format_Ods();
+
+$ods->setRow('Sommaire',1, array(1 => 'Module','Nombre'));
+$ods->setRowCellsStyle('Sommaire', 1, "ce1");
+
+$cell_row = 1;
+foreach($headers as $name => $sql) {
+    $cell_row++;
+    $res = $DATABASE->query($sql);
+    $row = $res->fetch();
+    $ods->setRow('Sommaire',$cell_row, array(1 => $name, $row[0]));
+}
+
+// @attention : should also support _dot reports
+$names = array("PHP extensions" => array('query' => 'SELECT DISTINCT element FROM <report> WHERE module="Php_Modules" ORDER BY element',
+                                         'headers' => array('Extension'),
+                                         'columns' => array('element')),
+               "Constants" => array('query' => 'SELECT element, COUNT(*) as NB FROM <report> WHERE module="Constants_Definitions" GROUP BY element ORDER BY NB DESC',
+                                    'headers' => array('Constant','Number'),
+                                    'columns' => array('element','NB')),
+               "Classes" => array('query' => 'SELECT T1.class, T1.file AS file, IFNULL(T2.code, "") AS abstract
+FROM <tokens> T1
+LEFT JOIN <tokens> T2
+    ON T2.file = T1.file AND
+       T2.code != T1.class AND
+       (T2.left = T1.left + 1 ) AND
+       T2.type = "_abstract_"
+WHERE T1.type="_class" AND
+      T1.class!= "" 
+ORDER BY T1.class',
+                                  'headers' => array('Classe','abstract','File'),
+                                  'columns' => array('class','abstract','file')),
+               "Interfaces" => array('query' => 'SELECT element, COUNT(*) as NB FROM <report> WHERE module="Classes_Interfaces" GROUP BY element ORDER BY NB DESC',
+                                    'headers' => array('Interface','Number'),
+                                    'columns' => array('element','NB')),
+               "Methods" => array('query' => 'SELECT T1.class, T1.scope AS method, T1.file AS file, 
+if (SUM(if(T2.code="private",1,0))>0, "private","") AS private,
+if (SUM(if(T2.code="protected",1,0))>0, "protected","") AS protected,
+if ((SUM(if(T2.code="public",1,0))>0) OR 
+(SUM(if(T2.code="protected",1,0)) + SUM(if(T2.code="private",1,0)) = 0), "public","") as public,
+if (SUM(if(T2.code="abstract",1,0))>0, "abstract","") as abstract,
+if (SUM(if(T2.code="final",1,0))>0, "final","") as final,
+if (SUM(if(T2.code="static",1,0))>0, "static","") as static
+FROM <tokens> T1
+LEFT JOIN <tokens> T2
+    ON T2.file = T1.file AND
+       T2.type = "_ppp_" AND
+       (T2.left = T1.left + 1 OR 
+        T2.left = T1.left + 3 OR 
+        T2.left = T1.left + 5
+        )
+WHERE T1.type="_function" AND
+      T1.class!= ""
+GROUP BY T1.class, T1.scope, T1.file
+ORDER BY T1.class, T1.scope
+',
+                                    'headers' => array('Class','Method','private','protected','public','static','final','abstract','File'),
+                                    'columns' => array('class','method','private','protected','public','static','final','abstract','file')),
+               "Properties" => array('query' => 'SELECT T1.class, T1.code AS property, T1.file AS file, 
+if (SUM(if(T2.code="public",1,0))>0, "public","") as public,
+if (SUM(if(T2.code="protected",1,0))>0, "protected","") as protected,
+if (SUM(if(T2.code="private",1,0))>0, "private","") as private,
+if (SUM(if(T2.code="static",1,0))>0, "static","") as static
+FROM <tokens> T1
+LEFT JOIN <tokens> T2
+    ON T2.file = T1.file AND
+       T2.code != T1.class AND
+       (T2.left = T1.left + 1 OR
+        T2.left = T1.left + 3 OR
+        T2.left = T1.left + 5) AND
+       T2.type = "_ppp_"
+WHERE T1.type="_var" AND
+      T1.class!= ""
+GROUP BY T1.class, T1.code
+ORDER BY T1.class
+',
+                                    'headers' => array('Class','Property','private','protected','public','static','File'),
+                                    'columns' => array('class','property','private','protected','public','static','file')),
+               "Functions" => array('query' => 'SELECT element, file FROM <report> WHERE module="Functions_Definitions" ORDER BY element',
+                                    'headers' => array('Functions','Number'),
+                                    'columns' => array('element','file')),
+               "Parameters" => array('query' => 'SELECT element, COUNT(*) as NB FROM <report> WHERE module="Variables_Gpc" GROUP BY element ORDER BY NB DESC',
+                                    'headers' => array('Variable','Number'),
+                                    'columns' => array('element','NB')),
+               "Sessions" => array('query' => 'SELECT element, COUNT(*) as NB FROM <report> WHERE module="Variables_Session" GROUP BY element ORDER BY NB DESC',
+                                    'headers' => array('Variable','Number'),
+                                    'columns' => array('element','NB')),
+               "Variables" => array('query' => 'SELECT element, COUNT(*) as NB FROM <report> WHERE module="Variables_Names" GROUP BY element ORDER BY NB DESC',
+                                    'headers' => array('Variable','Number'),
+                                    'columns' => array('element','NB')),
+               "Globals"  => array(  'query' => 'SELECT element, COUNT(*) as NB FROM <report> WHERE module="Php_Globals" GROUP BY element ORDER BY NB DESC',
+                                    'headers' => array('Variable','Number'),
+                                    'columns' => array('element','NB')),
+               "Files   " => array('query' => 'SELECT DISTINCT file FROM <report> GROUP BY file ORDER BY file DESC',
+                                    'headers' => array('file'),
+                                    'columns' => array('file')),
+               "Can't compile" => array('query' => 'SELECT target FROM <tasks> WHERE completed = 3',
+                                    'headers' => array('file'),
+                                    'columns' => array('file')),
+               "Extensions " => array('query' => 'SELECT RIGHT(file, LOCATE(".", REVERSE(file)) - 1) AS ext, COUNT(*) AS number
+                                                    FROM (SELECT DISTINCT file FROM <tokens>)
+                                                  files GROUP BY ext ORDER BY COUNT(*)',
+                                    'headers' => array('ext','number'),
+                                    'columns' => array('ext', 'number')),
+);
+
+foreach($names as $name => $conf) {
+    extract($conf);
+
+    $confs = array('query','headers','columns');
+    foreach($confs as $conf) {
+        if (!isset($$conf)) {
+            print "Missing '$conf' info in configuration for '$name' : aborting\n";
+            continue;
+        }
+    }
+
+    foreach($headers as $id => $header) {
+        $ods->setCell($name, 1, $id + 1, $header);
+        $ods->setCellStyle($name, 1, $id + 1, "ce1");
+    }
+
+    foreach($columns as $id => $col) {
+        $r = $DATABASE->query_one_array($query, $col);
+        if (!isset($r[0])) { 
+            print "'$name' didn't bring anything. Ignoring\n"; 
+            break;
+        }
+        $r[] = $r[0];
+        unset($r[0]);
+        $r[] = $r[1];
+        unset($r[1]);
+        $ods->setCol($name, $id + 1, $r);
+    }
+}
+
+$filename = "./$OPTIONS->output";
+
+// @todo have an export class, like for Log, that will export files in the right folder
+if ($ods->save($filename)) {
+    print "Done\n";
+} else {
+    print "Failed\n";
+}
+
+?>

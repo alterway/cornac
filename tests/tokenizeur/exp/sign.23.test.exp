@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/sign.23.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $list
+       "=" 
+      right : 
+          sign  "-"method_static 307 "Stdclass"::functioncall 307 "methode" ( arglist(literals arg) ) 
+              method_static 
+              307 "Stdclass"::functioncall 307 "methode" ( arglist(literals arg) ) : 
+                  functioncall methode
+                  function call : 307 "methode": 
+                      arglist 
+                      0 : 
+                          literals arg

@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/interface.1.test.php
+  codephp <?php
+
+  code : 
+      _interface 307 "x"
+          block 
+          0 : 
+              function literals y ( )
+                  block 

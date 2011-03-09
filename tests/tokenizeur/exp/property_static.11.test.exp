@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/property_static.11.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison _constant null 283 "==" affectation variable $a  "=" noscream @" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $d
+               "=" 
+              right : 
+                  literals 1

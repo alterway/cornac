@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/continue.2.test.php
+  codephp <?php
+
+  code : 
+      _continue "2" 

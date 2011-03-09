@@ -1,0 +1,30 @@
+tests/tokenizeur/scripts/ternaryop.12.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "variable $b" )
+          block 
+          0 : 
+              rawtext 
+              Texte : "311 "TR ""
+          1 : 
+              functioncall echo
+              function call : 316 "echo": 
+                  arglist 
+                  0 : 
+                      ternaryop ?
+                      functioncall 350 "isset" ( arglist(variable $a) )  ? literals desc : literals asc
+                          functioncall isset
+                          function call : 350 "isset": 
+                              arglist 
+                              0 : 
+                                  variable $a
+                          literals desc
+                          literals asc
+          2 : 
+              rawtext 
+              Texte : "311 " TR 
+""

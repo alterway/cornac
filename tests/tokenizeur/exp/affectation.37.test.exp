@@ -1,0 +1,20 @@
+tests/tokenizeur/scripts/affectation.37.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+      269 "^=" 
+      right : 
+          operation 
+          left : 
+              logical 
+              left : 
+                  literals 1
+              operateur :  "^"
+              right : 
+                  literals 2
+          operation :  "+"
+          right : 
+              literals 3

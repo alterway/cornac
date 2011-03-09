@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/function.18.test.php
+  codephp <?php
+
+  code : 
+      function literals _getRules arglist(affectation variable $a  "=" _constant null, affectation variable $b  "=" _constant null, affectation variable $c  "=" _constant null, affectation variable $d  "=" _constant null, affectation variable $e  "=" _constant null, affectation variable $f  "=" _constant null)
+          block 

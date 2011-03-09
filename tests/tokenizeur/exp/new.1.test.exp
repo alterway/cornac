@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/new.1.test.php
+  codephp <?php
+
+  code : 
+       new  "stdclass" ( ) 

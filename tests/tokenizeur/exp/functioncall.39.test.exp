@@ -1,0 +1,43 @@
+tests/tokenizeur/scripts/functioncall.39.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  literals x
+      1 : 
+          rawtext 
+          Texte : "311 "  <img src="""
+      2 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  concatenation 
+                  0 : 
+                      functioncall fct_lien_page_custom
+                      function call : 307 "fct_lien_page_custom": 
+                          arglist 
+                          0 : 
+                              concatenation 
+                              0 : 
+                                  _constant (                                  TYPE_DOMAINE )
+                              1 : 
+                                  literals /accueil_graph1_trt.php
+                  1 : 
+                      literals ?
+                  2 : 
+                      variable $chart1URL
+      3 : 
+          rawtext 
+          Texte : "311 "" border="0" usemap="#map1" />""
+      4 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  literals y

@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/logical.2.test.php
+  codephp <?php
+
+  code : 
+      logical 
+      left : 
+          literals 1
+      operateur : 265 "and"
+      right : 
+          literals 2

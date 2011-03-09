@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/comparison.6.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison variable $x 288 "instanceof" _constant Exception" )
+          block 
+          0 : 
+              _return 
+              return : "_constant false"

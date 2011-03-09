@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/method_static.8.test.php
+  codephp <?php
+
+  code : 
+      method_static 
+      380 "\"\307 "a"\307 "b"\307 "c"\307 "d"\307 "e"::functioncall 307 "f" ( arglist(variable $g) ) : 
+          functioncall f
+          function call : 307 "f": 
+              arglist 
+              0 : 
+                  variable $g

@@ -1,0 +1,34 @@
+tests/tokenizeur/scripts/functioncall.58.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          functioncall list
+          function call : 359 "list": 
+              arglist 
+              0 : 
+                  [empty]
+              1 : 
+                  variable $a
+              2 : 
+                  [empty]
+              3 : 
+                  [empty]
+              4 : 
+                  [empty]
+              5 : 
+                  variable $b
+       "=" 
+      right : 
+          functioncall imagettfbbox
+          function call : 307 "imagettfbbox": 
+              arglist 
+              0 : 
+                  variable $c
+              1 : 
+                  literals 0
+              2 : 
+                  variable $d
+              3 : 
+                  literals e

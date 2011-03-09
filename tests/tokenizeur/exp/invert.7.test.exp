@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/invert.7.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $mod
+      271 "&=" 
+      right : 
+          invert ~
+              constant_static (              variable $y::_constant x )

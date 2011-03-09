@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/inclusion.3.test.php
+  codephp <?php
+
+  code : 
+      inclusion include
+          literals literal

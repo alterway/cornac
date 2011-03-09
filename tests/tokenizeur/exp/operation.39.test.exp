@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/operation.39.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          operation 
+          left : 
+              noscream @
+                  functioncall number_format
+                  function call : 307 "number_format": 
+                      arglist 
+                      0 : 
+                          operation 
+                          left : 
+                              variable $a
+                          operation :  "/"
+                          right : 
+                              variable $b
+                      1 : 
+                          literals 2
+          operation :  "+"
+          right : 
+              variable $c

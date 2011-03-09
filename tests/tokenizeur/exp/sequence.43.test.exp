@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/sequence.43.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          property variable $non_fluentliterals level_1->
+      1 : 
+          property property variable $fluent1->literals level_1literals level_2->
+      2 : 
+          property property property variable $fluent2->literals level_1->literals level_2literals level_3->

@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/closure.3.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          function() using ( ) arglist(variable $y) 
+              arglist 
+              Empty arglist
+              arglist 
+              0 : 
+                  variable $y

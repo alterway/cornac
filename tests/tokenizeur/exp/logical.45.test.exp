@@ -1,0 +1,28 @@
+tests/tokenizeur/scripts/logical.45.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          logical 
+          left : 
+              _array
+                  variable $a
+                  concatenation 
+                  0 : 
+                      literals b
+                  1 : 
+                      variable $c
+                  2 : 
+                      literals d
+          operateur : 279 "&&"
+          right : 
+              comparison 
+              left : 
+                  variable $e
+              operateur :  ">"
+              right : 
+                  literals 3

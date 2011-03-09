@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/sequence.46.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          function literals a arglist(reference &variable $b, reference &variable $c)
+              block 
+              0 : 
+                  variable $x
+      1 : 
+          variable $x297 "++" 
+              variable $x
+      2 : 
+          function literals b arglist(reference &variable $b)
+              block 

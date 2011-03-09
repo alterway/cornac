@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/literals.9.test.php
+  codephp <?php
+
+  code : 
+      ternaryop ?
+      sign  "-"literals 1 ? sign  "-"literals 2 : sign  "-"literals 3
+          sign  "-"literals 1
+              literals 1
+          sign  "-"literals 2
+              literals 2
+          sign  "-"literals 3
+              literals 3

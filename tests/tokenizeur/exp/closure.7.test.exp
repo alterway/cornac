@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/closure.7.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          function() using arglist(variable $a) block {_return return functioncall 307 "substr" ( arglist(variable $b) )  } 
+              arglist 
+              0 : 
+                  variable $a
+              block 
+              0 : 
+                  _return 
+                  return : "functioncall 307 "substr" ( arglist(variable $b) ) "

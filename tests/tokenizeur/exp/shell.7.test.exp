@@ -1,0 +1,34 @@
+tests/tokenizeur/scripts/shell.7.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          shell 
+          0 : 
+              variable $a
+          1 : 
+              literals  b 
+          2 : 
+              variable $c
+          3 : 
+              literals  d 
+          4 : 
+              variable property variable $e->literals f
+          5 : 
+              literals  
+          6 : 
+              variable method variable $g->functioncall 307 "h" ( ( ) ) 
+          7 : 
+              literals  i j 
+          8 : 
+              variable _array variable $k[literals l]
+          9 : 
+              literals  
+          10 : 
+              variable _array _array variable $m[literals n][literals o]
+          11 : 
+              literals  

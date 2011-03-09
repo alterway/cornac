@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/logical.7.test.php
+  codephp <?php
+
+  code : 
+      logical 
+      left : 
+          variable $x
+      operateur : 278 "||"
+      right : 
+          property variable $yliterals z->

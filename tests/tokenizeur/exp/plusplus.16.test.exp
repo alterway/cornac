@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/plusplus.16.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          property variable $a->variable $b297 "++" 
+              property variable $avariable $b->
+      1 : 
+          297 "++"property variable $e->variable $d 
+              property variable $evariable $d->

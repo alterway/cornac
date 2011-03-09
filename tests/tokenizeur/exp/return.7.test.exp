@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/return.7.test.php
+  codephp <?php
+
+  code : 
+      function literals cmp1 arglist(variable $a, variable $b)
+          block 
+          0 : 
+              ifthen if
+              Condition 0) 
+                  parenthesis 
+                  ( "comparison _array variable $a[literals fichier] 283 "==" _array variable $b[literals fichier]" )
+                  block 
+                  0 : 
+                      _return 
+                      return : "literals 0"

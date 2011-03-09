@@ -1,0 +1,29 @@
+tests/tokenizeur/scripts/switch.17.test.php
+  codephp <?php
+
+  code : 
+      _switch 
+          parenthesis 
+          ( "variable $x" )
+          block 
+          0 : 
+              _case 
+                  literals 2
+                  block 
+                  0 : 
+                      method variable $a
+                      method call : functioncall 307 "b" ( ( ) ) : 
+                          functioncall b
+                          function call : 307 "b": 
+                              arglist 
+                              Empty arglist
+                  1 : 
+                      affectation 
+                      left : 
+                          property variable $cliterals d->
+                       "=" 
+                      right : 
+                          _constant (                          true )
+                  2 : 
+                      _break 
+                      Number : " "1""

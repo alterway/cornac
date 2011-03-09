@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.6.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property variable $aliterals c->
+       "=" 
+      right : 
+           new method variable $b->functioncall 307 "a" ( ( ) )  ( ) 

@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/namespace.3.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          namespace 307 "admin"
+      1 : 
+          use 307 "a"\307 "b"\307 "c"
+      2 : 
+           class 307 "d"
+              block 
+              0 : 
+                  347 "static"function literals e arglist(variable $f)
+                      block 

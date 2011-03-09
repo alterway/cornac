@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/property.1.test.php
+  codephp <?php
+
+  code : 
+      property variable $xliterals y->

@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/reference.7.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          reference &
+              method_static 
+              307 "classe"::functioncall 307 "method_static" ( ( ) ) : 
+                  functioncall method_static
+                  function call : 307 "method_static": 
+                      arglist 
+                      Empty arglist

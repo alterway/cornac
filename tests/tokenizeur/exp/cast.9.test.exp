@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/cast.9.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          cast (291 "(object)")_new 
+               new  "StdClass" ( ) 

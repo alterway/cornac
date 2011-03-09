@@ -1,0 +1,32 @@
+tests/tokenizeur/scripts/sequence.11.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          affectation 
+          left : 
+              variable $a
+           "=" 
+          right : 
+              literals a
+      1 : 
+          affectation 
+          left : 
+              variable $b
+           "=" 
+          right : 
+              literals b
+      2 : 
+          affectation 
+          left : 
+              variable $c
+           "=" 
+          right : 
+              literals c
+      3 : 
+          functioncall print
+          function call : 266 "print": 
+              arglist 
+              0 : 
+                  variable $c

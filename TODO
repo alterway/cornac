@@ -1,0 +1,335 @@
+[cornac]
+Add script to check all script validates 
+Add deploy directory
+
+add remove table option for cornac / auditeur
+
+database : some query (like for cache) may end up breaking the maximum sql query size. This should be checked.
+
+Add an Export class, to handle export to a configurable folder.
+
+Add an option to remvoe prefix on file names during tokenization. 
+
+Check cornac on SQLITE.
+
+Add a way to display code within cornac (Through PHP COde Browser? Under work with JMF)
+Have a tar.gz packaged automatically (create a phing build)
+Set up a version system, so that it is easier to know which version is being used (upon a phing publication? ) 
+process extension as case unsensitive. 
+check for default values of .ini in the code, so as to make sure we have a nice list
+
+update tokeniseur.sh to run tokenizeur on all the Reference project and check output automatically (also, collect stats on volume, and processing time).
+
+update tokinit, to have a list of excluded/included file extension. 
+
+Add a log to show progress
+Add support for a version of Cornac (checking for config files, tables configurations, etc.)
+add file restriction in the cornac.ini file
+
+Move auditeur.php to English
+prepare an internationalisation folder
+Move auditeur.php to upper directory
+
+make a script to change name of auditeur's analyser git : move auditeur/classes/, auditeur/auditeur.php, tests/auditeur/ scripts, class.*.test.php, alltests.php 
+
+add a script to check ext sync between class/functions/classes (missing ones?)
+
+Add some more cornac tests
+make a database of already tokenized applications (with a link to the source, and automatic update)
+Apply cornac to itself
+Move array style to object ? 
+
+Upgrade error messages (Still, too often dies)
+
+Add a log option in cornac/* to 
+Add an option to clean content first
+Check that one can update code with cornac (cleaning old reports)
+
+Add multi-processing for tokenizeur/auditeur (should be easy, given the task are all concurrent and distinct)
+Be able to use another PHP than the system one (specify PHP path?)
+Have fast in-progress report (report built while tokenizeur is working...)
+Make analyses paralelle (gearman or DB task list? process recently edited files only
+
+Add more unit tests for the auditeur (check track.php)
+Move to English (messages, names...) : Comparant (_case)
+Check for code coverage
+
+Move the chained list to SPL
+Move the analyze into SQL only ? (That would be too slow, because of the disk)
+
+Stop script when option is unrecognized (any of them);
+Display dots when parsing the file (tokenizer)
+Display dots when processing analyzers (auditeur)
+
+Add a file lister, that will also display ignored files from tokenizeur (export current function to external scripts/)
+
+[tokenizeur]
+move classes from tests to library
+move test classes in own directory
+
+Extract xdebug functions to external class to avoid dependency
+
+Move column cache in table tokens
+Fully fill the column cache 
+Remove the template 'cache'
+
+Check the actual value of column class and scope dans token table
+Remove all -1 mentions in column line for tokens
+
+tokenizeur : store literal type (string, bool, int, real...)
+
+add a diff mode, that will make tokinit check for update in files, and only update those. 
+
+move _static as an attribute, and not a type of token. 
+
+Check for table structure before using MCD
+check tokclient, to make sure he keeps going on when a script can't be processed. 
+
+Compile some more PHP version to use for outsourcing token_get_all() function
+
+Run tokenizeur regularly on Open source project : make a script for automation, and extract some stats on how much was tested, compare applications (function used, extension used, pattern spotted, number of files...)
+check that tokenizeur works on one file only, without database
+
+Spot php error during execution, and report it. 
+Could it be possible to chain results? Atm, one can do it manually, or creating a new analyzer
+Use JMF's style
+
+Add support for comments
+
+See how cache template must be used with mysql/sqlite
+Sqlite is currently not up to date with mysql template
+
+Limit usage of getNext() in regex
+Add a cache for getNext() (case of applyRegex?)
+Count GetNext and getPrev for stats
+
+For each tokem note scope, class, method, variable, array, fichier
+Add -log option to log information in a log file
+
+see how tokclient may not stop stupidly, and keep going when there are still some tasks to do : Test this now
+
+Add information code when tokclient fail at parsing a file. (php not compile, etc.)
+
+check that "$r[g]" doesn't interpolate an array in the string (contrary to "{$r[g]}").
+rename mon_log into my_log...
+
+use select in tokclient to // processing
+
+[auditeur]
+Make a list of auditeur's basic actions, so as to start a reference doc for auditeur/analyzers
+
+Log time of analyseur's process
+
+Detect tables available for MCD, and stop if this is not compatible
+
+Automat Analyzer sorting in auditeur.php
+
+Have a report_characteristics table (that will hold reports at the token level)
+make a web interface to update analyseurs
+
+Automatically spot authorized values in SQL queries (<report>, between '');
+
+Add suggestion when -a is provided to auditeur
+Add listing of all analyzers with -l
+
+Check for table structure before using. 
+Move auditeur to English as reference translations of analyzers's title and description
+Add 'tags' propertie to every analyzers to help sort out the analyzers
+Support tags in web format : on the index page, display a list of them, for filtering. 
+
+Spot php error during execution, report it by auditeur
+Add a log-time option to auditeur, to fill the auditeur.log
+Make auditeur i18n easily (export in external file, auto-adding new titles)
+
+Add typing for the analyzers : increment or global; display to web, or internal. 
+
+Gather analyzers by type : function/method, class, file, overall (global) : we can then adapt output, and also, decide if a change in code impact this analyzer. 
+
+Add options for auditeurs analyzers (.ini for the main, or sqlite's db, and also dictionnaries)
+
+Export from auditeur to other format (PDF, HTML, XML, JSON, CSV, SQLITE, ODT...)
+
+Standardization : display one groupe, another, its intersection. Should we build be able to combine the reports as groups (intersect, union, etc.) between report? Then add counting system (group by, vent by file...). 
+
+export analyzers dependencies in a graph
+
+find a nice display for auditeur export in HTML/Web version
+
+Add one main figure for each analyzers (count of info)
+Have a property that tells if an analyzers is public or not
+
+Have ratio calculated on top of analyzers (TDB)
+
+Support dot format for testing
+
+Organize tests hierarchically (Common/Zend/Sf) and allow some arbitrary gathering
+
+ multiple -> (fluent interfaces on properties)
+List of undefined/unused interfaces
+GPC used in functions... 
+
+sort functions (PHP 5.3 migration) : spot object type first
+PHP 5.3 SPL classes : Warning : trailing " are removed from strings...
+
+Structure (Function, method, class) must use, have return, call such method, etc... 
+
+check tokens? and version for PHP. This must be done in tokenizer. 
+
+Prepare auditeur for wordpress, joomla, drupal, sf, zf, ci. 
+
+[analysers ideas]
+spot method that do not use $this (property or method). 
+Suggest moving public to private, based on method usage (within or outside).
+
+Make a tree with view calling each other (that coud word on controllers too, and models). 
+CHeck for calls between controlers/models/view!  (This shouldn't happen...)
+
+Make a tree with exceptions throws (List des émetteur d'exception, et de leur catch)
+
+check that variables are constante (only received a constant value).
+
+Spot special advice in the PHP doc (like warning in the strpos doc) and make an analyzer for them
+   http://php.net/manual/en/domdocument.load.php 
+Spot integer not in decimal format
+Spot invalid integer in different format (octal, hexa...)
+Spot typecasting of integer in operations.
+
+Classes relations based on class constant.
+
+return out of functions scope
+Spot redeclared methods in class hierarchy
+Spot type of value returned by method/functions
+(then start identifying types of variables/properties, including the mixed one). 
+
+spot affectations out of place (in if, as argument...)
+
+identify 'tainted' values (either from GPC, or from arguments)
+identify returned values (used in return)
+identify tainted function (one that return transformed incoming values)
+identify variable class by method/property/constant usage. 
+
+Make a function call tree (which function calls which)
+
+add 'variable' as a scope, so that we can actually work context by context
+
+affected only variables (not used anywhere else that affectations)
+
+String by delimiter (especially <<< )
+
+detect impossible condition (if (false), ...)
+
+PHP configuration function usage
+
+uninitialised variables (first to be used in a function/main).
+
+Structures of other languages (JS, HTML, ...)   
+
+default before other cases (this is useless)
+useless lines (like 1; array(); etc.)
+Identify variables that where not initialized (less args, less foreach)
+
+Long functions (number of tokens, number of lines...), 
+Compromised variables (the one affected with values from GPC)
+
+Gather files including something else than class, function or global.... 
+undefined properties used (in class) : must support hierarchy too.
+
+Note variable type, when it is possible (intval, new, etc...)
+
+List of type variable we might guess.
+Variable that never gets affected (is this register_globals?)
+Long list of parameters (called or defined...)
+Long list of public methods
+
+List open-ended inclusions (including files that we don't know about)
+
+Report of dependance of a method : local variables, global ones, class, constantes, statique. 
+
+Detect multiple definitions of functions/classes (things that should be there only once : how can we process that then?)
+Detect missing elements in classes (like methods, properties, etc)
+Make a array of function (are they defined? at what level?)
+
+Make a map of a function : in, out, dependances
++ in (global, statiques, membres)
++ out (return)
++ local (variables)
++ dependances (constants, functions, classes...)
+
+Script mail usage
+SQL queries protections
+Upper case variables
+URL manipulations
+
+Spot PHP code in comments
+
+Gather all index used in an array (how to check 2 arrays are the same?)
+
+Be able to search for a string, whatever the analyzer (intersect analyzers result and see what is is common)
+
+functions (and files) that emit text (print, var_dump, raw text...)
+functions (and files) that emit error (join, mysql_connect, ) : they should be checked...
+
+methods/files/classes that misses some (provided) code.
+
+Qualify scripts/contextes/folders as being controler (aka _GET, include), model (database) ou template (html, pdf, echo...).
+Check that above characteristics are at the right place (by folder, by framework...)
+
+Support some framework : drupal, joomla, zend, symfony, magento
+    Support for : templating, modele, controler, usage of internals recommanded libraries
+
+htmlentities used without encoding information
+
+Spot function declaration in the middle of nowhere
+
+Suggest gathering code, depending on calling graph (a->b, b->c, so a,b,c should be a class by itself)
+
+List variables used in a view (ZF)
+List des variables dans les vues
+différences entre les variables de vue et de controleur
+
+check for proxy classes : X methods call their parent methods
+Relay functions : call another method with the same args
+spot useless heritage     function __construct($mid) {  parent::__construct($mid);    } 
+Methods that call their parent:: or self::
+Classes that overload parent methods
+Classes that uses parent properties
+
+Check Symfony naming convention
+move References folder and associated script out of cornac
+spot similar folders (containing about the same files)
+spot similar classe (containing similar properties/methods)
+sf migration (http://www.symfony-project.org/tutorial/1_4/en/deprecated)
+
+spot continue that are not in a loop (this is a fatal error in php 5).
+
+[web]
+use .ini for the web folder too
+export to html : should match the interactive web version
+add a table list for the DOT format
+export to .csv
+export to .yaml
+export to .xmi 
+support graphic file representation (move file2png to a lib, then integrate)
++ What to do when one (un)check a group of element, when the group is not homogenous : currently, toggle invert the values, and it is not easy to understand
+export to html : should match the interactive web version
+
+[inventaire]
+Add unit tests for inventaires (through other output format?)
+make 'inventaire' work on one file only
+make 'inventaire' export to other format (TEXT, csv, json...)
+
+add information on inventaire.ods about processing of application.
+
+mention presence of phpinfo
+
+add output file in .ini
+internationalize
+centralize connexion to the database
+regex
+sql requests
+Cookies
+Configuration variables
+
+[dict]
+Make a library of common library, and extract classes, functions, constante from them. 
+extract classes from pecl and PHP code, to move into dictionary. 

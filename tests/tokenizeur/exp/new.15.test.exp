@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.15.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $document
+       "=" 
+      right : 
+           new 347 "static" ( ) 

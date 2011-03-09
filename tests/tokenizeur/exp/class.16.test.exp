@@ -1,0 +1,36 @@
+tests/tokenizeur/scripts/class.16.test.php
+  codephp <?php
+
+  code : 
+      345 "final" class 307 "x"
+          block 
+          0 : 
+              342 "public"function literals a ( )
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $x
+                       "=" 
+                      right : 
+                          literals 1
+          1 : 
+              344 "private"function literals b ( )
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $x
+                       "=" 
+                      right : 
+                          literals 1
+          2 : 
+              343 "protected"function literals c ( )
+                  block 
+                  0 : 
+                      affectation 
+                      left : 
+                          variable $x
+                       "=" 
+                      right : 
+                          literals 1

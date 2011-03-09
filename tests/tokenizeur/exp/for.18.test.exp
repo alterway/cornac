@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/for.18.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : block {affectation variable $i  "=" literals 0
+affectation variable $a  "=" literals 1 };
+        End  : block {comparison variable $i  "<" literals 0
+affectation variable $b  "=" literals 2 };
+        Incr : postplusplus 297 "++"variable $i;
+          functioncall unset
+          function call : 349 "unset": 
+              arglist 
+              0 : 
+                  variable $t

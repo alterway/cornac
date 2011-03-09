@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/for.37.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _for 
+            Init : affectation variable $i  "=" literals 0;
+            End  : comparison variable $i  "<" literals 3;
+            Incr : postplusplus 297 "++"variable $i;
+              block 
+              0 : 
+                  variable $a297 "++" 
+                      variable $a
+      1 : 
+          method variable $a
+          method call : functioncall 307 "b" ( ( ) ) : 
+              functioncall b
+              function call : 307 "b": 
+                  arglist 
+                  Empty arglist

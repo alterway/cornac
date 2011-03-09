@@ -1,0 +1,27 @@
+tests/tokenizeur/scripts/sequence.21.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $h
+       "=" 
+      right : 
+          logical 
+          left : 
+              functioncall a
+              function call : 307 "a": 
+                  arglist 
+                  0 : 
+                      functioncall b
+                      function call : 307 "b": 
+                          arglist 
+                          0 : 
+                              property variable $cliterals d->
+          operateur :  "^"
+          right : 
+              functioncall e
+              function call : 307 "e": 
+                  arglist 
+                  0 : 
+                      property variable $fliterals g->

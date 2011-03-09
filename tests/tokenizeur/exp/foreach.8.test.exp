@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/foreach.8.test.php
+  codephp <?php
+
+  code : 
+      _foreach (_array property variable $a->literals b[literals 1] as variable $c => variable $d)
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1

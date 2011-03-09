@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/sign.4.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              sign  "-"_constant true
+                  _constant (                  true )

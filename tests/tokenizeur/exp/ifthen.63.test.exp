@@ -1,0 +1,29 @@
+tests/tokenizeur/scripts/ifthen.63.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison variable $a 283 "==" literals b" )
+          block 
+          0 : 
+              functioncall $c
+              function call : variable $c: 
+                  arglist 
+                  0 : 
+                      property variable $dliterals e->
+                  1 : 
+                      variable $f
+                  2 : 
+                      variable $g
+       else 
+          block 
+          0 : 
+              functioncall $h
+              function call : variable $h: 
+                  arglist 
+                  0 : 
+                      property variable $iliterals j->
+                  1 : 
+                      variable $k

@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/affectation.30.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          property_static 307 "Y"::variable $C->

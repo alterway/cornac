@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/property.16.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              property variable $aliterals b->

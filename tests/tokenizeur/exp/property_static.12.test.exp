@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/property_static.12.test.php
+  codephp <?php
+
+  code : 
+      property_static 380 "\"\307 "A"::variable $B297 "++" 
+          property_static 380 "\"\307 "A"::variable $B->

@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/operation.28.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+      277 "+=" 
+      right : 
+          operation 
+          left : 
+              property_static 307 "self"::_array variable $b[variable $c]->
+          operation :  "*"
+          right : 
+              literals 86400

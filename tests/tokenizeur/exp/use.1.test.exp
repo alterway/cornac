@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/use.1.test.php
+  codephp <?php
+
+  code : 
+      use 307 "a"

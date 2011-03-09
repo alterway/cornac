@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/concatenation.24.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          concatenation 
+          0 : 
+              _array
+                  property variable $thisliterals properties->
+                  literals prefix
+          1 : 
+              property variable $nodeliterals id->

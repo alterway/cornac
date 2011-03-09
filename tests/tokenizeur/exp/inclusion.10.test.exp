@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/inclusion.10.test.php
+  codephp <?php
+
+  code : 
+      inclusion include
+          property variable $aliterals b->

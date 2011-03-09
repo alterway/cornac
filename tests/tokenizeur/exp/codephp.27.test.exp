@@ -1,0 +1,8 @@
+tests/tokenizeur/scripts/codephp.27.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          variable $a297 "++" 
+              variable $a

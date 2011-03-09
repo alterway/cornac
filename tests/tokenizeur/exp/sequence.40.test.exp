@@ -1,0 +1,13 @@
+tests/tokenizeur/scripts/sequence.40.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+           new 307 "StdClass" ( ) 
+      1 : 
+           new 307 "StdClass" ( ) 
+      2 : 
+           new 307 "StdClass" ( ) 
+      3 : 
+           new 307 "StdClass" ( ) 

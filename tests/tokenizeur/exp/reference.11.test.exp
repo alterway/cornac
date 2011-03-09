@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/reference.11.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          parenthesis 
+          ( "functioncall 307 "chr" ( arglist(bitshift logical literals 0xC0  "|" variable $char  286 ">>"  literals 12 ) ) " )

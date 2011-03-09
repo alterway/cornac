@@ -1,0 +1,5 @@
+tests/tokenizeur/scripts/halt_compiler.1.test.php
+  codephp <?php
+
+  code : 
+      ___halt_compiler 

@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/class.31.test.php
+  codephp <?php
+
+  code : 
+      346 "abstract" class 307 "a"
+          block 
+          0 : 
+              346 "abstract"function literals b arglist(variable $d, affectation variable $e  "=" _constant false)
+                  block 
+          1 : 
+              346 "abstract"function literals d arglist(variable $e, affectation variable $f  "=" functioncall 360 "array" ( ( ) ) )
+                  block 
+          2 : 
+              function literals g ( )
+                  block 

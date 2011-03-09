@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/for.8.test.php
+  codephp <?php
+
+  code : 
+      _for 
+        Init : ;
+        End  : comparison variable $i  "<" literals 5;
+        Incr : postplusplus 297 "++"variable $i;
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals s

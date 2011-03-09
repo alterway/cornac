@@ -1,0 +1,28 @@
+tests/tokenizeur/scripts/ifthen.41.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "variable $a" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  property property variable $this->literals bliterals c->
+               "=" 
+              right : 
+                  variable $d
+       else 
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $e
+               "=" 
+              right : 
+                  functioncall f
+                  function call : 307 "f": 
+                      arglist 
+                      Empty arglist

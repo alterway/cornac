@@ -1,0 +1,24 @@
+tests/tokenizeur/scripts/try.6.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _try 
+              block 
+              0 : 
+                  method variable $x
+                  method call : functioncall 307 "y" ( arglist(literals 3, literals 4) ) : 
+                      functioncall y
+                      function call : 307 "y": 
+                          arglist 
+                          0 : 
+                              literals 3
+                          1 : 
+                              literals 4
+          0 : 
+              _catch (307 "Exception")variable $e
+                  block 
+      1 : 
+          variable $i297 "++" 
+              variable $i

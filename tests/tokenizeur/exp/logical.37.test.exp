@@ -1,0 +1,31 @@
+tests/tokenizeur/scripts/logical.37.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  logical 
+                  left : 
+                      parenthesis 
+                      ( "comparison _array variable $property[literals emp_id] 283 "==" sign  "-"literals 1" )
+                  operateur :  "|"
+                  right : 
+                      ternaryop ?
+                      parenthesis (comparison _array variable $property[literals emp_id] 283 "==" literals ) ? literals selected : literals 
+                          parenthesis 
+                          ( "comparison _array variable $property[literals emp_id] 283 "==" literals " )
+                          literals selected
+                          literals 
+      1 : 
+          rawtext 
+          Texte : "311 "A""
+      2 : 
+          functioncall echo
+          function call : 316 "echo": 
+              arglist 
+              0 : 
+                  variable $lang_Admin_Property_Please_Select

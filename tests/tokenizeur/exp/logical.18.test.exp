@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/logical.18.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "logical logical functioncall 307 "a" ( arglist(variable $b, variable $c) )  278 "||" comparison variable $c 283 "==" literals d 278 "||" parenthesis (logical comparison variable $c 283 "==" literals e 279 "&&" logical functioncall _array variable $f[literals g] ( arglist(functioncall _array variable $g[literals g] ( arglist(variable $a, operation variable $q  "+" literals 1, literals 1) ) ) )  279 "&&" parenthesis (logical logical variable $p 278 "||" variable $q 278 "||" variable $r))" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1

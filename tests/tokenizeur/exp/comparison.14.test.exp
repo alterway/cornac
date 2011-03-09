@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/comparison.14.test.php
+  codephp <?php
+
+  code : 
+      ifthen if
+      Condition 0) 
+          parenthesis 
+          ( "comparison literals 0 283 "==" preplusplus variable $x297 "++"" )
+          block 
+          0 : 
+              affectation 
+              left : 
+                  variable $x
+               "=" 
+              right : 
+                  literals 1

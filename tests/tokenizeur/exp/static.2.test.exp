@@ -1,0 +1,22 @@
+tests/tokenizeur/scripts/static.2.test.php
+  codephp <?php
+
+  code : 
+      sequence 
+      0 : 
+          _static 
+              variable $x
+      1 : 
+          _static 
+              affectation 
+              left : 
+                  variable $mimetypes
+               "=" 
+              right : 
+                  functioncall array
+                  function call : 360 "array": 
+                      arglist 
+                      0 : 
+                          literals 323 => literals text/h323
+                              literals 323
+                              literals text/h323

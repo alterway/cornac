@@ -1,0 +1,14 @@
+tests/tokenizeur/scripts/logical.29.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+      273 ".=" 
+      right : 
+          concatenation 
+          0 : 
+              literals ^
+          1 : 
+              property _array property property variable $a->literals b->literals d[variable $e]literals r->

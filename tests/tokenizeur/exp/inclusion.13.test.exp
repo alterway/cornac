@@ -1,0 +1,16 @@
+tests/tokenizeur/scripts/inclusion.13.test.php
+  codephp <?php
+
+  code : 
+      noscream @
+          inclusion include
+              concatenation 
+              0 : 
+                  method variable $a
+                  method call : functioncall 307 "b" ( ( ) ) : 
+                      functioncall b
+                      function call : 307 "b": 
+                          arglist 
+                          Empty arglist
+              1 : 
+                  literals /c.php

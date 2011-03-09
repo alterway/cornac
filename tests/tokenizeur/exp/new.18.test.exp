@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.18.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+           new 380 "\"\307 "b"\307 "c"\307 "d"\307 "e" arglist(literals f) 

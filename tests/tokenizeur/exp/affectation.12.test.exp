@@ -1,0 +1,12 @@
+tests/tokenizeur/scripts/affectation.12.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $row
+       "=" 
+      right : 
+          _array
+              variable $result
+              literals 0

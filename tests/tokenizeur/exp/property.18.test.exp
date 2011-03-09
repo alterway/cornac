@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/property.18.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          property method variable $this->functioncall 307 "a" ( ( ) ) variable $b->
+       "=" 
+      right : 
+          variable $c

@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/clone.10.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          _clone 
+              property_static 307 "y"::variable $C->

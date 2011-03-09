@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/affectation.51.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+          affectation 
+          left : 
+              variable $z
+          276 "-=" 
+          right : 
+              variable $d

@@ -1,0 +1,21 @@
+tests/tokenizeur/scripts/operation.34.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $base
+       "=" 
+      right : 
+          operation 
+          left : 
+              operation 
+              left : 
+                  variable $pad
+              operation :  "+"
+              right : 
+                  variable $width
+          operation :  "+"
+          right : 
+              variable $i296 "--" 
+                  variable $i

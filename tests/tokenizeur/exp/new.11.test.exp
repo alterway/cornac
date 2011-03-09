@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.11.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x
+       "=" 
+      right : 
+           new property_static 307 "classe"::variable $property ( ) 

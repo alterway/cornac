@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/method.14.test.php
+  codephp <?php
+
+  code : 
+      method variable $e
+      method call : functioncall literals namespace1:gt ( ( ) ) : 
+          functioncall namespace1:gt
+          function call : literals namespace1:gt: 
+              arglist 
+              Empty arglist

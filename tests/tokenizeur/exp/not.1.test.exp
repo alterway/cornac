@@ -1,0 +1,6 @@
+tests/tokenizeur/scripts/not.1.test.php
+  codephp <?php
+
+  code : 
+      not !
+          variable $x

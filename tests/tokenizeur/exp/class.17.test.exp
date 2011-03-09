@@ -1,0 +1,18 @@
+tests/tokenizeur/scripts/class.17.test.php
+  codephp <?php
+
+  code : 
+       class 307 "x"
+          block 
+          0 : 
+               343 "protected"347 "static"variable $a
+          1 : 
+               343 "protected"347 "static"variable $b
+          2 : 
+               342 "public"347 "static"variable $c
+          3 : 
+               342 "public"347 "static"variable $d
+          4 : 
+               344 "private"347 "static"variable $e
+          5 : 
+               344 "private"347 "static"variable $f

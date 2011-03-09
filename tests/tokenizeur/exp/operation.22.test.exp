@@ -1,0 +1,25 @@
+tests/tokenizeur/scripts/operation.22.test.php
+  codephp <?php
+
+  code : 
+      operation 
+      left : 
+          parenthesis 
+          ( "ternaryop ?" )
+      operation :  "*"
+      right : 
+          functioncall $sorter
+          function call : variable $sorter: 
+              arglist 
+              0 : 
+                  _array
+                      variable $a
+                      _array
+                          variable $GLOBALS
+                          literals callback_sort_by
+              1 : 
+                  _array
+                      variable $b
+                      _array
+                          variable $GLOBALS
+                          literals callback_sort_by

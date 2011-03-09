@@ -1,0 +1,38 @@
+tests/tokenizeur/scripts/switch.25.test.php
+  codephp <?php
+
+  code : 
+      _switch 
+          parenthesis 
+          ( "variable $a" )
+          block 
+          0 : 
+              _case 
+                  literals 1
+                  block 
+                  0 : 
+                      variable $x297 "++" 
+                          variable $x
+                  1 : 
+                      _break 
+                      Number : " "1""
+          1 : 
+              _case 
+                  literals 2
+                  block 
+                  0 : 
+                      variable $x297 "++" 
+                          variable $x
+                  1 : 
+                      _break 
+                      Number : " "1""
+          2 : 
+              _case 
+                  literals 3
+                  block 
+                  0 : 
+                      variable $x297 "++" 
+                          variable $x
+                  1 : 
+                      _break 
+                      Number : " "1""

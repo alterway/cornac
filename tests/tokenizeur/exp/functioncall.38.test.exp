@@ -1,0 +1,19 @@
+tests/tokenizeur/scripts/functioncall.38.test.php
+  codephp <?php
+
+  code : 
+      functioncall eval
+      function call : 260 "eval": 
+          arglist 
+          0 : 
+              concatenation 
+              0 : 
+                  literals insert_histo_
+              1 : 
+                  variable $table
+              2 : 
+                  literals (
+              3 : 
+                  variable $pdt_cle
+              4 : 
+                  literals ,1);

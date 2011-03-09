@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/functioncall.49.test.php
+  codephp <?php
+
+  code : 
+      functioncall echo
+      function call : 316 "echo": 
+          arglist 
+          0 : 
+              literals (

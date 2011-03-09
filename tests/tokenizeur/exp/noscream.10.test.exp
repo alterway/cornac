@@ -1,0 +1,11 @@
+tests/tokenizeur/scripts/noscream.10.test.php
+  codephp <?php
+
+  code : 
+      noscream @
+          method_static 
+          307 "x"::functioncall 307 "y" ( ( ) ) : 
+              functioncall y
+              function call : 307 "y": 
+                  arglist 
+                  Empty arglist

@@ -1,0 +1,15 @@
+tests/tokenizeur/scripts/noscream.19.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+          noscream @
+              concatenation 
+              0 : 
+                  literals b
+              1 : 
+                  variable $x

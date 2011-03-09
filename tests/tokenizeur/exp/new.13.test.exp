@@ -1,0 +1,10 @@
+tests/tokenizeur/scripts/new.13.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $a
+       "=" 
+      right : 
+           new method variable $b->functioncall 307 "c" ( arglist(variable $d) )  ( ) 

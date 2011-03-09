@@ -1,0 +1,26 @@
+tests/tokenizeur/scripts/operation.21.test.php
+  codephp <?php
+
+  code : 
+      affectation 
+      left : 
+          variable $x1
+       "=" 
+      right : 
+          operation 
+          left : 
+              variable $x1
+          operation :  "/"
+          right : 
+              operation 
+              left : 
+                  method variable $this
+                  method call : functioncall 307 "_size_col" ( arglist(variable $col_start) ) : 
+                      functioncall _size_col
+                      function call : 307 "_size_col": 
+                          arglist 
+                          0 : 
+                              variable $col_start
+              operation :  "+"
+              right : 
+                  literals 1024

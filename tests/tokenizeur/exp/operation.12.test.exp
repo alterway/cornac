@@ -1,0 +1,17 @@
+tests/tokenizeur/scripts/operation.12.test.php
+  codephp <?php
+
+  code : 
+      operation 
+      left : 
+          variable $x
+      operation :  "+"
+      right : 
+          affectation 
+          left : 
+              _array
+                  variable $y
+                  literals 1
+           "=" 
+          right : 
+              variable $z

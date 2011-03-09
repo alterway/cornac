@@ -1,0 +1,9 @@
+tests/tokenizeur/scripts/typehint.11.test.php
+  codephp <?php
+
+  code : 
+      function literals a arglist(typehint 307 "B" variable $c, typehint 380 "\"\307 "D" affectation variable $e  "=" _constant null)
+          block 
+          0 : 
+              variable $x297 "++" 
+                  variable $x
