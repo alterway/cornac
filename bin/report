@@ -1,0 +1,431 @@
+#!/usr/bin/env php
+<?php
+
+/*
+   +----------------------------------------------------------------------+
+   | Cornac, PHP code inventory                                           |
+   +----------------------------------------------------------------------+
+   | Copyright (c) 2010 - 2011                                            |
+   +----------------------------------------------------------------------+
+   | This source file is subject to version 3.01 of the PHP license,      |
+   | that is bundled with this package in the file LICENSE, and is        |
+   | available through the world-wide-web at the following url:           |
+   | http://www.php.net/license/3_01.txt                                  |
+   | If you did not receive a copy of the PHP license and are unable to   |
+   | obtain it through the world-wide-web, please send a note to          |
+   | license@php.net so we can mail you a copy immediately.               |
+   +----------------------------------------------------------------------+
+   | Author: Damien Seguy <damien.seguy@alterway.fr>                      |
+   +----------------------------------------------------------------------+
+ */
+
+include('library/Cornac/Autoload.php');
+spl_autoload_register('Cornac_Autoload::autoload');
+
+$options = array('help' => array('help' => 'display this help',
+                                 'option' => '?',
+                                 'compulsory' => false),
+                 'ini' => array('help' => 'configuration set or file',
+                                 'get_arg_value' => null,
+                                 'option' => 'I',
+                                 'compulsory' => true),
+                 'output' => array('help' => 'output file name (default inventory)',
+                                 'get_arg_value' => 'inventory',
+                                 'option' => 'o',
+                                 'compulsory' => false),
+                 'format' => array('help' => 'output file name (not supported. Only ODS at the moment)',
+                                 'get_arg_value' => 'ods',
+                                 'option' => 'f',
+                                 'compulsory' => false),
+// @todo option to run auditeur if missing values. 
+                 'clean' => array('help' => 'remove output file',
+                                 'option' => 'K',
+                                 'compulsory' => false),
+);
+
+$OPTIONS = new Cornac_Options();
+$OPTIONS->setConfig($options);
+$OPTIONS->init();
+
+$DATABASE = new Cornac_Database();
+
+if (!isset($OPTIONS->report) || !isset($OPTIONS->report['rules']) ||
+    !is_array($OPTIONS->report['rules']) || count($OPTIONS->report['rules']) == 0) {
+    $rules = array('Variables_Unaffected', 
+                   'Ext_VarDump',
+                   'Functions_UnusedReturn',
+                   'Variables_Unaffected',
+                   'Functions_Relay',
+                   'Classes_MethodsWithoutPpp',
+                   'Classes_PropertiesUnused',
+                   'Classes_Unused',
+                   'Commands_SqlConcatenation',
+                   'Constants_HasLowerCase',
+                   'Ext_DieExit',
+                   'Ext_Evals',
+                   'Functions_Emptys');
+} else {
+    $rules = $OPTIONS->report['rules'];
+    
+    // @todo check for availability of the rule
+}
+
+$res = $DATABASE->query("SELECT DISTINCT file FROM <report>");
+$rows = $res->fetchall();
+
+copy_files();
+foreach($rows as $row) {
+    process($row['file'], $rules);
+}
+
+foreach($rules as $rule) {
+    rule_report($rule);
+}
+
+summary($rules);
+
+function process($path, $rules) {
+    global $DATABASE; 
+    
+    if (!file_exists($path)) {
+        return false; 
+    }
+    print "$path\n";
+    
+//    $path = "./tests/auditeur/scripts/Functions_Relay.php";
+    $file = basename($path);
+
+    $in_rules = make_in($rules);
+    $res = $DATABASE->query("SELECT * FROM <report> TR
+                             JOIN <tokens> T1
+                                ON TR.token_id = T1.id 
+                             WHERE TR.file = '$path' AND
+                             module IN ( $in_rules )");
+    $rows = $res->fetchAll();
+    $violations = array();
+    foreach ($rows as $id => $row) {
+        $rule_path = rule2report($row['module']);
+        $idpu = $id + 1;
+        $code_html = htmlentities($row['code']);
+        $violations[] = <<<HTML
+		<tr class="violation">
+			<td class="code"><a href="$rule_path">{$row['module']}</a></td>
+			<td>$code_html</td>
+			<td class="figure">1</td>
+			<td class="line"><a href="#L{$row['line']}">{$row['line']}</td>
+		</tr>
+HTML;
+    }
+    $violations = join("\n", $violations);
+
+    // @todo add first line marker
+    $php = file_get_contents($path);
+    $code_source = prepare_code_source($php);
+
+    $html = <<<HTML
+<html>
+<head>
+<title>Code source file : $path</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <style type="text/css" media="all">
+  @import url("css/report.css");
+ </style>
+<script src="./js/1.5/jquery.min.js"></script>
+<script src="./js/report.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('td.line > a').click(function() {
+        click_line($(this).parent().parent());
+    });
+
+    $('.violation').click(function() {
+        click_line($(this));
+    });
+});
+    </script>
+</head>
+<body>
+
+<a href="summary.html">Summary</a>
+<h1>$file</h1>
+<I>$path</I>
+
+
+<h2>Violations</h2>
+
+<table class="violations">
+	<tr class="header">
+		<th>Inspector</th>
+		<th>Message</th>
+		<th>Severity</th>
+		<th>Location</th>
+	</tr>
+$violations
+
+</table>
+
+<h2><a name="source">Source code</a></h2>
+<div class="code_source">
+$code_source
+</div>
+</body>
+</html>
+HTML;
+
+    print file2report($path)."\n";
+    global $OPTIONS;
+    file_put_contents($OPTIONS->report['dir'].file2report($path), $html);
+    return true;
+}
+
+function rule_report($rule) {
+    global $DATABASE; 
+    
+    $res = $DATABASE->query("SELECT TR.file, line FROM <report> TR
+                             JOIN <tokens> T1
+                                ON TR.token_id = T1.id 
+                             WHERE TR.module='$rule'");
+    $rows = $res->fetchAll();
+    $violations = array();
+
+    foreach ($rows as $row) {
+        $path_report = file2report($row['file']);
+        $file = basename($row['file']);
+        $path = dirname($row['file']);
+        
+        $violations[] = <<<HTML
+	<tr>
+		
+			<td>{$file} ($path)</td>
+			<td><a href="$path_report#L{$row['line']}">{$row['line']}</a></td>
+		
+	</tr>
+HTML;
+    }
+    
+    $violations = join("\n", $violations);
+    
+    $full_rule = "Cornac_Auditeur_Analyzer_".$rule;
+    $rule_object = new $full_rule($DATABASE);
+    $description = $rule_object->getDescription();
+
+    $html = <<<HTML
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Inspector</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <style type="text/css" media="all">
+  @import url("css/report.css");
+ </style>
+<script src="./js/1.5/jquery.min.js"></script>
+</head>
+<body>
+<a href="summary.html">Summary</a>
+<h1>Rule summary</h1>
+
+
+<h1>$rule</h1>
+$description
+
+<!--
+<h2>Configuration</h2>
+<TABLE border="1" cellspacing="0" cellpadding="3"><TR><TH>Name</TH><TH>Value</TH></TR><TR><TD rowspan="1">Exempts</TD><TD>java.lang.NumberFormatException</TD></TR></TABLE>
+-->
+
+<h2>Violations</h2>
+<table class="violations">
+	<tr class="header">
+		<th>Source unit</th>
+		<th>Location</th>
+	</tr>	
+	$violations
+</table>
+</body>
+</html>
+HTML;
+
+    global $OPTIONS;
+    file_put_contents($OPTIONS->report['dir'].rule2report($rule), $html);
+    return true;
+}
+
+function summary($rules) {
+    global $DATABASE; 
+    
+    $in_rules = make_in($rules);
+    $res = $DATABASE->query("SELECT module, COUNT(*) AS nb FROM <report> TR
+                            WHERE module IN ($in_rules)
+                            GROUP BY module");
+    $rows = $res->fetchAll();
+    $violations = array();
+
+    foreach ($rows as $row) {
+        $rule = $row['module'];
+        $nb = $row['nb'];
+
+        $rule_path = rule2report($rule);
+        $full_rule = "Cornac_Auditeur_Analyzer_".$rule;
+        $rule_object = new $full_rule($DATABASE);
+        $rule_description = $rule_object->getDescription();
+        
+        $violations[] = <<<HTML
+<tr>
+	<td nowrap="nowrap"><a href="$rule_path">$rule</a></td>
+	<td>$rule_description</td>
+	<td align="right">$nb</td>
+</tr>
+HTML;
+    }
+    
+    $violations = join("\n", $violations);
+
+// files 
+    $res = $DATABASE->query("SELECT file, COUNT(*) AS nb FROM <report> TR
+                            WHERE module IN ($in_rules)
+                            GROUP BY file");
+    $rows = $res->fetchAll();
+    $files_violations = array();
+
+    foreach ($rows as $row) {
+        $nb = $row['nb'];
+        $path_report = file2report($row['file']);
+
+
+        $files_violations[] = <<<HTML
+<tr>
+	<td nowrap="nowrap"><a href="$path_report">{$row['file']}</a></td>
+	<td align="right">$nb</td>
+</tr>
+HTML;
+    }
+    
+    $files_violations = join("\n", $files_violations);
+    
+    $html = <<<HTML
+<html>
+<head>
+<title>Summary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <style type="text/css" media="all">
+  @import url("css/report.css");
+ </style>
+<script src="./js/1.5/jquery.min.js"></script>
+</head>
+<body>
+<h1>Summary</h1>
+
+<h2>Analyzers</h2>
+
+	<table class="violations">
+		<tr bgcolor="silver">
+			<th>Analyzer</th>
+			<th width="80%">Description</th>
+			<th>Violations</th>
+		</tr>
+    $violations
+    </table> 
+
+<h2>Files</h2>
+
+	<table class="violations">
+		<tr class="header">
+			<th>Analyzer</th>
+			<th>Number of violations</th>
+		</tr>
+    $files_violations
+    </table> 
+</body>
+</html>
+HTML;
+
+    global $OPTIONS;
+    file_put_contents($OPTIONS->report['dir'].'summary.html', $html);
+    return true;
+}
+
+function copy_files() {
+    $rdi = new RecursiveIteratorIterator(new RecursiveDirectoryIterator('report'));
+    foreach($rdi as $file) {
+        $dir = str_replace('report/','',dirname($file));
+        if (!file_exists($OPTIONS->report['dir'].'/'.$dir)) {
+            mkdir($OPTIONS->report['dir'].'/'.$dir, 0755, true);
+        }
+        copy ($file, $OPTIONS->report['dir'].'/'.str_replace('report/','', $file));
+    }
+}
+
+function cb_div_line($r) {
+    global $line_number;
+    
+    $line_number++;
+    return "</div>\n<div id=\"d$line_number\">";
+}
+
+function cb_code($r) {
+    global $line_number;
+    
+    $line_number++;
+    return "\n<a name=\"L$line_number\" class=\"line_number\">$line_number) </a>";
+}
+
+function file2report($path) {
+    $path = preg_replace('/(\.\.\/)+/', '', $path);
+    return str_replace('/','_', str_replace('./','', $path)).'.html';
+}
+
+function rule2report($rule) {
+    return $rule.'.html';
+}
+
+function make_in($elements) {
+    return "'".join("', '", $elements)."'";
+
+}
+
+function cb_break_div_to_line($r) {
+    if (strpos($r[2], '</span>') !== false) { 
+        return $r[0]; 
+    }
+    return $r[1].$r[2].'</span>'."".'<br />'.$r[1];
+}
+
+function prepare_code_source($php) {
+    $code_source = highlight_string($php, true);
+    
+    $t = 0;
+    $md5 = '';
+    while($md5 != ($md52 = md5($code_source))) {
+        $t++;
+        if ($t == 100) { 
+        // @note break anyway, this is going to take too long! Report bug.
+            break 1;
+        }
+        $md5 = $md52;
+        $code_source = preg_replace_callback('@(<span style="color: #[0-9A-F]{6}">)([^<>]*?)<br />@s', 'cb_break_div_to_line' , $code_source); 
+    }
+    
+    global $line_number;
+    $line_number=1;
+    $code_source = preg_replace_callback('$<br />$is', 'cb_code', $code_source); 
+    $count = 1;
+    $code_source = str_replace("<code><span style=\"color: #000000\">\n",
+                               '<code><span style="color: #000000">'."\n".'<a name="L1" class="line_number">1) </a>', $code_source, $count);
+
+    global $line_number;
+    $line_number=0;
+    $code_source = preg_replace_callback("@\n@is", 'cb_div_line', $code_source); 
+    
+    $phphtml = array('style="color: #FF8000"' => 'class="phpcode_comment"',
+                     'style="color: #0000BB"' => 'class="phpcode_default"',
+                     'style="color: #000000"' => 'class="phpcode_html"',
+                     'style="color: #007700"' => 'class="phpcode_keyword"',
+                     'style="color: #DD0000"' => 'class="phpcode_string"',
+                     );
+    $span = array_keys($phphtml);
+    $class = array_values($phphtml);
+
+    return $code_source;
+}
+
+?>

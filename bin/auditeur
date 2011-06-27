@@ -309,6 +309,7 @@ $modules = array(
 'Zf_Validator',
 
 'Ez_Getgpc', 
+'Report',
 // new analyzers
 );
 

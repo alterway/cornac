@@ -1,0 +1,56 @@
+#!/usr/bin/env php
+<?php
+/*
+   +----------------------------------------------------------------------+
+   | Cornac, PHP code inventory                                           |
+   +----------------------------------------------------------------------+
+   | Copyright (c) 2010 - 2011                                            |
+   +----------------------------------------------------------------------+
+   | This source file is subject to version 3.01 of the PHP license,      |
+   | that is bundled with this package in the file LICENSE, and is        |
+   | available through the world-wide-web at the following url:           |
+   | http://www.php.net/license/3_01.txt                                  |
+   | If you did not receive a copy of the PHP license and are unable to   |
+   | obtain it through the world-wide-web, please send a note to          |
+   | license@php.net so we can mail you a copy immediately.               |
+   +----------------------------------------------------------------------+
+   | Author: Damien Seguy <damien.seguy@alterway.fr>                      |
+   +----------------------------------------------------------------------+
+ */
+
+include('library/Cornac/Autoload.php');
+spl_autoload_register('Cornac_Autoload::autoload');
+
+$options = array('help' => array('help' => 'display this help',
+                                 'option' => '?',
+                                 'compulsory' => false),
+                 'ini' => array('help' => 'configuration set or file',
+                                 'get_arg_value' => null,
+                                 'option' => 'I',
+                                 'compulsory' => true),
+);
+
+$OPTIONS = new Cornac_Options();
+$OPTIONS->setConfig($options);
+$OPTIONS->init();
+
+$DATABASE = new Cornac_Database();
+
+$res = $DATABASE->query('SHOW TABLES LIKE "'.$OPTIONS->cornac['prefix'].'%"');
+$rows = $res->fetchAll();
+
+if (count($rows) == 0) { 
+    print "No tables to drop for prefix '".$OPTIONS->cornac['prefix']."'\n";
+    die();
+}
+
+$tables = array();
+foreach($rows as $r) {
+    $tables[] = $r[0];
+}
+
+$query = "DROP TABLE ".join(', ', $tables) ;
+$DATABASE->query($query);
+
+print count($rows)." tables dropped.\n";
+?>

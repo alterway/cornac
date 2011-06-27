@@ -14,7 +14,7 @@
    | obtain it through the world-wide-web, please send a note to          |
    | license@php.net so we can mail you a copy immediately.               |
    +----------------------------------------------------------------------+
-   | Author: Damien Seguy <damien.seguy@alterway.fr>                      |
+   | Author: Damien Seguy <damien.seguy@alterway.com>                     |
    +----------------------------------------------------------------------+
  */
 
@@ -31,12 +31,12 @@ $options = array('help' => array('help' => 'display this help',
                  'directory' => array('help' => 'directory to work in',
                                       'get_arg_value' => null,
                                       'option' => 'd',
-                                      'compulsory' => true),
+                                      'compulsory' => false),
                  'destination' => array('help' => 'output directory',
                                       'get_arg_value' => null,
                                       'option' => 'o',
-                                      'compulsory' => true),
-                 'clean' => array('help' => 'clean tasks',
+                                      'compulsory' => false),
+                 'clean' => array('help' => 'Clean tasks',
                                  'option' => 'K',
                                  'compulsory' => false),
 );
@@ -47,10 +47,11 @@ $OPTIONS->init();
 $OPTIONS->cornac = array('ini' => $OPTIONS->ini);
 $OPTIONS->cornac = array('prefix' => $OPTIONS->ini);
 
-$OPTIONS->cornac = array('origin' => $OPTIONS->directory);
+$OPTIONS->cornac = array('origin' => $OPTIONS->cornac['origin']);
 if (empty($OPTIONS->cornac['origin'])) {
     print "Origin folder is missing : use option -d\n";
-    $OPTIONS->help();
+    print $OPTIONS->help();
+    die();
 }
 // @notes validations
 if (!file_exists($OPTIONS->cornac['origin']['origin'])) {
@@ -60,11 +61,13 @@ if (!file_exists($OPTIONS->cornac['origin']['origin'])) {
 
 
 $OPTIONS->cornac = array('destination' => $OPTIONS->destination);
+/*
 if (empty($OPTIONS->cornac['destination'])) {
     print "Destination folder is missing : use option -o\n";
-    help();
+    print $OPTIONS->help();
+    die();
 }
-
+*/
 // @todo check this. 
 if (realpath($OPTIONS->cornac['origin']) == realpath($OPTIONS->cornac['destination'])) {
     print "Please, don't use the same folder for source and destination\n";
@@ -74,7 +77,8 @@ if (realpath($OPTIONS->cornac['origin']) == realpath($OPTIONS->cornac['destinati
 if ($OPTIONS->cornac['storage'] == 'mysql') {
     $INI['mysql']['active'] = 1;
     $INI['sqlite']['active'] = 0;
-
+    $OPTIONS->cornac = array('storage' => 'mysql');
+    
     if ($OPTIONS->clean) {
         $database = new Cornac_Database();
         // @todo add some more verifications (existence, number actually destroyed..)
@@ -84,6 +88,7 @@ if ($OPTIONS->cornac['storage'] == 'mysql') {
 } elseif ($OPTIONS->cornac['storage'] == 'sqlite') {
     $INI['mysql']['active'] = 0;
     $INI['sqlite']['active'] = 1;
+    $OPTIONS->cornac = array('storage' => 'sqlite');
 } else {
     print "Please, storage should be mysql or sqlite\n";
     die();
@@ -97,14 +102,14 @@ Output : {$OPTIONS->cornac['destination']}\n";
 if (!empty($OPTIONS->cornac['ini'])) { $ini = " -I {$OPTIONS->cornac['ini']} "; } else { $ini = ""; }
 
 print "Tokenizeur\n";
-shell_exec("php tokenizeur.php -r -d {$OPTIONS->cornac['origin']} -g {$OPTIONS->cornac['storage']},cache $ini "); // @todo : note the log
+shell_exec("./bin/tok -r -d {$OPTIONS->cornac['origin']} -g {$OPTIONS->cornac['storage']},cache $ini "); // @todo : note the log
                                                                                                             // @sqlite as default ?
 print "Auditeur\n";
-shell_exec("cd auditeur; php auditeur.php $ini -o -d {$OPTIONS->cornac['destination']}");
+shell_exec("./bin/auditeur $ini -o -d {$OPTIONS->cornac['destination']}");
 // @todo clean audits tables before.
 
 print "Export\n";
-shell_exec("cd auditeur; php reader.php $ini -F html -o {$OPTIONS->cornac['destination']} ");
+shell_exec("./bin/reader $ini -F html -o {$OPTIONS->cornac['destination']} ");
 
 print "Done\n";
 
