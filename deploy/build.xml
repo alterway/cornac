@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="cornac" default="build">
+    <property file="build.properties" />
+    <property name="branch" value="master" />
+
+    <!-- ============================================  -->
+    <!-- Target: build                                 -->
+    <!-- ============================================  -->
+    <target name="build">
+    <!-- prepare version file -->
+        <delete file="./cornac.v${version}.tbz2" />
+        <delete file="./cornac.v${version}.tgz" />
+        <delete file="./cornac.v${version}.zip" />
+
+        <exec command="php version.php" />
+        
+        <exec command="cd ..; git archive ${branch} | bzip2 > ./deploy/cornac.v${version}.tbz2" />
+        <exec command="cd ..; git archive ${branch} | gzip > ./deploy/cornac.v${version}.tgz" />
+        <exec command="cd ..; git archive --format zip --output ./deploy/cornac.v${version}.zip ${branch}" />
+    </target>
+
+    <!-- ============================================  -->
+    <!-- (DEFAULT)  Target: dist                       --> 
+    <!-- ============================================  -->
+    <target name="send_web" depends="build">
+        <ftpdeploy 
+          host="${ftp.host}" 
+          port="${ftp.port}" 
+          username="${ftp.username}" 
+          password="${ftp.password}"
+          dir="/cornac" 
+          mode="binary">
+          <fileset dir=".">
+            <include name="cornac.v0.02.tbz2"/>
+            <include name="cornac.v0.02.tgz"/>
+            <include name="cornac.v0.02.zip"/>
+          </fileset>
+        </ftpdeploy>    
+    </target>
+</project>
