@@ -78,6 +78,9 @@ if ($OPTIONS->cornac['storage'] == 'mysql') {
     $INI['mysql']['active'] = 1;
     $INI['sqlite']['active'] = 0;
     $OPTIONS->cornac = array('storage' => 'mysql');
+    $OPTIONS->mysql = array('dsn' => $OPTIONS->ini);
+    $OPTIONS->mysql = array('username' => $OPTIONS->ini);
+    $OPTIONS->mysql = array('password' => $OPTIONS->ini);
     
     if ($OPTIONS->clean) {
         $database = new Cornac_Database();

@@ -78,6 +78,29 @@ if (empty($OPTIONS->reader['format']) || !in_array($OPTIONS->reader['format'], $
 $DATABASE = new Cornac_Database();
 
 $query = 'SELECT * FROM <report_module> WHERE module='.$DATABASE->quote($OPTIONS->reader['module']);
+
+//$query = "SELECT * FROM <report_module> WHERE module='Default'";
+/*, Classes_Constants, Classes_Definitions, Classes_Interfaces
+Classes_MethodsDefinition
+ Classes_MethodsSpecial
+ Classes_Properties
+ Constants_Definitions
+ Functions_Definitions     
+ Php_Globals               
+ Php_References            
+ Functions_Php             
+ Classes_Php               
+ Php_Modules               
+ Sf_Dependencies           
+Structures_FluentInterface
+ Variables_Gpc             
+ Variables_Names           
+ Variables_Session       
+ Variables_Variables     
+ Zf_Dependencies         
+ Php_Phpinfo             
+ Inventaire */
+
 $res = $DATABASE->query($query);
 $row = $res->fetch();
 unset($res);
@@ -85,6 +108,8 @@ unset($res);
 // @todo check that all those columns are needed. 
 if (!$row) {
     print "No module with name '{$OPTIONS->reader['module']}'. Aborting\n";
+    $str="echo nnn ". $OPTIONS->reader['module'] ."ccccc > /tmp/HH.txt";
+    `$str`;
     die();
 } elseif ($row['format'] == 'html') {
     // @attention : should also support _dot reports
